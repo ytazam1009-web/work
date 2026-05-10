@@ -16,7 +16,7 @@ export default function Header() {
   const navLinks = [
     { label: 'Services', href: '#services' },
     { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Pricing', href: '#pricing' },
+    //{ label: 'Pricing', href: '#pricing' },
     { label: 'Areas', href: '#areas' },
     { label: 'Reviews', href: '#reviews' },
     { label: 'Contact', href: '#contact' },
@@ -36,11 +36,12 @@ export default function Header() {
             </div>
             <div>
               <span className={`text-xl font-bold leading-none block ${scrolled ? 'text-gray-900' : 'text-white'}`}>
-                Quick Rubbish
-              </span>
-              <span className="text-xs font-medium text-green-500 uppercase tracking-wider">
-                Removal UK
-              </span>
+  GB WASTE
+</span>
+
+<span className="text-xs font-medium text-green-500 uppercase tracking-wider">
+  Removals UK
+</span>
             </div>
           </a>
 

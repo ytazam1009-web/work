@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
   // Return ZIP file
   if (format === 'zip') {
     const zip = new JSZip();
-    const folder = zip.folder('quick-rubbish-removal');
+    const folder = zip.folder('GB-waste-removals');
     if (folder) {
       for (const file of fileContents) {
         folder.file(file.path, file.content);
@@ -75,7 +75,7 @@ export async function GET(request: NextRequest) {
       status: 200,
       headers: {
         'Content-Type': 'application/zip',
-        'Content-Disposition': 'attachment; filename="quick-rubbish-removal.zip"',
+        'Content-Disposition': 'attachment; filename="GB-waste-removals.zip"',
         'Content-Length': String(zipBuffer.length),
         'Cache-Control': 'no-cache, no-store, must-revalidate',
         'Pragma': 'no-cache',

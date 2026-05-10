@@ -5,12 +5,12 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 
 export const metadata: Metadata = {
-  title: 'Quick Rubbish Removal | Same Day Waste Collection UK',
-  description: 'Fast, affordable rubbish removal across the UK. Same-day collection, licensed waste carriers, eco-friendly disposal. Get a free quote in seconds. Household, commercial & garden waste cleared.',
-  keywords: 'rubbish removal UK, waste collection, same day rubbish removal, cheap rubbish removal, household waste removal, garden waste removal, commercial waste disposal, junk removal',
+  title: 'GB Waste Removal | We Collect Waste with in 24 Hours',
+  description: 'Fast, affordable waste removal across Birmingham, Coventry and Leicester. Collection available within 24 hours, licensed waste carriers, eco-friendly disposal. Get a free quote in seconds. Household, commercial & garden waste cleared.',
+  keywords: 'waste removal UK, waste collection, same day waste removal, cheap waste removal, household waste removal, garden waste removal, commercial waste disposal, junk removal',
   openGraph: {
-    title: 'Quick Rubbish Removal | Same Day Waste Collection UK',
-    description: 'Fast, affordable rubbish removal across the UK. Licensed, insured & eco-friendly. Get your free quote today.',
+    title: 'GB Waste Removals | We Collect Waste with in 24 Hours',
+    description: 'Fast, affordable waste removal across the UK. Licensed, insured & eco-friendly. Get your free quote today.',
     images: [{ url: 'https://bolt.new/static/og_default.png' }],
   },
   twitter: {

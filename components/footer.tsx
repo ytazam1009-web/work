@@ -2,7 +2,7 @@ import { Truck, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } fr
 
 const footerLinks = {
   Services: [
-    'Household Rubbish Removal',
+    'Household waste Removal',
     'Garden Waste Removal',
     'Commercial Waste',
     'Construction Waste',
@@ -10,23 +10,18 @@ const footerLinks = {
     'Office Clearance',
     'WEEE Recycling',
     'Furniture Removal',
+    'House stuff Moving',
+    'Office stuff Moving',
   ],
   Areas: [
-    'London',
-    'Manchester',
+    
     'Birmingham',
-    'Leeds',
-    'Bristol',
-    'Edinburgh',
-    'Liverpool',
-    'Glasgow',
-    'Cardiff',
-    'Sheffield',
-  ],
+    'Coventry',
+    'Leicester',
+      ],
   Company: [
     'About Us',
     'How It Works',
-    'Pricing',
     'Reviews',
     'Blog',
     'Careers',
@@ -40,8 +35,6 @@ const footerLinks = {
     'Terms & Conditions',
     'Privacy Policy',
     'Cookie Policy',
-    'Sitemap',
-    'Download Source Code',
   ],
 };
 
@@ -58,12 +51,12 @@ export default function Footer() {
                 <Truck className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div>
-                <span className="text-lg sm:text-xl font-bold text-white block leading-none">Quick Rubbish</span>
+                <span className="text-lg sm:text-xl font-bold text-white block leading-none">GB Waste</span>
                 <span className="text-xs font-medium text-green-400 uppercase tracking-wider">Removal UK</span>
               </div>
             </div>
             <p className="text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 text-gray-400">
-              The UK's most trusted rubbish removal service. Fast, affordable, and eco-friendly waste collection for households, businesses, and contractors across England, Scotland, and Wales.
+              The UK's most trusted waste removal service. Fast, affordable, and eco-friendly waste collection for households, businesses, and contractors across England, Scotland, and Wales.
             </p>
 
             {/* Contact snippet */}
@@ -74,11 +67,11 @@ export default function Footer() {
                 </div>
                 0800 123 4567
               </a>
-              <a href="mailto:hello@quickrubbish.co.uk" className="flex items-center gap-3 text-xs sm:text-sm hover:text-green-400 transition-colors group">
+              <a href="mailto:hello@gbwasteremovals.co.uk" className="flex items-center gap-3 text-xs sm:text-sm hover:text-green-400 transition-colors group">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 bg-green-600/20 rounded-lg flex items-center justify-center group-hover:bg-green-600/40 transition-colors">
                   <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400" />
                 </div>
-                hello@quickrubbish.co.uk
+                hello@gbwasteremovals.co.uk
               </a>
               <div className="flex items-center gap-3 text-xs sm:text-sm">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 bg-green-600/20 rounded-lg flex items-center justify-center">
@@ -147,7 +140,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 text-xs text-gray-500">
-          <p>&copy; 2026 Quick Rubbish Removal Ltd. All rights reserved. Registered in England & Wales.</p>
+          <p>2026 GB Waste Removal Ltd. All rights reserved. Registered in England.</p>
           <div className="flex items-center gap-3 sm:gap-4">
             <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>

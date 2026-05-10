@@ -14,9 +14,9 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    detail: 'hello@quickrubbish.co.uk',
+    detail: 'hello@gbwasteremovals.co.uk',
     sub: 'We reply within 1 hour',
-    href: 'mailto:hello@quickrubbish.co.uk',
+    href: 'mailto:hello@gbwasteremovals.co.uk',
   },
   {
     icon: Clock,
@@ -93,7 +93,7 @@ export default function Contact() {
                 {[
                   'Free no-obligation quotes',
                   'Response within 60 minutes',
-                  'Same-day service available',
+                  'Service available with in 24 housrs',
                   'No cancellation fees',
                   'Fully licensed & insured',
                 ].map((item) => (
@@ -182,13 +182,13 @@ export default function Contact() {
                       className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white text-sm text-gray-700"
                     >
                       <option value="">Select a service...</option>
-                      <option>Household Rubbish Removal</option>
+                      <option>Household waste Removal</option>
                       <option>Garden Waste Removal</option>
                       <option>Commercial Waste</option>
                       <option>Construction / Builder Waste</option>
                       <option>Furniture & Bulky Items</option>
-                      <option>House Clearance</option>
-                      <option>Office Clearance</option>
+                      <option>House Clearance & Moving</option>
+                      <option>Office Clearance & Moving</option>
                       <option>WEEE / Electronics</option>
                       <option>Other</option>
                     </select>

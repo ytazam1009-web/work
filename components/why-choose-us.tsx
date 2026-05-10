@@ -3,8 +3,8 @@ import { Clock, Shield, Leaf, Banknote, Award, HeartHandshake } from 'lucide-rea
 const features = [
   {
     icon: Clock,
-    title: 'Same Day Service',
-    description: 'Book before 12pm and we\'ll collect the same day. Emergency collections available 7 days a week, including bank holidays.',
+    title: '24 Hours Service',
+    description: 'Book 24 hours before and we\'ll collect there and then. Emergency collections available 7 days a week, including bank holidays.',
     stat: '2hr',
     statLabel: 'Avg response time',
   },
@@ -25,8 +25,8 @@ const features = [
   {
     icon: Leaf,
     title: 'Eco-Friendly Disposal',
-    description: 'We divert up to 95% of waste from landfill by recycling and donating reusable items to local charities and organisations.',
-    stat: '95%',
+    description: 'We divert up to 100% of waste from landfill by recycling and donating reusable items to local charities and organisations.',
+    stat: '100%',
     statLabel: 'Recycling rate',
   },
   {
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
         <div className="text-center mb-10 sm:mb-16">
           <span className="text-green-600 font-semibold text-xs sm:text-sm uppercase tracking-widest">Why Us?</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-2 mb-3 sm:mb-4">
-            The UK's Most Trusted<br className="hidden sm:block" />Rubbish Removal Team
+            The UK's Most Trusted<br className="hidden sm:block" />waste Removal Team
           </h2>
           <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto px-2">
             We're not just another man-with-a-van. We're a professional, fully licensed waste carrier with a reputation for speed, reliability, and fair pricing.
