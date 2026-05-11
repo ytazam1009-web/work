@@ -128,13 +128,31 @@ export default function Header() {
 
             <div className="border-t border-gray-100 my-2" />
 
-            <a
-              href="tel:08001234567"
-              className="flex items-center gap-2 text-green-600 font-semibold py-3 px-2"
-            >
-              <Phone className="w-4 h-4" />
-              0800 123 4567
-            </a>
+<a
+  href="tel:08001234567"
+  className="flex items-center gap-2 text-green-600 font-semibold py-3 px-2"
+>
+  <Phone className="w-4 h-4" />
+  0800 123 4567
+</a>
+
+<a
+  href="https://wa.me/447000000000"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg mt-2 transition"
+>
+  <MessageCircle className="w-4 h-4" />
+  WhatsApp
+</a>
+
+<a
+  href="#contact"
+  onClick={() => setMenuOpen(false)}
+  className="bg-green-600 text-white text-center font-semibold py-3 rounded-lg mt-2"
+>
+  Get Free Quote
+</a>
 
             <a
               href="#contact"
