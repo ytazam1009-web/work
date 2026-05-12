@@ -74,16 +74,6 @@ export default function Header() {
               </a>
 
               <a
-                href="https://wa.me/447000000000"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-all hover:shadow-lg"
-              >
-                <MessageCircle className="w-4 h-4" />
-                WhatsApp
-              </a>
-
-              <a
                 href="#contact"
                 className="bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5"
               >
