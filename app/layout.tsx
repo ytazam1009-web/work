@@ -8,29 +8,61 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'GB Waste Removal | We Collect Waste with in 24 Hours',
+  title:
+    'GB Waste Removal UK | Same Day Waste Collection & House Clearance',
 
   description:
-    'Fast, affordable waste removal across Birmingham, Coventry and Leicester. Collection available within 24 hours, licensed waste carriers, eco-friendly disposal. Get a free quote in seconds. Household, commercial & garden waste cleared.',
+    'Fast and affordable waste removal services across Birmingham, Coventry & Leicester. Same-day waste collection, house clearance, office clearance, garden waste removal, junk removal, furniture disposal & moving services. Licensed UK waste carriers with eco-friendly recycling.',
 
   viewport: 'width=device-width, initial-scale=1',
 
-  keywords:
-    'waste removal UK, waste collection, same day waste removal, cheap waste removal, household waste removal, garden waste removal, commercial waste disposal, junk removal',
+  keywords: [
+    'waste removal UK',
+    'same day waste collection',
+    'house clearance UK',
+    'junk removal UK',
+    'rubbish removal',
+    'garden waste removal',
+    'commercial waste disposal',
+    'office clearance',
+    'furniture removal',
+    'waste collection Birmingham',
+    'waste collection Coventry',
+    'waste collection Leicester',
+    'cheap waste removal',
+    'licensed waste carrier UK',
+    'eco friendly waste disposal',
+    'builder waste removal',
+    'moving services UK',
+    'house moving',
+    'office moving',
+    'same day rubbish removal',
+  ],
 
   openGraph: {
-    title: 'GB Waste Removals | We Collect Waste with in 24 Hours',
+    title:
+      'GB Waste Removal UK | Fast Same-Day Waste Collection',
 
     description:
-      'Fast, affordable waste removal across the UK. Licensed, insured & eco-friendly. Get your free quote today.',
+      'Trusted UK waste removal company offering same-day collections, house clearances, office moving, junk removal & eco-friendly waste disposal.',
 
-    images: [{ url: 'https://bolt.new/static/og_default.png' }],
+    images: [
+      {
+        url: '/uk-bg.jpg',
+      },
+    ],
   },
 
   twitter: {
     card: 'summary_large_image',
 
-    images: [{ url: 'https://bolt.new/static/og_default.png' }],
+    title:
+      'GB Waste Removal UK | Fast Same-Day Waste Collection',
+
+    description:
+      'Affordable same-day waste removal, house clearance & junk collection services across the UK.',
+
+    images: ['/uk-bg.jpg'],
   },
 };
 
