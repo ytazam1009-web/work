@@ -31,7 +31,7 @@ export default function Hero() {
         style={{
          // backgroundImage: `url('https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
          // backgroundSize: 'cover',
-          //backgroundPosition: 'center',
+         // backgroundPosition: 'center',
         }}
       />
 
