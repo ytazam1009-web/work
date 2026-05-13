@@ -8,13 +8,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://gbwasteremovals.com'),
+
   title:
     'GB Waste Removal UK | Same Day Waste Collection & House Clearance',
 
   description:
     'Fast and affordable waste removal services across Birmingham, Coventry & Leicester. Same-day waste collection, house clearance, office clearance, garden waste removal, junk removal, furniture disposal & moving services. Licensed UK waste carriers with eco-friendly recycling.',
-
-  viewport: 'width=device-width, initial-scale=1',
 
   keywords: [
     'waste removal UK',
@@ -39,16 +39,42 @@ export const metadata: Metadata = {
     'same day rubbish removal',
   ],
 
+  authors: [
+    {
+      name: 'GB Waste Removal UK',
+    },
+  ],
+
+  creator: 'GB Waste Removal UK',
+
+  publisher: 'GB Waste Removal UK',
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   openGraph: {
+    type: 'website',
+
+    locale: 'en_GB',
+
+    url: 'https://gbwasteremovals.co.uk',
+
     title:
       'GB Waste Removal UK | Fast Same-Day Waste Collection',
 
     description:
       'Trusted UK waste removal company offering same-day collections, house clearances, office moving, junk removal & eco-friendly waste disposal.',
 
+    siteName: 'GB Waste Removal UK',
+
     images: [
       {
-        url: '/uk-bg.jpg',
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'GB Waste Removal UK',
       },
     ],
   },
@@ -62,7 +88,11 @@ export const metadata: Metadata = {
     description:
       'Affordable same-day waste removal, house clearance & junk collection services across the UK.',
 
-    images: ['/uk-bg.jpg'],
+    images: ['/og-image.jpg'],
+  },
+
+  icons: {
+    icon: '/favicon.ico',
   },
 };
 

@@ -37,7 +37,7 @@ export default function Hero() {
     backgroundRepeat: 'no-repeat',
   }}
 >
-    >
+    
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 opacity-10 rounded-full -translate-y-48 translate-x-48 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-500 opacity-10 rounded-full translate-y-48 -translate-x-48 blur-3xl" />
 
