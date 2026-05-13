@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gbwasteremovals.com'),
+  metadataBase: new URL('https://gbwasteremovals.co.uk'),
 
   title:
     'GB Waste Removal UK | Same Day Waste Collection & House Clearance',
@@ -52,6 +52,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 
   openGraph: {
@@ -71,10 +78,10 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://gbwasteremovals.co.uk/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'GB Waste Removal UK',
+        alt: 'GB Waste Removal UK Waste Removal Services',
       },
     ],
   },
@@ -88,11 +95,15 @@ export const metadata: Metadata = {
     description:
       'Affordable same-day waste removal, house clearance & junk collection services across the UK.',
 
-    images: ['/og-image.jpg'],
+    images: [
+      'https://gbwasteremovals.co.uk/og-image.jpg',
+    ],
   },
 
   icons: {
     icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
 };
 
