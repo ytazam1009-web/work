@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://work-azure-two.vercel.app
+
+# Sitemaps
+Sitemap: https://work-azure-two.vercel.app/sitemap.xml
