@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gbwasteremovals.co.uk'),
+ metadataBase: new URL('https://work-azure-two.vercel.app'),
 
   title:
     'GB Waste Removal UK | Same Day Waste Collection & House Clearance',
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 
     locale: 'en_GB',
 
-    url: 'https://gbwasteremovals.co.uk',
+    url: 'https://work-azure-two.vercel.app',
 
     title:
       'GB Waste Removal UK | Fast Same-Day Waste Collection',
@@ -77,13 +77,13 @@ export const metadata: Metadata = {
     siteName: 'GB Waste Removal UK',
 
     images: [
-      {
-        url: 'https://gbwasteremovals.co.uk/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'GB Waste Removal UK Waste Removal Services',
-      },
-    ],
+  {
+    url: 'https://work-azure-two.vercel.app/og-image.jpg',
+    width: 1200,
+    height: 630,
+    alt: 'GB Waste Removal UK',
+  },
+],
   },
 
   twitter: {
