@@ -28,14 +28,15 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)), url('/ukbg.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
+  className="relative min-h-screen flex items-center justify-center overflow-hidden"
+  style={{
+    backgroundImage:
+      "linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)), url('/ukbg.png')",
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }}
+>
     >
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 opacity-10 rounded-full -translate-y-48 translate-x-48 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-500 opacity-10 rounded-full translate-y-48 -translate-x-48 blur-3xl" />
