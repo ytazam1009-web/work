@@ -30,14 +30,13 @@ export default function Hero() {
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/uk-bg.jpg')",
+        backgroundImage:
+          "linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)), url('/ukbg.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="absolute inset-0 bg-blue-300/30"></div>
-
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 opacity-10 rounded-full -translate-y-48 translate-x-48 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-500 opacity-10 rounded-full translate-y-48 -translate-x-48 blur-3xl" />
 
@@ -46,7 +45,7 @@ export default function Hero() {
         {/* SEO BADGE */}
         <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white/80 border border-blue-200 text-[#0A1F44] text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 shadow-sm backdrop-blur-sm">
           <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
-          #1 Rated Waste Removal Company in the UK – Junk Removal & Clearance Experts
+            Proudly UK Based Waste Removal Service
           <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
         </div>
 
@@ -118,7 +117,7 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* STATS SEO (slight text improvement only) */}
+        {/* STATS */}
         <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-4 sm:gap-8">
 
           <div className="flex flex-col items-center">
@@ -148,7 +147,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* CTA unchanged */}
+        {/* CTA */}
         <div className="mt-8 sm:mt-12">
           <a
             href="tel:08001234567"
@@ -161,8 +160,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-
-      {/* bottom wave unchanged */}
     </section>
   );
 }

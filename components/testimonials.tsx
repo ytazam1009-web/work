@@ -63,7 +63,7 @@ const renderStars = (rating: number) => {
     <Star
       key={i}
       className={`w-4 h-4 sm:w-5 sm:h-5 ${
-        i < rating ? 'fill-[#CF142B] text-[#CF142B]' : 'text-gray-300'
+       i < rating ? 'fill-[#FFD700] text-[#FFD700]' : 'text-gray-300'
       }`}
     />
   ));

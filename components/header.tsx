@@ -42,16 +42,20 @@ export default function Header() {
               <img
                 src="/imagesitelogo.png"
                 alt="GB Waste Removals UK"
-                className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-105"
+                className="w-32 h-32 object-contain transition-transform duration-300 group-hover:scale-105"
               />
 
               <div>
-                <span className="text-xl font-extrabold block text-[#071739] leading-none tracking-tight">
+                <span className="text-2xl font-extrabold block text-[#071739] leading-none tracking-tight">
                   GB WASTE
                 </span>
 
-                <span className="text-xs font-bold text-[#2563EB] uppercase tracking-[0.25em]">
+                <span className="text-sm font-bold text-[#2563EB] uppercase tracking-[0.25em]">
                   Removals UK
+                </span>
+
+                <span className="text-base font-black text-[#2563EB] tracking-widest uppercase mt-1 block [text-shadow:_0_0_12px_white,_0_0_18px_white,_0_0_22px_white]">
+                  Proudly UK Based
                 </span>
               </div>
             </a>
@@ -86,7 +90,7 @@ export default function Header() {
                 href="https://wa.me/447000000000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-[#2563EB] hover:bg-[#071739] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+                className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
               >
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp
@@ -114,17 +118,21 @@ export default function Header() {
                 <img
                   src="/imagesitelogo.png"
                   alt="GB Waste Removals UK"
-                  className="w-10 h-10 object-contain shrink-0"
+                  className="w-14 h-14 object-contain shrink-0"
                 />
 
                 <div className="leading-none min-w-0">
 
-                  <span className="text-sm font-extrabold block text-[#071739] truncate">
+                  <span className="text-base font-extrabold block text-[#071739] truncate">
                     GB WASTE
                   </span>
 
-                  <span className="text-[9px] font-bold text-[#2563EB] uppercase tracking-[0.2em]">
+                  <span className="text-[10px] font-bold text-[#2563EB] uppercase tracking-[0.2em] block">
                     Removals UK
+                  </span>
+
+                  <span className="text-[12px] font-black text-[#2563EB] uppercase tracking-widest block mt-1 [text-shadow:_0_0_10px_white,_0_0_16px_white,_0_0_20px_white]">
+                    Proudly UK Based
                   </span>
 
                 </div>
@@ -144,7 +152,7 @@ export default function Header() {
                   href="https://wa.me/447000000000"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center bg-[#2563EB] hover:bg-[#071739] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
+                  className="flex items-center justify-center bg-[#25D366] hover:bg-[#1EBE5D] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
                 >
                   <MessageCircle className="w-4 h-4" />
                 </a>
