@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Phone, MessageCircle } from 'lucide-react';
+import Image from 'next/image'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,11 +40,13 @@ export default function Header() {
             {/* Logo */}
             <a href="#" className="flex items-center gap-3 group">
 
-              <img
-                src="/imagesitelogo.png"
-                alt="GB Waste Removals UK"
-                className="w-32 h-32 object-contain transition-transform duration-300 group-hover:scale-105"
-              />
+              <Image
+  src="/uk-bg.webp"
+  alt="Waste removal truck for house clearance services"
+  width={1920}
+  height={1080}
+  className="w-full h-auto"
+/>
 
               <div>
                 <span className="text-2xl font-extrabold block text-[#071739] leading-none tracking-tight">
@@ -115,11 +118,12 @@ export default function Header() {
               {/* Logo */}
               <a href="#" className="flex items-center gap-2 min-w-0">
 
-                <img
-                  src="/imagesitelogo.png"
-                  alt="GB Waste Removals UK"
-                  className="w-14 h-14 object-contain shrink-0"
-                />
+                <Image
+  src="/uk-bg.webp"
+  alt="Professional waste removal services"
+  fill
+  className="object-cover"
+/>
 
                 <div className="leading-none min-w-0">
 
