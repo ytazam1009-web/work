@@ -43,8 +43,8 @@ export default function Header() {
               <Image
   src="/uk-bg.webp"
   alt="Waste removal truck for house clearance services"
-  width={1920}
-  height={1080}
+  width={300}
+  height={300}
   className="w-full h-auto"
 />
 
@@ -121,8 +121,9 @@ export default function Header() {
                 <Image
   src="/uk-bg.webp"
   alt="Professional waste removal services"
-  fill
-  className="object-cover"
+  width={50}
+  height={50}
+  className="w-10 h-10 object-cover rounded-lg"
 />
 
                 <div className="leading-none min-w-0">
