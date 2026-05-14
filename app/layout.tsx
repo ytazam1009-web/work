@@ -96,7 +96,7 @@ export const metadata: Metadata = {
       'Affordable same-day waste removal, house clearance & junk collection services across the UK.',
 
     images: [
-      'https://gbwasteremovals.co.uk/og-image.jpg',
+    'https://work-azure-two.vercel.app/og-image.jpg',
     ],
   },
 
