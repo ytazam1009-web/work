@@ -58,7 +58,7 @@ export default function Header() {
                 </span>
 
                 <span className="text-base font-black text-[#2563EB] tracking-widest uppercase mt-1 block [text-shadow:_0_0_12px_white,_0_0_18px_white,_0_0_22px_white]">
-                  Proudly UK Based
+                  
                 </span>
               </div>
             </a>
@@ -136,7 +136,7 @@ export default function Header() {
                   </span>
 
                   <span className="text-[12px] font-black text-[#2563EB] uppercase tracking-widest block mt-1 [text-shadow:_0_0_10px_white,_0_0_16px_white,_0_0_20px_white]">
-                    Proudly UK Based
+                    
                   </span>
 
                 </div>
