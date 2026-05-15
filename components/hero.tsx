@@ -56,7 +56,7 @@ export default function Hero() {
           Fast & Affordable{' '}
 
           <span className="text-[#CF142B] relative inline-block">
-            Waste Removal
+            Same-Day Waste Removal & House Clearance Services in the UK
 
             <svg
               className="absolute -bottom-2 left-0 w-full"
