@@ -79,7 +79,8 @@ export default function Hero() {
         <p className="text-base sm:text-xl text-[#0A1F44] mb-6 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-2 font-medium">
 
           Professional <strong>household waste removal, garden waste clearance, commercial waste disposal, and construction rubbish removal</strong> across the Birmingham, Coventry & Leicester.
-          We provide same-day or collection with in 24-hour services with fully licensed waste carriers and eco-friendly recycling solutions.
+          We provide same-day or collection with in 24-hour services with fully licensed waste carriers and eco-friendly recycling solutions 
+          <strong>We are House Clearance & Waste Removal Experts — No Delays, No Hassle</strong>.
         </p>
 
         {/* FORM */}

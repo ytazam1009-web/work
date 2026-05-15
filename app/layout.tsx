@@ -55,7 +55,8 @@ export const metadata: Metadata = {
     'house moving',
     'office moving',
     'same day rubbish removal',
-    'DBS-checked staff'
+    'DBS-checked staff',
+    'Man and Van Clearance',
   ],
 
   authors: [
