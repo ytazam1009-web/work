@@ -21,7 +21,7 @@ export default function Hero() {
   };
 
   const trustBadges = [
-    { icon: Clock, text: 'Same Day Waste Removal UK (24 Hour Collection)' },
+    { icon: Clock, text: 'Same Day Waste Removal (Collection with in 24 Hours)' },
     { icon: Shield, text: 'Licensed Waste Carrier Approved in the UK' },
     { icon: Leaf, text: 'Eco-Friendly Waste Recycling & Disposal' },
   ];
@@ -46,7 +46,7 @@ export default function Hero() {
         {/* SEO BADGE */}
         <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white/80 border border-blue-200 text-[#0A1F44] text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 shadow-sm backdrop-blur-sm">
           <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
-            Proudly UK Based Waste Removal Service
+            Contact us and your waste is gone!
           <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
         </div>
 
@@ -56,7 +56,7 @@ export default function Hero() {
           Fast & Affordable{' '}
 
           <span className="text-[#CF142B] relative inline-block">
-            Waste Removal UK
+            Waste Removal
 
             <svg
               className="absolute -bottom-2 left-0 w-full"
@@ -72,14 +72,14 @@ export default function Hero() {
             </svg>
           </span>{' '}
 
-          & Junk Clearance Services
+          & Home/Office Clearance Services
         </h1>
 
         {/* SEO DESCRIPTION */}
         <p className="text-base sm:text-xl text-[#0A1F44] mb-6 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-2 font-medium">
 
-          Professional <strong>household waste removal, garden waste clearance, commercial waste disposal, and construction rubbish removal</strong> across the UK.
-          We provide same-day and 24-hour waste collection services with fully licensed waste carriers and eco-friendly recycling solutions.
+          Professional <strong>household waste removal, garden waste clearance, commercial waste disposal, and construction rubbish removal</strong> across the Birmingham, Coventry & Leicester.
+          We provide same-day or collection with in 24-hour services with fully licensed waste carriers and eco-friendly recycling solutions.
         </p>
 
         {/* FORM */}
@@ -119,7 +119,7 @@ export default function Hero() {
         </div>
 
         {/* STATS */}
-        <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-4 sm:gap-8">
+      {/*}  <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-4 sm:gap-8">
 
           <div className="flex flex-col items-center">
             <span className="text-2xl sm:text-3xl font-bold text-[#0A1F44]">15,000+</span>
@@ -146,7 +146,7 @@ export default function Hero() {
             <span className="text-2xl sm:text-3xl font-bold text-[#0A1F44]">100%</span>
             <span className="text-xs sm:text-sm text-[#0A1F44] font-medium">Eco-Friendly Waste Recycling UK</span>
           </div>
-        </div>
+        </div>*/}
 
         {/* CTA */}
         <div className="mt-8 sm:mt-12">

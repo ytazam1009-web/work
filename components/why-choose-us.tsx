@@ -13,13 +13,13 @@ const features = [
     icon: Banknote,
     title: 'No Hidden Charges',
     description:
-      'Transparent, upfront pricing with no nasty surprises. We quote by volume — you only pay for the space you use.',
+      'Transparent, upfront pricing with no nasty surprises. We quote by volume and weight — you only pay for the weight and space you use.',
     stat: '£0',
     statLabel: 'Hidden fees',
   },
   {
     icon: Shield,
-    title: 'Fully Licensed & Insured Waste Carrier UK',
+    title: 'Fully Licensed & Insured Waste Carrier of the UK',
     description:
       'We are registered Environment Agency waste carriers. All collections include a duty of care certificate for full legal compliance.',
     stat: '100%',
@@ -29,7 +29,7 @@ const features = [
     icon: Leaf,
     title: 'Eco-Friendly Waste Disposal UK',
     description:
-      'We divert up to 100% of waste from landfill by recycling and donating reusable items to local charities and organisations.',
+      'We divert up to 100% of waste from landfill by recycling.',
     stat: '100%',
     statLabel: 'Recycling rate',
   },
@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto px-2">
-            A fully licensed UK waste carrier providing fast, affordable, and eco-friendly rubbish removal services nationwide.
+            A fully licensed UK waste carrier providing fast, affordable, and eco-friendly rubbish removal services across major cities.
           </p>
         </header>
 
@@ -122,11 +122,11 @@ export default function WhyChooseUs() {
 
             <div>
               <h3 className="text-xl sm:text-2xl font-bold mb-2">
-                UK Waste Duty of Care — Guaranteed
+                Duty of Care — Guaranteed
               </h3>
 
               <p className="text-gray-300 max-w-xl text-sm sm:text-base">
-                Every job includes a <strong>Waste Transfer Note</strong> for legal compliance.
+                Our job includes a <strong>Waste Transfer Note</strong>(on demand) for legal compliance.
                 We are fully registered with the Environment Agency under registration number{' '}
                 <strong>CBDU123456</strong>.
               </p>
