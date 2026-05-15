@@ -56,20 +56,21 @@ export default function Hero() {
           Fast & Affordable{' '}
 
           <span className="text-[#CF142B] relative inline-block">
-            Waste Removal & House Clearance Services in the UK
+            Waste Removal & Clearance Service 
 
-            <svg
-              className="absolute -bottom-2 left-0 w-full"
-              viewBox="0 0 300 12"
-              fill="none"
-            >
-              <path
-                d="M2 10C50 4 100 2 150 4C200 6 250 4 298 2"
-                stroke="#CF142B"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-            </svg>
+            {/*<svg
+  className="absolute left-0 top-full mt-1 w-full"
+  viewBox="0 0 300 12"
+  preserveAspectRatio="none"
+  fill="none"
+>
+  <path
+    d="M2 10C50 4 100 2 150 4C200 6 250 4 298 2"
+    stroke="#CF142B"
+    strokeWidth="3"
+    strokeLinecap="round"
+  />
+</svg>*/}
           </span>{' '}
 
           Same-Day Waste Removal & Home/Office Clearance Services in the UK
