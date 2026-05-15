@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { Phone, MessageCircle } from 'lucide-react';
-import Image from 'next/image'
+import Image from 'next/image';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -95,7 +96,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
               >
-                <MessageCircle className="w-4 h-4" />
+                <FaWhatsapp className="w-4 h-4" />
                 WhatsApp
               </a>
 
@@ -159,7 +160,7 @@ export default function Header() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center bg-[#25D366] hover:bg-[#1EBE5D] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <FaWhatsapp className="w-4 h-4" />
                 </a>
 
                 <a
