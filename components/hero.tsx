@@ -44,7 +44,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
 
         {/* SEO BADGE */}
-        <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white/80 border border-blue-200 text-[#0A1F44] text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 shadow-sm backdrop-blur-sm">
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#0A1F44] border border-blue-400/30 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 shadow-lg backdrop-blur-sm">
           <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
             Contact us and your waste is gone!
           <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
@@ -56,7 +56,7 @@ export default function Hero() {
           Fast & Affordable{' '}
 
           <span className="text-[#CF142B] relative inline-block">
-            Same-Day Waste Removal & House Clearance Services in the UK
+            Waste Removal & House Clearance Services in the UK
 
             <svg
               className="absolute -bottom-2 left-0 w-full"
@@ -72,7 +72,7 @@ export default function Hero() {
             </svg>
           </span>{' '}
 
-          & Home/Office Clearance Services
+          Same-Day Waste Removal & Home/Office Clearance Services in the UK
         </h1>
 
         {/* SEO DESCRIPTION */}
