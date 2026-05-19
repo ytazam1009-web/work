@@ -127,8 +127,8 @@ export default function WhyChooseUs() {
 
               <p className="text-gray-300 max-w-xl text-sm sm:text-base">
                 Our job includes a <strong>Waste Transfer Note</strong>(on demand) for legal compliance.
-                We are fully registered with the Environment Agency under registration number{' '}
-                <strong>CBDU123456</strong>.
+               {/* We are fully registered with the Environment Agency under registration number{' '}
+                <strong>CBDU123456</strong>.*/}
               </p>
             </div>
 

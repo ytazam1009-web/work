@@ -201,7 +201,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-blue-100/60 flex-shrink-0">
-              Waste Carrier Licence: CBDU123456
+              {/*Waste Carrier Licence: CBDU123456*/}
             </p>
           </div>
         </div>
