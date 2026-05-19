@@ -8,6 +8,7 @@
   import Areas from '@/components/areas';
   import Contact from '@/components/contact';
   import Footer from '@/components/footer';
+  import PostcodeChecker from '@/components/postcode-checker';
 
   export default function Home() {
     return (
@@ -21,7 +22,9 @@
         <Testimonials />
         <Areas />
         <Contact />
+          <PostcodeChecker />
         <Footer />
       </main>
+      
     );
   }
