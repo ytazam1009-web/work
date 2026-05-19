@@ -89,7 +89,7 @@ export default function Testimonials() {
           </h2>
 
           <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto mb-6 sm:mb-8 px-2">
-            Over 15,000 verified customers across the UK trust our licensed waste removal service.
+            Over 1,000s verified customers across the UK trust our licensed waste removal service.
           </p>
 
           {/* rating summary */}
