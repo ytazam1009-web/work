@@ -113,7 +113,7 @@ export default function Testimonials() {
 
             <div className="flex flex-col items-center text-center">
               <span className="text-xl sm:text-2xl font-bold text-[#0A1F44]">
-                15,000+
+                1,000+
               </span>
               <span className="text-xs sm:text-sm text-gray-500">
                 Verified UK Reviews
