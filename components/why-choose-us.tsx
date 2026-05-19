@@ -45,7 +45,7 @@ const features = [
     icon: HeartHandshake,
     title: 'Trusted UK Waste Removal Service',
     description:
-      'Over 15,000 happy customers across the UK — from households, landlords, councils and businesses.',
+      'Over 1,000s happy customers across the UK — from households, landlords, councils and businesses.',
     stat: '4.9★',
     statLabel: 'Customer rating',
   },
