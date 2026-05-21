@@ -101,7 +101,7 @@ export default function Hero() {
             type="submit"
             className="bg-[#CF142B] hover:bg-red-700 text-white font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl transition-all hover:shadow-2xl hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap text-sm sm:text-base"
           >
-            Get Free Waste Quote <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+            Check Your Area <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </form>
 
