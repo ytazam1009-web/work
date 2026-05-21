@@ -198,7 +198,7 @@ export default function Contact() {
                     href="tel:00447348481091"
                     className="text-[#CF142B] font-semibold"
                   >
-                    0800 123 4567
+                    0044 7348 481091
                   </a>
                 </p>
               </div>
