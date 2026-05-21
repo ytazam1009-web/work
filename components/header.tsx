@@ -167,7 +167,7 @@ export default function Header() {
                   href="#contact"
                   className="bg-[#CF142B] hover:bg-red-700 text-white text-xs font-bold px-3 py-2 rounded-lg whitespace-nowrap transition-all shadow-sm"
                 >
-                  Quote
+                  Free Quote
                 </a>
 
               </div>
