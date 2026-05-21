@@ -86,9 +86,9 @@ export default function Services() {
             What We Remove
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2">
-            /Waste Removal Services Across the UK
-          </h2>
+          {/*<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2">
+            Waste Removal Services Across the UK
+          </h2>*/}
 
           <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto mt-4">
             From single items to full property clearances — fast, licensed, and affordable UK-wide service.
