@@ -74,7 +74,7 @@ export default function Footer() {
                 </span>
 
                 <span className="text-xs font-medium text-blue-300 uppercase tracking-wider">
-                  Removal UK
+                  Removal 
                 </span>
               </div>
             </div>
