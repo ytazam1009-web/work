@@ -20,7 +20,7 @@ export default function Header() {
     { label: 'Services', href: '#services' },
     { label: 'How It Works', href: '#how-it-works' },
     { label: 'Areas', href: '#areas' },
-    { label: 'Reviews', href: '#reviews' },
+    //{ label: 'Reviews', href: '#reviews' },
     { label: 'Contact', href: '#contact' },
   ];
 
