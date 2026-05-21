@@ -124,7 +124,7 @@ export default function Hero() {
       {/*}  <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-4 sm:gap-8">
 
           <div className="flex flex-col items-center">
-            <span className="text-2xl sm:text-3xl font-bold text-[#0A1F44]">15,000+</span>
+            <span className="text-2xl sm:text-3xl font-bold text-[#0A1F44]">1,000+</span>
             <span className="text-xs sm:text-sm text-[#0A1F44] font-medium">Happy Waste Removal Customers UK</span>
           </div>
 
@@ -159,7 +159,7 @@ export default function Hero() {
             <div className="w-7 h-7 sm:w-8 sm:h-8 bg-[#0A1F44] rounded-full flex items-center justify-center">
               <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
             </div>
-            Call us free: 0800 123 4567
+            Call us: 0734 848 1091
           </a>
         </div>
       </div>
