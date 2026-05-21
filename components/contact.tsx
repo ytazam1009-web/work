@@ -22,9 +22,9 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    detail: 'hello@gbwasteremovals.co.uk',
+    detail: 'info@gbwasteremovals.co.uk',
     sub: 'We reply within 1 hour',
-    href: 'mailto:hello@gbwasteremovals.co.uk',
+    href: 'mailto:info@gbwasteremovals.co.uk',
   },
   {
     icon: Clock,

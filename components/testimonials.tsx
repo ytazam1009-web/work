@@ -3,7 +3,7 @@ import { Star, Quote } from 'lucide-react';
 const testimonials = [
   {
     name: 'Sarah Mitchell',
-    location: 'London',
+    location: 'Leicester',
     role: 'Homeowner',
     rating: 5,
     text: 'Absolutely brilliant service! I needed a full house clearance after my mother passed away and the team were incredibly respectful, efficient, and professional. Everything was cleared in under 3 hours. Would recommend to anyone.',
@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     name: 'James Thornton',
-    location: 'Manchester',
+    location: 'Coventry',
     role: 'Landlord',
     rating: 5,
     text: "I use GB Waste Removal for all my rental properties. They're always on time, competitively priced, and I get my duty of care certificate same day. Makes end-of-tenancy turnarounds so much easier.",
@@ -30,7 +30,7 @@ const testimonials = [
   },
   {
     name: 'David Patel',
-    location: 'Leeds',
+    location: 'Birmingham',
     role: 'Building Contractor',
     rating: 5,
     text: "Best trade account I've set up. The guys are professional and the pricing is fair. For a contractor doing multiple sites a week, having a reliable waste partner is gold. Highly recommended to any tradespeople.",
@@ -39,7 +39,7 @@ const testimonials = [
   },
   {
     name: 'Rachel Thompson',
-    location: 'Bristol',
+    location: 'Birmingham',
     role: 'Estate Agent',
     rating: 5,
     text: 'We regularly refer GB Waste Removals to our clients for pre-sale clearances. Every single time they\'ve been punctual, polite, and left properties spotless. Our clients always report back positively.',
@@ -48,7 +48,7 @@ const testimonials = [
   },
   {
     name: 'Mark Wilson',
-    location: 'Edinburgh',
+    location: 'Birmingham',
     role: 'DIY Enthusiast',
     rating: 5,
     text: 'Did a complete kitchen renovation and had a mountain of plasterboard, old units and rubble. Called at 8am, they were there by 11am and had it all gone by noon. Can’t believe how easy it was. Will use again!',
