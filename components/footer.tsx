@@ -45,7 +45,7 @@ const footerLinks = {
     'FAQs',
     'Terms & Conditions',
     'Privacy Policy',
-    'Cookie Policy',
+    
   ],
 };
 
@@ -95,11 +95,11 @@ export default function Footer() {
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-300 group-hover:text-white" />
                 </div>
 
-                0800 123 4567
+                //0800 123 4567
               </a>
 
               <a
-                href="mailto:hello@gbwasteremovals.co.uk"
+                href="mailto:info@gbwasteremovals.co.uk"
                 className="flex items-center gap-3 text-xs sm:text-sm hover:text-red-300 transition-colors group"
               >
                 <div className="w-7 h-7 sm:w-8 sm:h-8 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-[#CF142B] transition-colors">
