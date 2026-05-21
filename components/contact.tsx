@@ -36,7 +36,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Head Office',
-    detail: '12 Green Lane, London',
+    detail: '37 Temple St, Birmingham',
     sub: 'EC1A 1BB',
     href: null,
   },
