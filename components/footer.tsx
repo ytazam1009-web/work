@@ -107,7 +107,7 @@ export default function Footer() {
                   <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-300 group-hover:text-white" />
                 </div>
 
-                hello@gbwasteremovals.co.uk
+                info@gbwasteremovals.co.uk
               </a>
 
               <div className="flex items-center gap-3 text-xs sm:text-sm">
