@@ -91,7 +91,7 @@ export default function Header() {
               </a>*/}
 
               <a
-                href="https://wa.me/447348481091"
+                href="https://wa.me/00447348481091"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
@@ -155,7 +155,7 @@ export default function Header() {
                 </a>*/}
 
                 <a
-                  href="https://wa.me/447348481091"
+                  href="https://wa.me/00447348481091"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center bg-[#25D366] hover:bg-[#1EBE5D] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
