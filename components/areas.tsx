@@ -39,22 +39,7 @@ export default function Areas() {
             If your area is not listed, contact us — we may still cover it.
           </p>
         </div>
-{/* Bottom CTA */}
-        <div className="mt-14 text-center">
 
-          <p className="text-gray-600 mb-5 text-sm sm:text-base">
-            Don’t see your city? Contact us — we may still cover your area.
-          </p>
-
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 bg-[#CF142B] hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-xl hover:-translate-y-0.5"
-          >
-            Check Your Area
-
-            <ArrowRight className="w-5 h-5" />
-          </a>
-        </div>
         {/* City cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -106,7 +91,22 @@ export default function Areas() {
           ))}
         </div>
 
-        
+        {/* Bottom CTA */}
+        <div className="mt-14 text-center">
+
+          <p className="text-gray-600 mb-5 text-sm sm:text-base">
+            Don’t see your city? Contact us — we may still cover your area.
+          </p>
+
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 bg-[#CF142B] hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-xl hover:-translate-y-0.5"
+          >
+            Check Your Area
+
+            <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
 
       </div>
     </section>

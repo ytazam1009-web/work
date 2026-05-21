@@ -85,25 +85,17 @@ export default function Hero() {
         </p>
 
         {/* FORM */}
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto mb-8 sm:mb-10"
-        >
-          <input
-            type="text"
-            value={postcode}
-            onChange={(e) => setPostcode(e.target.value.toUpperCase())}
-            placeholder="Enter UK postcode for waste removal service"
-            className="flex-1 px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl text-gray-900 text-sm sm:text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] shadow-xl border border-white/50"
-          />
-
-          <button
-            type="submit"
-            className="bg-[#CF142B] hover:bg-red-700 text-white font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl transition-all hover:shadow-2xl hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap text-sm sm:text-base"
-          >
-            Get Free Waste Quote <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-          </button>
-        </form>
+        <div className="mb-10">
+  <button
+    onClick={() => {
+      const areas = document.getElementById('areas');
+      if (areas) areas.scrollIntoView({ behavior: 'smooth' });
+    }}
+    className="bg-[#CF142B] hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:shadow-2xl hover:-translate-y-0.5 flex items-center gap-2 mx-auto"
+  >
+    Get Free Waste Quote <ArrowRight className="w-5 h-5" />
+  </button>
+</div>
 
         {/* TRUST */}
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6 mb-8 sm:mb-12">
