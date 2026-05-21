@@ -129,13 +129,13 @@ export default function HowItWorks() {
           <div className="relative z-10 p-6 sm:p-12 text-center">
 
             <h3 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-              Need Fast Waste Collection Anywhere In The UK?
+              Need Fast Waste Collection Anywhere In The Midland?
             </h3>
 
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-sm sm:text-lg leading-relaxed px-2">
               Same-day waste removal, rubbish clearance, garden waste disposal,
               office clearance, and junk collection available across Birmingham,
-              Coventry, Leicester, and nearby UK areas.
+              Coventry, Leicester, and nearby Midland areas.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">
