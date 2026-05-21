@@ -82,14 +82,13 @@ export default function Header() {
             {/* Desktop Buttons */}
             <div className="flex items-center gap-3">
 
-             <a
-                href="tel:00447348481091"
-                className="flex items-center gap-2 text-sm font-semibold text-[#071739] hover:text-[#2563EB] transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                0044 7348 481091
-              </a>
-
+<a
+  href="tel:00447348481091"
+  className="flex items-center gap-2 bg-[#071739] hover:bg-[#050e24] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+>
+  <Phone className="w-4 h-4" />
+  0044 7348 481091
+</a>
               <a
                 href="https://wa.me/00447348481091"
                 target="_blank"
@@ -148,11 +147,11 @@ export default function Header() {
               <div className="flex items-center gap-2 shrink-0">
 
                 <a
-                  href="tel:00447348481091"
-                  className="flex items-center justify-center text-[#071739] bg-blue-50 hover:bg-blue-100 w-9 h-9 rounded-lg transition-all"
-                >
-                  <Phone className="w-4 h-4" />
-                </a>
+  href="tel:00447348481091"
+  className="flex items-center justify-center bg-[#071739] hover:bg-[#050e24] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
+>
+  <Phone className="w-4 h-4" />
+</a>
 
                 <a
                   href="https://wa.me/00447348481091"
