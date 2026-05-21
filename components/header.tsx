@@ -84,7 +84,7 @@ export default function Header() {
 
 <a
   href="tel:00447348481091"
-  className="flex items-center gap-2 bg-[#071739] hover:bg-[#050e24] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+  className="flex items-center gap-2 bg-[#050b1a] hover:bg-[#030713] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
 >
   <Phone className="w-4 h-4" />
   0044 7348 481091
@@ -148,7 +148,7 @@ export default function Header() {
 
                 <a
   href="tel:00447348481091"
-  className="flex items-center justify-center bg-[#071739] hover:bg-[#050e24] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
+  className="flex items-center justify-center bg-[#050b1a] hover:bg-[#030713] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
 >
   <Phone className="w-4 h-4" />
 </a>
