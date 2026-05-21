@@ -14,10 +14,10 @@ import {
 const contactInfo = [
   {
     icon: Phone,
-    title: 'Call Us Free',
-    detail: '0800 123 4567',
+    title: 'Call Us',
+    detail: '07348 481 091',
     sub: 'Mon–Sun, 7am–10pm',
-    href: 'tel:08001234567',
+    href: 'tel:07348481091',
   },
   {
     icon: Mail,
@@ -195,7 +195,7 @@ export default function Contact() {
                   In a hurry? Call us free on{' '}
 
                   <a
-                    href="tel:08001234567"
+                    href="tel:00447348481091"
                     className="text-[#CF142B] font-semibold"
                   >
                     0800 123 4567
