@@ -23,9 +23,15 @@ export default function Hero() {
         </div>
 
         {/* HEADING */}
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-[#0A1F44] mb-6">
-          Fast & Affordable Waste Removal Service in the UK
-        </h1>
+<h1 className="text-4xl sm:text-6xl font-extrabold text-[#0A1F44] mb-6">
+  Fast & Affordable{' '}
+  
+  <span className="text-[#CF142B]">
+    Waste Removal
+  </span>{' '}
+  
+  Service in the UK
+</h1>
 
         {/* DESCRIPTION */}
         <p className="text-base sm:text-xl text-[#0A1F44] mb-10 max-w-3xl mx-auto">

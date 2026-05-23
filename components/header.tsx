@@ -50,11 +50,11 @@ export default function Header() {
 />
 
               <div>
-                <span className="text-2xl font-extrabold block text-[#071739] leading-none tracking-tight">
+                <span className="text-2xl font-extrabold block text-[#0A1F44] leading-none tracking-tight">
                   GB WASTE
                 </span>
 
-                <span className="text-sm font-bold text-[#2563EB] uppercase tracking-[0.25em]">
+                <span className="text-sm font-bold text-[#CF142B] uppercase tracking-[0.25em]">
                   Removals UK
                 </span>
 
@@ -84,7 +84,7 @@ export default function Header() {
 
 <a
   href="tel:+447348481091"
-  className="flex items-center gap-2 bg-[#0A1F44] hover:bg-[#030713] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+  className="flex items-center gap-2 bg-[#0A1F44] hover:bg-[#CF142B] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
 >
   <Phone className="w-4 h-4" />
   +44 7348 481091
@@ -101,7 +101,7 @@ export default function Header() {
 
               <a
                 href="#contact"
-                className="bg-[#0A1F44] hover:bg-red-700 text-white text-sm font-semibold px-5 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+                className="bg-[#CF142B] hover:bg-red-700 text-white text-sm font-semibold px-5 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
               >
                 Free Quote
               </a>
@@ -132,7 +132,7 @@ export default function Header() {
                     GB WASTE
                   </span>
 
-                  <span className="text-[10px] font-bold text-[#2563EB] uppercase tracking-[0.2em] block">
+                  <span className="text-[10px] font-bold text-[#CF142B] uppercase tracking-[0.2em] block">
                     Removals UK
                   </span>
 
@@ -148,7 +148,7 @@ export default function Header() {
 
                 <a
   href="tel:+447348481091"
-  className="flex items-center justify-center bg-[#050b1a] hover:bg-[#030713] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
+  className="flex items-center justify-center bg-[#0A1F44] hover:bg-[#CF142B] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
 >
   <Phone className="w-4 h-4" />
 </a>
@@ -164,7 +164,7 @@ export default function Header() {
 
                 <a
                   href="#contact"
-                  className="bg-[#0A1F44] hover:bg-red-700 text-white text-xs font-bold px-3 py-2 rounded-lg whitespace-nowrap transition-all shadow-sm"
+                  className="bg-[#CF142B] hover:bg-red-700 text-white text-xs font-bold px-3 py-2 rounded-lg whitespace-nowrap transition-all shadow-sm"
                 >
                   Free Quote
                 </a>
