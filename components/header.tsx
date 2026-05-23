@@ -83,14 +83,14 @@ export default function Header() {
             <div className="flex items-center gap-3">
 
 <a
-  href="tel:00447348481091"
-  className="flex items-center gap-2 bg-[#050b1a] hover:bg-[#030713] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+  href="tel:+447348481091"
+  className="flex items-center gap-2 bg-[#0A1F44] hover:bg-[#030713] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
 >
   <Phone className="w-4 h-4" />
-  0044 7348 481091
+  +44 7348 481091
 </a>
               <a
-                href="https://wa.me/00447348481091"
+                href="https://wa.me/447348481091"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
@@ -101,7 +101,7 @@ export default function Header() {
 
               <a
                 href="#contact"
-                className="bg-[#CF142B] hover:bg-red-700 text-white text-sm font-semibold px-5 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+                className="bg-[#0A1F44] hover:bg-red-700 text-white text-sm font-semibold px-5 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
               >
                 Free Quote
               </a>
@@ -147,14 +147,14 @@ export default function Header() {
               <div className="flex items-center gap-2 shrink-0">
 
                 <a
-  href="tel:00447348481091"
+  href="tel:+447348481091"
   className="flex items-center justify-center bg-[#050b1a] hover:bg-[#030713] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
 >
   <Phone className="w-4 h-4" />
 </a>
 
                 <a
-                  href="https://wa.me/00447348481091"
+                  href="https://wa.me/447348481091"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center bg-[#25D366] hover:bg-[#1EBE5D] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
@@ -164,7 +164,7 @@ export default function Header() {
 
                 <a
                   href="#contact"
-                  className="bg-[#CF142B] hover:bg-red-700 text-white text-xs font-bold px-3 py-2 rounded-lg whitespace-nowrap transition-all shadow-sm"
+                  className="bg-[#0A1F44] hover:bg-red-700 text-white text-xs font-bold px-3 py-2 rounded-lg whitespace-nowrap transition-all shadow-sm"
                 >
                   Free Quote
                 </a>
@@ -181,7 +181,7 @@ export default function Header() {
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-xs whitespace-nowrap font-semibold text-[#071739] hover:text-[#CF142B] transition-colors"
+                    className="text-xs whitespace-nowrap font-semibold text-[#0A1F44] hover:text-[#CF142B] transition-colors"
                   >
                     {link.label}
                   </a>
