@@ -192,13 +192,13 @@ export default function Contact() {
                 </p>
 
                 <p className="text-sm text-gray-500 mt-5">
-                  In a hurry? Call us free on{' '}
+                  In a hurry? Call us on{' '}
 
                   <a
-                    href="tel:00447348481091"
+                    href="tel:+447348481091"
                     className="text-[#CF142B] font-semibold"
                   >
-                    0044 7348 481091
+                    +44 7348 481091
                   </a>
                 </p>
               </div>
@@ -344,7 +344,7 @@ export default function Contact() {
                     <>
                       <Send className="w-5 h-5" />
 
-                      Get My Free Quote
+                      Get My Quote
                     </>
                   )}
                 </button>
