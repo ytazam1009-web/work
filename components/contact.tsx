@@ -196,10 +196,10 @@ export default function Contact() {
                   In a hurry? Call us on{' '}
 
                   <a
-                    href="tel:+447348481091"
+                    href="tel:+447348481092"
                     className="text-[#CF142B] font-semibold"
                   >
-                    +44 7348 481091
+                    +44 7348 481092
                   </a>
                 </p>
               </div>
