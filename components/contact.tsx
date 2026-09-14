@@ -1,5 +1,6 @@
 'use client';
 
+import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 
 import {
@@ -15,9 +16,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Call Us',
-    detail: '07348 481 091',
+    detail: '07348 481 092',
     sub: 'Mon–Sun, 7am–10pm',
-    href: 'tel:07348481091',
+    href: 'tel:07348481092',
   },
   {
     icon: Mail,

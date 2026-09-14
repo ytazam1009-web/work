@@ -61,11 +61,11 @@ export default function Hero() {
         {/* CALL */}
         <div className="mt-10">
           <a
-            href="tel:07348481091"
+            href="tel:07348481092"
             className="inline-flex items-center gap-2 bg-white border px-6 py-3 rounded-full"
           >
             <Phone className="w-4 h-4" />
-            Call us: 0734 848 1091
+            Call us: 0734 848 1092
           </a>
         </div>
 
