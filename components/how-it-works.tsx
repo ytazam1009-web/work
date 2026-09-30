@@ -10,30 +10,30 @@ const steps = [
   {
     number: '01',
     icon: Phone,
-    title: 'Get a Free Waste Removal Quote',
+    title: 'Request Your Free Waste Quote',
     description:
-      "Call us on 0800 123 4567 or fill in our fast online form for an instant quote. We provide affordable household waste removal, garden clearance, office clearance, junk removal, and commercial waste collection across the UK.",
+      'Contact our team by phone or through the online form. Tell us what needs removing, where you are located and the approximate amount of waste. Our quotation team will provide a clear quote for your collection.',
   },
   {
     number: '02',
     icon: CalendarCheck,
-    title: 'Book a Same-Day Collection',
+    title: 'Choose Your Collection Time',
     description:
-      'Choose a time that suits you. We offer same-day waste collection, next-day rubbish removal, evening pickups, and weekend bookings across Birmingham, Coventry, Leicester, and surrounding UK areas.',
+      'Once you are happy with the quote, arrange a convenient collection time. We provide waste collection appointments across Birmingham, Coventry, Leicester and surrounding Midlands areas.',
   },
   {
     number: '03',
     icon: Truck,
-    title: 'Our Team Collects Your Waste',
+    title: 'We Collect Your Waste',
     description:
-      "Our licensed waste removal team arrives on time, handles all heavy lifting, and removes your rubbish quickly and safely. No skip hire needed — just point and we'll clear everything.",
+      'Our team arrives at the agreed location, loads the waste and clears the items from your property. We handle household rubbish, garden waste, furniture, commercial waste and other suitable non-hazardous waste.',
   },
   {
     number: '04',
     icon: Recycle,
-    title: 'Eco-Friendly Waste Disposal',
+    title: 'Responsible Waste Disposal',
     description:
-      'We recycle and dispose of waste responsibly using licensed UK waste facilities. Household junk, garden waste, furniture, office waste, and builder waste are sorted for maximum recycling.',
+      'Your collected waste is taken for appropriate handling and disposal, with recyclable and reusable materials separated where suitable.',
   },
 ];
 
@@ -49,17 +49,17 @@ export default function HowItWorks() {
         <div className="text-center mb-10 sm:mb-16">
 
           <span className="text-[#CF142B] font-bold text-xs sm:text-sm uppercase tracking-[0.2em]">
-            Simple Process
+            Simple Waste Removal Process
           </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0A1F44] mt-3 mb-4">
-            Fast UK Waste Removal In 4 Easy Steps
+            How Our Waste Collection Service Works
           </h2>
 
           <p className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto px-2 leading-relaxed">
-            We make rubbish removal simple, affordable, and stress-free.
-            From household junk removal to commercial waste collection,
-            our UK waste disposal team handles everything quickly and responsibly.
+            From requesting a quote to collection and responsible disposal,
+            we make rubbish removal straightforward for homes and businesses
+            across Birmingham, Coventry, Leicester and the surrounding Midlands.
           </p>
         </div>
 
@@ -81,9 +81,7 @@ export default function HowItWorks() {
                 <div className="relative z-10 mb-5 sm:mb-6">
 
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#0A1F44] to-[#1D4ED8] rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-200">
-
                     <step.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-
                   </div>
 
                   <div className="absolute -top-2 -right-2 w-7 h-7 sm:w-8 sm:h-8 bg-[#CF142B] text-white text-xs font-bold rounded-full flex items-center justify-center shadow-lg">
@@ -129,20 +127,21 @@ export default function HowItWorks() {
           <div className="relative z-10 p-6 sm:p-12 text-center">
 
             <h3 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-              Need Fast Waste Collection Anywhere In The Midland?
+              Need Waste Collection in the Midlands?
             </h3>
 
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-sm sm:text-lg leading-relaxed px-2">
-              Same-day waste removal, rubbish clearance, garden waste disposal,
-              office clearance, and junk collection available across Birmingham,
-              Coventry, Leicester, and nearby Midland areas.
+              Request a free quote for household waste removal, garden
+              clearance, furniture collection, office clearance, commercial
+              rubbish removal or builders waste collection across Birmingham,
+              Coventry, Leicester and nearby areas.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">
 
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#CF142B] hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:shadow-2xl hover:-translate-y-1 text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-2 bg-[#CF142B] hover:bg-[#b81025] text-white font-bold px-8 py-4 rounded-xl transition-all hover:shadow-2xl hover:-translate-y-1 text-sm sm:text-base"
               >
                 Get My Free Quote
                 <ArrowRight className="w-5 h-5" />
@@ -150,7 +149,7 @@ export default function HowItWorks() {
 
               <a
                 href="tel:00447348481091"
-                className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all backdrop-blur-sm text-sm sm:text-base"
+                className="bg-white text-[#0A1F44] hover:bg-[#CF142B] hover:text-white border border-white font-bold px-8 py-4 rounded-xl transition-all text-sm sm:text-base"
               >
                 Call 0044 7348 481091
               </a>

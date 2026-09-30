@@ -3,51 +3,51 @@ import { Clock, Shield, Leaf, Banknote, Award, HeartHandshake } from 'lucide-rea
 const features = [
   {
     icon: Clock,
-    title: '24 Hours Service',
+    title: 'Flexible Waste Collection',
     description:
-      "Book 24 hours before and we'll collect there and then. Emergency collections available 7 days a week, including bank holidays.",
-    stat: '2hr',
-    statLabel: 'Avg response time',
+      'We offer convenient waste collection appointments for households and businesses, with availability for urgent and time-sensitive clearances.',
+    stat: '24hr',
+    statLabel: 'Collection availability',
   },
   {
     icon: Banknote,
-    title: 'No Hidden Charges',
+    title: 'Clear, Upfront Quotes',
     description:
-      'Transparent, upfront pricing with no nasty surprises. We quote by volume and weight — you only pay for the weight and space you use.',
+      'We aim to keep pricing straightforward, with a clear quote based on the type and amount of waste being collected.',
     stat: '£0',
     statLabel: 'Hidden fees',
   },
   {
     icon: Shield,
-    title: 'Fully Licensed & Insured Waste Carrier of the UK',
+    title: 'Registered Waste Carrier',
     description:
-      'We are registered Environment Agency waste carriers. All collections include a duty of care certificate for full legal compliance.',
-    stat: '100%',
-    statLabel: 'Legal compliance',
+      'Our waste collection service is focused on responsible handling, transportation and disposal of collected waste in line with applicable UK requirements.',
+    stat: 'UK',
+    statLabel: 'Waste collection',
   },
   {
     icon: Leaf,
-    title: 'Eco-Friendly Waste Disposal UK',
+    title: 'Responsible Waste Disposal',
     description:
-      'We divert up to 100% of waste from landfill by recycling.',
-    stat: '100%',
-    statLabel: 'Recycling rate',
+      'Collected waste is handled responsibly, with suitable materials directed towards reuse or recycling where appropriate.',
+    stat: 'Eco',
+    statLabel: 'Focused disposal',
   },
   {
     icon: Award,
-    title: 'Experienced Waste Removal Professionals',
+    title: 'Experienced Waste Removal Team',
     description:
-      'All our crews are DBS-checked, uniformed, and trained to handle waste safely and respectfully in and around your property.',
-    stat: '10yr+',
-    statLabel: 'Industry experience',
+      'Our team helps with household clearances, bulky waste, garden waste, commercial rubbish and other non-hazardous waste removal requirements.',
+    stat: 'Pro',
+    statLabel: 'Removal service',
   },
   {
     icon: HeartHandshake,
-    title: 'Trusted UK Waste Removal Service',
+    title: 'Local Midlands Service',
     description:
-      'Over 1,000s happy customers across the UK — from households, landlords, councils and businesses.',
-    stat: '4.9★',
-    statLabel: 'Customer rating',
+      'We provide waste removal for homeowners, landlords, tenants and businesses across Birmingham, Coventry, Leicester and surrounding areas.',
+    stat: '3+',
+    statLabel: 'Main cities covered',
   },
 ];
 
@@ -56,22 +56,25 @@ export default function WhyChooseUs() {
     <section
       className="py-16 sm:py-24 bg-white"
       id="why-choose-us"
-      aria-label="Why choose UK waste removal service"
+      aria-label="Why choose GB Waste Removals"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* SEO HEADER */}
         <header className="text-center mb-10 sm:mb-16">
           <span className="text-[#CF142B] font-semibold text-xs sm:text-sm uppercase tracking-widest">
-            Why Choose Us
+            Why Choose GB Waste Removals
           </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2 mb-3 sm:mb-4">
-            The UK’s Most Trusted Waste Removal Team
+            Reliable Waste Removal Across the Midlands
           </h2>
 
-          <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto px-2">
-            A fully licensed UK waste carrier providing fast, affordable, and eco-friendly rubbish removal services across major cities.
+          <p className="text-base sm:text-xl text-gray-500 max-w-3xl mx-auto px-2">
+            A professional waste removal service helping homes, landlords and
+            businesses with rubbish collection, house clearance, garden waste,
+            bulky items and commercial waste across Birmingham, Coventry,
+            Leicester and surrounding areas.
           </p>
         </header>
 
@@ -116,27 +119,27 @@ export default function WhyChooseUs() {
         {/* TRUST STRIP */}
         <div
           className="mt-10 sm:mt-16 bg-[#0A1F44] rounded-2xl p-6 sm:p-8 md:p-10 text-white"
-          aria-label="Waste duty of care guarantee UK"
+          aria-label="Waste transfer documentation"
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
             <div>
               <h3 className="text-xl sm:text-2xl font-bold mb-2">
-                Duty of Care — Guaranteed
+                Waste Transfer Documentation
               </h3>
 
               <p className="text-gray-300 max-w-xl text-sm sm:text-base">
-                Our job includes a <strong>Waste Transfer Note</strong>(on demand) for legal compliance.
-               {/* We are fully registered with the Environment Agency under registration number{' '}
-                <strong>CBDU123456</strong>.*/}
+                Where applicable, we can provide a{' '}
+                <strong>Waste Transfer Note</strong> for collected waste to
+                support the required duty of care documentation.
               </p>
             </div>
 
             <a
               href="#contact"
-              className="flex-shrink-0 bg-[#CF142B] text-white font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl hover:bg-red-700 transition-colors whitespace-nowrap shadow-md text-sm sm:text-base"
+              className="flex-shrink-0 bg-[#CF142B] hover:bg-[#b81025] text-white font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl transition-colors whitespace-nowrap shadow-md text-sm sm:text-base"
             >
-              Book Waste Removal
+              Get a Free Quote
             </a>
           </div>
         </div>

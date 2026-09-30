@@ -12,7 +12,7 @@
 
   export default function Home() {
     return (
-      <main className="pt-20 lg:pt-24">
+      <main className="pt-[100px] xl:pt-[180px]">
         <Header />
         <Hero />
         <StatsBanner />

@@ -3,11 +3,11 @@ import { Home, Building2, Trees, Sofa, Construction, Recycle, ArrowRight } from 
 const services = [
   {
     icon: Home,
-    title: 'Household waste',
+    title: 'Household Waste Removal',
     description:
-      'Complete house clearances, old furniture, appliances, general waste — we handle it all quickly and responsibly.',
+      'Reliable household rubbish removal for unwanted items, general waste and property clearances across Birmingham, Coventry, Leicester and surrounding Midlands areas.',
     items: [
-      'General household waste',
+      'General household rubbish',
       'Old appliances & white goods',
       'Furniture & mattresses',
       'Clothing & textiles',
@@ -15,9 +15,9 @@ const services = [
   },
   {
     icon: Trees,
-    title: 'Garden Waste',
+    title: 'Garden Waste Removal',
     description:
-      'Grass cuttings, branches, soil, paving slabs — keep your garden clean with fast removal.',
+      'Clear unwanted garden waste quickly, including grass cuttings, branches, soil and outdoor items from homes across the Midlands.',
     items: [
       'Grass & hedge cuttings',
       'Tree branches & stumps',
@@ -27,21 +27,21 @@ const services = [
   },
   {
     icon: Building2,
-    title: 'Commercial Waste',
+    title: 'Commercial Waste Removal',
     description:
-      'Office clearances, retail fit-outs, warehouse cleanouts — flexible and reliable service.',
+      'Commercial rubbish removal for offices, shops, warehouses and other business premises across Birmingham, Coventry, Leicester and nearby areas.',
     items: [
       'Office furniture & equipment',
       'Retail & restaurant waste',
       'Warehouse clearances',
-      'Regular collections',
+      'Business waste collections',
     ],
   },
   {
     icon: Construction,
-    title: 'Construction Waste',
+    title: 'Builders & Construction Waste',
     description:
-      'Builders, contractors & DIYers — we remove construction debris quickly and safely.',
+      'Removal of non-hazardous building and renovation waste for builders, contractors and DIY projects across the Midlands.',
     items: [
       'Bricks & concrete',
       'Plasterboard & timber',
@@ -51,9 +51,9 @@ const services = [
   },
   {
     icon: Sofa,
-    title: 'Furniture & Bulky Items',
+    title: 'Furniture & Bulky Waste',
     description:
-      "Sofas, wardrobes, fridges — if you can't lift it, we can.",
+      'Convenient removal of unwanted furniture and bulky household items, including sofas, wardrobes, beds and large appliances.',
     items: [
       'Sofas & armchairs',
       'Wardrobes & beds',
@@ -63,9 +63,9 @@ const services = [
   },
   {
     icon: Recycle,
-    title: 'WEEE & Electronics',
+    title: 'WEEE & Electrical Waste',
     description:
-      'Safe disposal of electrical waste with full compliance documentation.',
+      'Responsible collection and disposal of waste electrical and electronic equipment from homes and businesses.',
     items: [
       'TVs & monitors',
       'Computers & laptops',
@@ -83,15 +83,18 @@ export default function Services() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-[#CF142B] font-semibold text-xs sm:text-sm uppercase tracking-widest">
-            What We Remove
+            Waste Removal Services
           </span>
 
-          {/*<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2">
-            Waste Removal Services Across the UK
-          </h2>*/}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2">
+            Waste Removal Services Across the Midlands
+          </h2>
 
-          <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto mt-4">
-            From single items to full property clearances — fast, licensed, and affordable UK-wide service.
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto mt-4">
+            From household rubbish and garden waste to furniture, commercial
+            clearances and builders waste, GB Waste Removals provides practical
+            waste collection services across Birmingham, Coventry, Leicester
+            and surrounding Midlands areas.
           </p>
         </div>
 
@@ -120,7 +123,10 @@ export default function Services() {
               {/* Items */}
               <ul className="space-y-2 mb-5">
                 {service.items.map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-sm text-gray-600">
+                  <li
+                    key={item}
+                    className="flex items-center gap-2 text-sm text-gray-600"
+                  >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#CF142B]" />
                     {item}
                   </li>
@@ -130,9 +136,10 @@ export default function Services() {
               {/* CTA */}
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#CF142B] hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 bg-[#CF142B] hover:bg-[#b81025] text-white text-sm font-semibold px-5 py-3 rounded-xl transition-all"
               >
-                Get a quote <ArrowRight className="w-4 h-4" />
+                Get a Free Quote
+                <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           ))}

@@ -1,364 +1,395 @@
 'use client';
 
-import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 
 import {
-  Phone,
-  Mail,
-  Clock,
-  MapPin,
-  Send,
-  CircleCheck as CheckCircle,
+Phone,
+Mail,
+Clock,
+MapPin,
+Send,
+CircleCheck as CheckCircle,
 } from 'lucide-react';
 
 const contactInfo = [
-  {
-    icon: Phone,
-    title: 'Call Us',
-    detail: '07348 481 092',
-    sub: 'Mon–Sun, 7am–10pm',
-    href: 'tel:07348481092',
-  },
-  {
-    icon: Mail,
-    title: 'Email Us',
-    detail: 'info@gbwasteremovals.co.uk',
-    sub: 'We reply within 1 hour',
-    href: 'mailto:info@gbwasteremovals.co.uk',
-  },
-  {
-    icon: Clock,
-    title: 'Opening Hours',
-    detail: 'Mon–Sun: 7am–10pm',
-    sub: 'Same-day slots until 8pm',
-    href: null,
-  },
-  {
-    icon: MapPin,
-    title: 'Head Office',
-    detail: '37 Temple St, Birmingham',
-    sub: 'EC1A 1BB',
-    href: null,
-  },
+{
+icon: Phone,
+title: 'Call Us',
+detail: '07348 481 092',
+sub: 'Mon–Sun, 7am–10pm',
+href: 'tel:07348481092',
+},
+{
+icon: Mail,
+title: 'Email Us',
+detail: '[info@gbwasteremovals.co.uk](mailto:info@gbwasteremovals.co.uk)',
+sub: 'We reply within 1 hour',
+href: 'mailto:info@gbwasteremovals.co.uk',
+},
+{
+icon: Clock,
+title: 'Opening Hours',
+detail: 'Mon–Sun: 7am–10pm',
+sub: 'Same-day slots until 8pm',
+href: null,
+},
+{
+icon: MapPin,
+title: 'Head Office',
+detail: '37 Temple St, Birmingham',
+sub: 'EC1A 1BB',
+href: null,
+},
 ];
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    postcode: '',
-    service: '',
-    message: '',
+const [form, setForm] = useState({
+name: '',
+phone: '',
+email: '',
+postcode: '',
+service: '',
+message: '',
+});
+
+const [submitted, setSubmitted] = useState(false);
+const [loading, setLoading] = useState(false);
+const [error, setError] = useState(false);
+
+const handleChange = (
+e: React.ChangeEvent<
+HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+>
+) => {
+setForm({ ...form, [e.target.name]: e.target.value });
+};
+
+const handleSubmit = async (e: React.FormEvent) => {
+e.preventDefault();
+
+if (loading) return;
+
+setLoading(true);
+setError(false);
+
+try {
+  const res = await fetch('/api/contacts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(form),
   });
 
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const data = await res.json();
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    setLoading(true);
-
-    await new Promise((r) => setTimeout(r, 1000));
-
-    setLoading(false);
-
+  if (res.ok && data.success) {
     setSubmitted(true);
-  };
+  } else {
+    setError(true);
+  }
+} catch (err) {
+  console.error('Contact form error:', err);
+  setError(true);
+}
 
-  return (
-    <section
-      id="contact"
-      className="py-16 sm:py-24 bg-gradient-to-b from-blue-50 to-white"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+setLoading(false);
 
-        {/* Heading */}
-        <div className="text-center mb-10 sm:mb-16">
+};
 
-          <span className="text-[#CF142B] font-bold text-xs sm:text-sm uppercase tracking-[0.2em]">
-            Get In Touch
-          </span>
+return ( <section
+   id="contact"
+   className="py-16 sm:py-24 bg-gradient-to-b from-blue-50 to-white"
+ > <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2 mb-3 sm:mb-4">
-            Get Your Free Quote Today
-          </h2>
+    {/* Heading */}
+    <div className="text-center mb-10 sm:mb-16">
 
-          <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto px-2">
-            Fill in the form below and we'll get back to you within 60 minutes
-            with a free no-obligation quote.
-          </p>
-        </div>
+      <span className="text-[#CF142B] font-bold text-xs sm:text-sm uppercase tracking-[0.2em]">
+        Get In Touch
+      </span>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-12">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2 mb-3 sm:mb-4">
+        Get Your Free Quote Today
+      </h2>
 
-          {/* Contact Info */}
-          <div className="lg:col-span-2 flex flex-col gap-4 sm:gap-6">
+      <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto px-2">
+        Fill in the form below and we'll get back to you within 60 minutes
+        with a free no-obligation quote.
+      </p>
+    </div>
 
-            {contactInfo.map(({ icon: Icon, title, detail, sub, href }) => (
-              <div
-                key={title}
-                className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-xl transition-all"
-              >
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-12">
 
-                <div className="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+      {/* Contact Info */}
+      <div className="lg:col-span-2 flex flex-col gap-4 sm:gap-6">
 
-                  <Icon className="w-5 h-5 text-[#0A1F44]" />
-                </div>
+        {contactInfo.map(({ icon: Icon, title, detail, sub, href }) => (
+          <div
+            key={title}
+            className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-xl transition-all"
+          >
 
-                <div>
+            <div className="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
 
-                  <p className="text-xs font-bold text-[#CF142B] uppercase tracking-wider mb-1">
-                    {title}
-                  </p>
+              <Icon className="w-5 h-5 text-[#0A1F44]" />
+            </div>
 
-                  {href ? (
-                    <a
-                      href={href}
-                      className="text-sm sm:text-base font-semibold text-[#0A1F44] hover:text-[#CF142B] transition-colors"
-                    >
-                      {detail}
-                    </a>
-                  ) : (
-                    <p className="text-sm sm:text-base font-semibold text-[#0A1F44]">
-                      {detail}
-                    </p>
-                  )}
+            <div>
 
-                  <p className="text-xs sm:text-sm text-gray-500 mt-1">
-                    {sub}
-                  </p>
-                </div>
-              </div>
-            ))}
+              <p className="text-xs font-bold text-[#CF142B] uppercase tracking-wider mb-1">
+                {title}
+              </p>
 
-            {/* Promise Box */}
-            <div className="bg-[#0A1F44] text-white rounded-2xl p-6 mt-1 shadow-2xl">
+              {href ? (
+                <a
+                  href={href}
+                  className="text-sm sm:text-base font-semibold text-[#0A1F44] hover:text-[#CF142B] transition-colors"
+                >
+                  {detail}
+                </a>
+              ) : (
+                <p className="text-sm sm:text-base font-semibold text-[#0A1F44]">
+                  {detail}
+                </p>
+              )}
 
-              <h4 className="font-bold text-lg mb-4">
-                Our Promise to You
-              </h4>
-
-              <ul className="space-y-3 text-sm text-blue-100">
-
-                {[
-                  'Free no-obligation quotes',
-                  'Response within 60 minutes',
-                  'Service available within 24 hours',
-                  'No cancellation fees',
-                  'Fully licensed & insured',
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-2"
-                  >
-
-                    <CheckCircle className="w-4 h-4 text-yellow-400 flex-shrink-0" />
-
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-xs sm:text-sm text-gray-500 mt-1">
+                {sub}
+              </p>
             </div>
           </div>
+        ))}
 
-          {/* Form */}
-          <div className="lg:col-span-3">
+        {/* Promise Box */}
+        <div className="bg-[#0A1F44] text-white rounded-2xl p-6 mt-1 shadow-2xl">
 
-            {submitted ? (
+          <h4 className="font-bold text-lg mb-4">
+            Our Promise to You
+          </h4>
 
-              <div className="h-full flex flex-col items-center justify-center text-center py-14 sm:py-20 bg-white rounded-3xl border border-blue-100 shadow-xl px-4">
+          <ul className="space-y-3 text-sm text-blue-100">
 
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            {[
+              'Free no-obligation quotes',
+              'Response within 60 minutes',
+              'Service available within 24 hours',
+              'No cancellation fees',
+              'Fully licensed & insured',
+            ].map((item) => (
 
-                  <CheckCircle className="w-10 h-10 text-green-600" />
-                </div>
-
-                <h3 className="text-2xl font-bold text-[#0A1F44] mb-3">
-                  Quote Request Sent!
-                </h3>
-
-                <p className="text-gray-600 max-w-md text-sm sm:text-base leading-relaxed">
-                  Thanks, <strong>{form.name}</strong>! Our team will review
-                  your request and contact you within 60 minutes with a
-                  competitive quote.
-                </p>
-
-                <p className="text-sm text-gray-500 mt-5">
-                  In a hurry? Call us on{' '}
-
-                  <a
-                    href="tel:+447348481092"
-                    className="text-[#CF142B] font-semibold"
-                  >
-                    +44 7348 481092
-                  </a>
-                </p>
-              </div>
-
-            ) : (
-
-              <form
-                onSubmit={handleSubmit}
-                className="bg-white rounded-3xl p-6 sm:p-8 border border-blue-100 shadow-xl"
+              <li
+                key={item}
+                className="flex items-center gap-2"
               >
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <CheckCircle className="w-4 h-4 text-yellow-400 flex-shrink-0" />
 
-                  {/* Name */}
-                  <div>
-                    <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
-                      Full Name *
-                    </label>
-
-                    <input
-                      name="name"
-                      required
-                      value={form.name}
-                      onChange={handleChange}
-                      placeholder="John Smith"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm"
-                    />
-                  </div>
-
-                  {/* Phone */}
-                  <div>
-                    <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
-                      Phone Number *
-                    </label>
-
-                    <input
-                      name="phone"
-                      required
-                      type="tel"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="07700 900000"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm"
-                    />
-                  </div>
-
-                  {/* Email */}
-                  <div>
-                    <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
-                      Email Address
-                    </label>
-
-                    <input
-                      name="email"
-                      type="email"
-                      value={form.email}
-                      onChange={handleChange}
-                      placeholder="john@example.com"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm"
-                    />
-                  </div>
-
-                  {/* Postcode */}
-                  <div>
-                    <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
-                      Your Postcode *
-                    </label>
-
-                    <input
-                      name="postcode"
-                      required
-                      value={form.postcode}
-                      onChange={(e) =>
-                        setForm({
-                          ...form,
-                          postcode: e.target.value.toUpperCase(),
-                        })
-                      }
-                      placeholder="SW1A 1AA"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm"
-                    />
-                  </div>
-
-                  {/* Service */}
-                  <div className="sm:col-span-2">
-
-                    <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
-                      Service Required *
-                    </label>
-
-                    <select
-                      name="service"
-                      required
-                      value={form.service}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm text-gray-700"
-                    >
-                      <option value="">Select a service...</option>
-                      <option>Household Waste Removal</option>
-                      <option>Garden Waste Removal</option>
-                      <option>Commercial Waste</option>
-                      <option>Construction / Builder Waste</option>
-                      <option>Furniture & Bulky Items</option>
-                      <option>House Clearance & Moving</option>
-                      <option>Office Clearance & Moving</option>
-                      <option>WEEE / Electronics</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-
-                  {/* Message */}
-                  <div className="sm:col-span-2">
-
-                    <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
-                      Tell Us More
-                    </label>
-
-                    <textarea
-                      name="message"
-                      rows={5}
-                      value={form.message}
-                      onChange={handleChange}
-                      placeholder="Describe what needs removing, approximate volume, access details, and preferred dates/times..."
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm resize-none"
-                    />
-                  </div>
-                </div>
-
-                {/* Submit */}
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full mt-6 bg-[#CF142B] hover:bg-red-700 disabled:bg-red-400 text-white font-bold py-4 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-2 text-sm sm:text-base"
-                >
-
-                  {loading ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-
-                      Sending Request...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-
-                      Get My Quote
-                    </>
-                  )}
-                </button>
-
-                <p className="text-center text-xs text-gray-400 mt-3">
-                  By submitting you agree to our privacy policy.
-                  We never share your data.
-                </p>
-              </form>
-            )}
-          </div>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-    </section>
-  );
+
+      {/* Form */}
+      <div className="lg:col-span-3">
+
+        {submitted ? (
+
+          <div className="h-full flex flex-col items-center justify-center text-center py-14 sm:py-20 bg-white rounded-3xl border border-blue-100 shadow-xl px-4">
+
+            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
+
+              <CheckCircle className="w-10 h-10 text-green-600" />
+            </div>
+
+            <h3 className="text-2xl font-bold text-[#0A1F44] mb-3">
+              Quote Request Sent!
+            </h3>
+
+            <p className="text-gray-600 max-w-md text-sm sm:text-base leading-relaxed">
+              Thanks, <strong>{form.name}</strong>! Our team will review
+              your request and contact you within 60 minutes with a
+              competitive quote.
+            </p>
+
+            <p className="text-sm text-gray-500 mt-5">
+              In a hurry? Call us on{' '}
+
+              <a
+                href="tel:+447348481092"
+                className="text-[#CF142B] font-semibold"
+              >
+                +44 7348 481092
+              </a>
+            </p>
+          </div>
+
+        ) : (
+
+          <form
+            id="quote-form"
+            onSubmit={handleSubmit}
+            className="bg-white rounded-3xl p-6 sm:p-8 border border-blue-100 shadow-xl"
+          >
+
+            {error && (
+              <div className="mb-5 rounded-xl border border-red-200 bg-red-50 p-4 text-center text-sm font-semibold text-red-600">
+                Something went wrong. Please try again or call us directly.
+              </div>
+            )}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+              {/* Name */}
+              <div>
+                <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
+                  Full Name *
+                </label>
+
+                <input
+                  name="name"
+                  required
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="John Smith"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm"
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
+                  Phone Number *
+                </label>
+
+                <input
+                  name="phone"
+                  required
+                  type="tel"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="07700 900000"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
+                  Email Address
+                </label>
+
+                <input
+                  name="email"
+                  type="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="john@example.com"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm"
+                />
+              </div>
+
+              {/* Postcode */}
+              <div>
+                <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
+                  Your Postcode *
+                </label>
+
+                <input
+                  name="postcode"
+                  required
+                  value={form.postcode}
+                  onChange={(e) =>
+                    setForm({
+                      ...form,
+                      postcode: e.target.value.toUpperCase(),
+                    })
+                  }
+                  placeholder="SW1A 1AA"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm"
+                />
+              </div>
+
+              {/* Service */}
+              <div className="sm:col-span-2">
+
+                <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
+                  Service Required *
+                </label>
+
+                <select
+name="service"
+required
+value={form.service}
+onChange={handleChange}
+className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm text-gray-700"
+
+>
+
+  <option value="">Select a service...</option>
+  <option>Household Waste Removal</option>
+  <option>Garden Waste Removal</option>
+  <option>Commercial Waste Removal</option>
+  <option>Builders & Construction Waste</option>
+  <option>Furniture & Bulky Waste</option>
+  <option>WEEE & Electrical Waste</option>
+</select>
+
+              </div>
+
+              {/* Message */}
+              <div className="sm:col-span-2">
+
+                <label className="block text-sm font-semibold text-[#0A1F44] mb-2">
+                  Tell Us More
+                </label>
+
+                <textarea
+                  name="message"
+                  rows={5}
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Describe what needs removing, approximate volume, access details, and preferred dates/times..."
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A1F44] bg-white text-sm resize-none"
+                />
+              </div>
+            </div>
+
+            {/* Submit */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full mt-6 bg-[#CF142B] hover:bg-red-700 disabled:bg-red-400 text-white font-bold py-4 rounded-xl transition-all hover:shadow-xl flex items-center justify-center gap-2 text-sm sm:text-base"
+            >
+
+              {loading ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+
+                  Sending Request...
+                </>
+              ) : (
+                <>
+                  <Send className="w-5 h-5" />
+
+                  Get My Quote
+                </>
+              )}
+            </button>
+
+            <p className="text-center text-xs text-gray-400 mt-3">
+              By submitting you agree to our privacy policy.
+              We never share your data.
+            </p>
+          </form>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+);
 }
