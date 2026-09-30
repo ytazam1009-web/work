@@ -70,7 +70,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 bg-white text-[#0A1F44] border-2 border-white px-6 py-3 rounded-full font-bold hover:bg-[#CF142B] hover:text-white hover:border-[#CF142B] transition-all"
           >
             <Phone className="w-4 h-4" />
-            Call us: 0734 848 1092
+            Call us: 07337 976 694
           </a>
         </div>
 

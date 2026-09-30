@@ -15,9 +15,9 @@ const contactInfo = [
 {
 icon: Phone,
 title: 'Call Us',
-detail: '07348 481 092',
+detail: '07337 976 694',
 sub: 'Mon–Sun, 7am–10pm',
-href: 'tel:07348481092',
+href: 'tel:07337976694',
 },
 {
 icon: Mail,
@@ -36,8 +36,8 @@ href: null,
 {
 icon: MapPin,
 title: 'Head Office',
-detail: '37 Temple St, Birmingham',
-sub: 'EC1A 1BB',
+detail: 'Office 1, Izabella House 24-26 Regent Place City Centre Birmingham',
+sub: 'B1 3NJ',
 href: null,
 },
 ];

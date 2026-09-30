@@ -27,6 +27,8 @@ const footerLinks = {
     'Birmingham',
     'Coventry',
     'Leicester',
+    'Wolverhampton',
+    'Walsall',
   ],
 
   Company: [
@@ -87,7 +89,7 @@ export default function Footer() {
             <div className="space-y-2.5 sm:space-y-3 mb-4 sm:mb-6">
 
               <a
-                href="tel:08001234567"
+                href="tel:+44 7337 976694"
                 className="flex items-center gap-3 text-xs sm:text-sm hover:text-red-300 transition-colors group"
               >
                 <div className="w-7 h-7 sm:w-8 sm:h-8 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-[#CF142B] transition-colors">
@@ -95,7 +97,7 @@ export default function Footer() {
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-300 group-hover:text-white" />
                 </div>
 
-                //0800 123 4567
+                //+44 7337 976694
               </a>
 
               <a
@@ -117,7 +119,7 @@ export default function Footer() {
                   <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-300" />
                 </div>
 
-                12 Green Lane, London, EC1A 1BB
+                Office 1, Izabella House 24-26 Regent Place City Centre Birmingham B1 3NJ GB
               </div>
             </div>
 
