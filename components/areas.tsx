@@ -31,6 +31,26 @@ const areas = [
       'Braunstone',
     ],
   },
+  {
+    city: 'Walsall',
+    areas: [
+      'Town Centre',
+      'Bloxwich',
+      'Aldridge',
+      'Pelsall',
+      'Willenhall',
+    ],
+  },
+  {
+    city: 'Wolverhampton',
+    areas: [
+      'City Centre',
+      'Tettenhall',
+      'Penn',
+      'Wednesfield',
+      'Bilston',
+    ],
+  },
 ];
 
 export default function Areas() {
@@ -49,27 +69,35 @@ export default function Areas() {
           </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2 mb-3 sm:mb-4 leading-tight">
-            Waste Removal in Birmingham, Coventry & Leicester
+            Waste Removal in Birmingham, Coventry, Leicester, Walsall & Wolverhampton
           </h2>
 
           <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto px-2 leading-relaxed">
             GB Waste Removals provides household, garden, furniture and
-            commercial waste collection across Birmingham, Coventry, Leicester
-            and surrounding Midlands areas. If your location is not listed,
-            contact us to check availability.
+            commercial waste collection across Birmingham, Coventry, Leicester,
+            Walsall, Wolverhampton and surrounding Midlands areas. If your
+            location is not listed, contact us to check availability.
           </p>
 
         </div>
 
         {/* City Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
 
-          {areas.map((area) => (
-            area.city === 'Birmingham' ? (
+          {areas.map((area, index) => {
+            const isBottomRow = index >= 3;
+
+            return area.city === 'Birmingham' ? (
               <a
                 key={area.city}
                 href="/birmingham"
-                className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 hover:border-[#CF142B]/30 hover:shadow-2xl transition-all duration-300 group block"
+                className={`bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 hover:border-[#CF142B]/30 hover:shadow-2xl transition-all duration-300 group block ${
+                  isBottomRow
+                    ? index === 3
+                      ? 'lg:col-start-2 lg:col-span-2'
+                      : 'lg:col-start-4 lg:col-span-2'
+                    : 'lg:col-span-2'
+                }`}
               >
 
                 {/* Card Heading */}
@@ -116,7 +144,13 @@ export default function Areas() {
             ) : (
               <div
                 key={area.city}
-                className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 hover:border-[#CF142B]/30 hover:shadow-2xl transition-all duration-300 group"
+                className={`bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 hover:border-[#CF142B]/30 hover:shadow-2xl transition-all duration-300 group ${
+                  isBottomRow
+                    ? index === 3
+                      ? 'lg:col-start-2 lg:col-span-2'
+                      : 'lg:col-start-4 lg:col-span-2'
+                    : 'lg:col-span-2'
+                }`}
               >
 
                 {/* Card Heading */}
@@ -152,7 +186,15 @@ export default function Areas() {
 
                 {/* CTA */}
                 <a
-                  href="#contact"
+                  href={
+                    area.city === 'Coventry'
+                      ? '/coventry'
+                      : area.city === 'Leicester'
+                        ? '/leicester'
+                        : area.city === 'Walsall'
+                          ? '/walsall'
+                          : '/wolverhampton'
+                  }
                   className="inline-flex items-center gap-2 bg-[#CF142B] hover:bg-[#b81025] text-white text-sm font-semibold px-5 py-3 rounded-xl mt-6 transition-all"
                 >
                   Get a {area.city} Quote
@@ -161,8 +203,8 @@ export default function Areas() {
                 </a>
 
               </div>
-            )
-          ))}
+            );
+          })}
 
         </div>
 
