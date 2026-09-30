@@ -4,7 +4,7 @@ const stats = [
   { icon: Users, value: '1,000s', label: 'Happy Customers' },
   { icon: Recycle, value: '100%', label: 'Waste Recycled' },
   { icon: Zap, value: 'Same Day', label: 'Collection Available' },
-  { icon: ThumbsUp, value: '4.9/5', label: 'Customer Rating' },
+  { icon: ThumbsUp, value: '5/5', label: 'Customer Rating' },
 ];
 
 export default function StatsBanner() {

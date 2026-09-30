@@ -97,7 +97,7 @@ export default function Testimonials() {
 
             <div className="flex flex-col items-center">
               <span className="text-4xl sm:text-5xl font-bold text-[#0A1F44]">
-                4.9
+                05
               </span>
 
               <div className="flex gap-1 my-1">
