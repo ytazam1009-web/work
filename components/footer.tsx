@@ -97,7 +97,7 @@ export default function Footer() {
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-300 group-hover:text-white" />
                 </div>
 
-                //+44 7337 976694
+                +44 7337 976694
               </a>
 
               <a
