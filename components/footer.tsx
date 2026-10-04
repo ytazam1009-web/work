@@ -1,3 +1,4 @@
+import WasteCarrierBadge from "./common/WasteCarrierBadge";
 import {
   Truck,
   Phone,
@@ -172,50 +173,14 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Accreditation */}
-      <div className="border-t border-white/10">
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
-
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
-
-            <div className="flex flex-wrap items-center gap-2 sm:gap-4 lg:gap-6">
-
-              {[
-                'Environment Agency Registered',
-                'ISO 14001 Certified',
-                'CHAS Accredited',
-                'Trustpilot Excellent',
-              ].map((badge) => (
-
-                <div
-                  key={badge}
-                  className="flex items-center gap-1.5 sm:gap-2 bg-white/5 rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 border border-white/5"
-                >
-                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#CF142B]" />
-
-                  <span className="text-xs font-medium text-blue-100/80">
-                    {badge}
-                  </span>
-                </div>
-
-              ))}
-            </div>
-
-            <p className="text-xs text-blue-100/60 flex-shrink-0">
-  Waste Carrier Registration:{' '}
-  <a
-    href="https://environment.data.gov.uk/public-register/view/search-waste-carriers-brokers"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-blue-100 hover:text-white underline transition-colors"
-  >
-    CBDU662042
-  </a>
-</p>
-          </div>
-        </div>
-      </div>
+      {/* Waste Carrier Accreditation */}
+<div className="border-t border-white/10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+    <div className="flex justify-center">
+      <WasteCarrierBadge />
+    </div>
+  </div>
+</div>
 
       {/* Bottom */}
       <div className="border-t border-white/10">
