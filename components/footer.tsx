@@ -203,8 +203,16 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-blue-100/60 flex-shrink-0">
-              {/*Waste Carrier Licence: CBDU123456*/}
-            </p>
+  Waste Carrier Registration:{' '}
+  <a
+    href="https://environment.data.gov.uk/public-register/view/search-waste-carriers-brokers"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-100 hover:text-white underline transition-colors"
+  >
+    CBDU662042
+  </a>
+</p>
           </div>
         </div>
       </div>
