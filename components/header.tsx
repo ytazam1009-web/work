@@ -12,11 +12,29 @@ interface HeaderProps {
 export default function Header({ showBackButton = false }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [headerHovered, setHeaderHovered] = useState(false);
+  const [cityPhone, setCityPhone] = useState('07337 976694');
+  const [cityPhoneLink, setCityPhoneLink] = useState('+447418628511');
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
 
     window.addEventListener('scroll', handleScroll);
+
+    const path = window.location.pathname.toLowerCase();
+
+    if (path === '/birmingham') {
+      setCityPhone('0121 838 5771');
+      setCityPhoneLink('+441218385771');
+    } else if (path === '/leicester') {
+      setCityPhone('0116 504 4442');
+      setCityPhoneLink('+441165044442');
+    } else if (path === '/coventry') {
+      setCityPhone('024 7552 2454');
+      setCityPhoneLink('+442475522454');
+    } else if (path === '/walsall' || path === '/wolverhampton') {
+      setCityPhone('01902 962 502');
+      setCityPhoneLink('+441902962502');
+    }
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -107,11 +125,11 @@ export default function Header({ showBackButton = false }: HeaderProps) {
             <div className="flex items-center gap-3">
 
               <a
-                href="tel:+447418628511"
+                href={`tel:${cityPhoneLink}`}
                 className="flex items-center gap-2 bg-[#0A1F44] hover:bg-[#CF142B] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
               >
                 <Phone className="w-4 h-4" />
-                07337 976694
+                {cityPhone}
               </a>
 
               <a
@@ -172,7 +190,7 @@ export default function Header({ showBackButton = false }: HeaderProps) {
               <div className="flex items-center gap-2 shrink-0">
 
                 <a
-                  href="tel:+447418628511"
+                  href={`tel:${cityPhoneLink}`}
                   className="flex items-center justify-center bg-[#0A1F44] hover:bg-[#CF142B] text-white w-9 h-9 rounded-lg transition-all shadow-sm"
                   aria-label="Call GB Waste Removals"
                 >

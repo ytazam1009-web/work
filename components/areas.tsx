@@ -57,6 +57,7 @@ export default function Areas() {
   return (
     <section
       id="areas"
+      aria-labelledby="areas-heading"
       className="py-16 sm:py-24 bg-gradient-to-b from-white to-blue-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,15 +69,21 @@ export default function Areas() {
             Areas We Cover
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2 mb-3 sm:mb-4 leading-tight">
-            Waste Removal in Birmingham, Coventry, Leicester, Walsall & Wolverhampton
+          <h2
+            id="areas-heading"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2 mb-3 sm:mb-4 leading-tight"
+          >
+            Waste Removal Services Across Birmingham, Coventry, Leicester,
+            Walsall & Wolverhampton
           </h2>
 
           <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto px-2 leading-relaxed">
-            GB Waste Removals provides household, garden, furniture and
-            commercial waste collection across Birmingham, Coventry, Leicester,
-            Walsall, Wolverhampton and surrounding Midlands areas. If your
-            location is not listed, contact us to check availability.
+            GB Waste Removals provides professional waste removal and rubbish
+            collection across Birmingham, Coventry, Leicester, Walsall and
+            Wolverhampton. Our services include house clearance, garden waste
+            removal, furniture removal, bulky waste collection, commercial
+            waste and general rubbish removal for homes and businesses across
+            the West Midlands and surrounding areas.
           </p>
 
         </div>
@@ -87,10 +94,27 @@ export default function Areas() {
           {areas.map((area, index) => {
             const isBottomRow = index >= 3;
 
-            return area.city === 'Birmingham' ? (
+            const cityPath =
+              area.city === 'Birmingham'
+                ? '/birmingham'
+                : area.city === 'Coventry'
+                  ? '/coventry'
+                  : area.city === 'Leicester'
+                    ? '/leicester'
+                    : area.city === 'Walsall'
+                      ? '/walsall'
+                      : '/wolverhampton';
+
+            const serviceLabel =
+              area.city === 'Birmingham'
+                ? 'View Birmingham Waste Removal Service'
+                : `View ${area.city} Waste Removal Service`;
+
+            return (
               <a
                 key={area.city}
-                href="/birmingham"
+                href={cityPath}
+                aria-label={`Waste removal services in ${area.city}`}
                 className={`bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 hover:border-[#CF142B]/30 hover:shadow-2xl transition-all duration-300 group block ${
                   isBottomRow
                     ? index === 3
@@ -114,8 +138,10 @@ export default function Areas() {
                 </div>
 
                 {/* Areas List */}
-                <ul className="space-y-3">
-
+                <ul
+                  className="space-y-3"
+                  aria-label={`Areas covered for waste removal in ${area.city}`}
+                >
                   {area.areas.map((subArea) => (
                     <li
                       key={subArea}
@@ -128,81 +154,18 @@ export default function Areas() {
 
                     </li>
                   ))}
-
                 </ul>
 
                 {/* CTA */}
                 <span
                   className="inline-flex items-center gap-2 bg-[#CF142B] hover:bg-[#b81025] text-white text-sm font-semibold px-5 py-3 rounded-xl mt-6 transition-all"
                 >
-                  View Birmingham Service
+                  {serviceLabel}
 
                   <ArrowRight className="w-4 h-4" />
                 </span>
 
               </a>
-            ) : (
-              <div
-                key={area.city}
-                className={`bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 hover:border-[#CF142B]/30 hover:shadow-2xl transition-all duration-300 group ${
-                  isBottomRow
-                    ? index === 3
-                      ? 'lg:col-start-2 lg:col-span-2'
-                      : 'lg:col-start-4 lg:col-span-2'
-                    : 'lg:col-span-2'
-                }`}
-              >
-
-                {/* Card Heading */}
-                <div className="flex items-center gap-2 mb-5">
-
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-[#0A1F44]" />
-                  </div>
-
-                  <h3 className="font-bold text-xl text-[#0A1F44]">
-                    Waste Removal {area.city}
-                  </h3>
-
-                </div>
-
-                {/* Areas List */}
-                <ul className="space-y-3">
-
-                  {area.areas.map((subArea) => (
-                    <li
-                      key={subArea}
-                      className="flex items-center gap-3 text-sm text-gray-600 group-hover:text-gray-800 transition-colors"
-                    >
-
-                      <div className="w-2 h-2 rounded-full bg-[#CF142B]" />
-
-                      {subArea}
-
-                    </li>
-                  ))}
-
-                </ul>
-
-                {/* CTA */}
-                <a
-                  href={
-                    area.city === 'Coventry'
-                      ? '/coventry'
-                      : area.city === 'Leicester'
-                        ? '/leicester'
-                        : area.city === 'Walsall'
-                          ? '/walsall'
-                          : '/wolverhampton'
-                  }
-                  className="inline-flex items-center gap-2 bg-[#CF142B] hover:bg-[#b81025] text-white text-sm font-semibold px-5 py-3 rounded-xl mt-6 transition-all"
-                >
-                  Get a {area.city} Quote
-
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-
-              </div>
             );
           })}
 
@@ -212,15 +175,16 @@ export default function Areas() {
         <div className="mt-14 text-center">
 
           <p className="text-gray-600 mb-5 text-sm sm:text-base">
-            Don’t see your location? Contact us to check whether we can
-            collect from your postcode.
+            Looking for waste removal outside the areas listed above? Contact
+            GB Waste Removals with your postcode and we can check whether
+            waste collection is available in your area.
           </p>
 
           <a
             href="#contact"
             className="inline-flex items-center gap-2 bg-[#CF142B] hover:bg-[#b81025] text-white font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-xl hover:-translate-y-0.5"
           >
-            Check Your Area
+            Check Your Waste Collection Area
 
             <ArrowRight className="w-5 h-5" />
           </a>

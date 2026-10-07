@@ -1,173 +1,264 @@
-import { Star, Quote } from 'lucide-react';
+"use client";
 
-const testimonials = [
-  {
-    name: 'Sarah Mitchell',
-    location: 'Leicester',
-    role: 'Homeowner',
-    rating: 5,
-    text: 'Absolutely brilliant service! I needed a full house clearance after my mother passed away and the team were incredibly respectful, efficient, and professional. Everything was cleared in under 3 hours. Would recommend to anyone.',
-    avatar: 'SM',
-    color: 'bg-[#0A1F44]/10 text-[#0A1F44]',
-  },
-  {
-    name: 'James Thornton',
-    location: 'Coventry',
-    role: 'Landlord',
-    rating: 5,
-    text: "I use GB Waste Removal for all my rental properties. They're always on time, competitively priced, and I get my duty of care certificate same day. Makes end-of-tenancy turnarounds so much easier.",
-    avatar: 'JT',
-    color: 'bg-[#CF142B]/10 text-[#CF142B]',
-  },
-  {
-    name: 'Emma Clarke',
-    location: 'Birmingham',
-    role: 'Office Manager',
-    rating: 5,
-    text: 'We had a major office refurbishment and needed all the old furniture and equipment cleared on a tight deadline. Same-day service was booked, the team arrived on time and cleared everything without any fuss. Outstanding.',
-    avatar: 'EC',
-    color: 'bg-[#0A1F44]/10 text-[#0A1F44]',
-  },
-  {
-    name: 'David Patel',
-    location: 'Birmingham',
-    role: 'Building Contractor',
-    rating: 5,
-    text: "Best trade account I've set up. The guys are professional and the pricing is fair. For a contractor doing multiple sites a week, having a reliable waste partner is gold. Highly recommended to any tradespeople.",
-    avatar: 'DP',
-    color: 'bg-[#CF142B]/10 text-[#CF142B]',
-  },
-  {
-    name: 'Rachel Thompson',
-    location: 'Birmingham',
-    role: 'Estate Agent',
-    rating: 5,
-    text: 'We regularly refer GB Waste Removals to our clients for pre-sale clearances. Every single time they\'ve been punctual, polite, and left properties spotless. Our clients always report back positively.',
-    avatar: 'RT',
-    color: 'bg-[#0A1F44]/10 text-[#0A1F44]',
-  },
-  {
-    name: 'Mark Wilson',
-    location: 'Birmingham',
-    role: 'DIY Enthusiast',
-    rating: 5,
-    text: 'Did a complete kitchen renovation and had a mountain of plasterboard, old units and rubble. Called at 8am, they were there by 11am and had it all gone by noon. Can’t believe how easy it was. Will use again!',
-    avatar: 'MW',
-    color: 'bg-[#CF142B]/10 text-[#CF142B]',
-  },
-];
+import { useEffect, useState } from "react";
+import { Star, ExternalLink, Quote, CheckCircle2 } from "lucide-react";
+import Script from "next/script";
 
-// reusable SEO stars
-const renderStars = (rating: number) => {
-  return Array.from({ length: 5 }).map((_, i) => (
-    <Star
-      key={i}
-      className={`w-4 h-4 sm:w-5 sm:h-5 ${
-       i < rating ? 'fill-[#FFD700] text-[#FFD700]' : 'text-gray-300'
-      }`}
-    />
-  ));
+type Review = {
+  authorName: string;
+  authorPhoto?: string;
+  text: string;
+  rating: number;
+  reviewUrl?: string;
 };
 
 export default function Testimonials() {
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [reviewPageUrl, setReviewPageUrl] = useState("");
+  const [businessRating, setBusinessRating] = useState(0);
+  const [reviewCount, setReviewCount] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchReviews() {
+      try {
+        const res = await fetch("/api/google-reviews");
+
+        if (!res.ok) {
+          throw new Error("Unable to fetch Google reviews");
+        }
+
+        const data = await res.json();
+
+        setReviews(data?.reviews || []);
+        setReviewPageUrl(data?.reviewPageUrl || "");
+        setBusinessRating(data?.rating || 0);
+        setReviewCount(data?.userRatingCount || 0);
+      } catch (err) {
+        console.error("Google reviews error:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchReviews();
+  }, []);
+
+  const reviewSchema =
+    reviews.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "GB Waste Removals Google Reviews",
+          itemListElement: reviews.slice(0, 5).map((review, index) => ({
+            "@type": "Review",
+            position: index + 1,
+            author: {
+              "@type": "Person",
+              name: review.authorName,
+            },
+            reviewBody: review.text,
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: review.rating || 5,
+              bestRating: 5,
+            },
+          })),
+        }
+      : null;
+
   return (
     <section
       id="reviews"
-      className="py-16 sm:py-24 bg-white"
-      aria-label="UK Waste Removal Customer Reviews"
+      aria-labelledby="reviews-heading"
+      className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {reviewSchema && (
+        <Script
+          id="google-review-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(reviewSchema),
+          }}
+        />
+      )}
 
-        {/* SEO HEADER */}
-        <header className="text-center mb-10 sm:mb-16">
-          <span className="text-[#CF142B] font-semibold text-xs sm:text-sm uppercase tracking-widest">
-            UK Customer Reviews
-          </span>
+      <div className="mx-auto max-w-7xl">
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2 mb-3 sm:mb-4">
-            Real Waste Removal Reviews from UK Customers
+        {/* HEADER */}
+        <div className="mx-auto max-w-3xl text-center">
+
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#0A1F44] sm:text-sm">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#0A1F44]">
+              <CheckCircle2 className="h-3.5 w-3.5 text-white" />
+            </span>
+
+            Google Reviews
+          </div>
+
+          <h2
+            id="reviews-heading"
+            className="text-3xl font-extrabold leading-tight text-[#0A1F44] sm:text-4xl lg:text-5xl"
+          >
+            What Our Customers Say
           </h2>
 
-          <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto mb-6 sm:mb-8 px-2">
-            Over 1,000s verified customers across the UK trust our licensed waste removal service.
+          <p className="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
+            Real customer feedback about our waste removal, rubbish collection,
+            house clearance, garden waste removal, furniture clearance and
+            commercial waste services.
           </p>
 
-          {/* rating summary */}
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-gray-50 rounded-2xl px-5 sm:px-8 py-4 sm:py-5">
+          {/* GOOGLE RATING */}
+          {!loading && reviews.length > 0 && (
+            <div className="mt-7 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-4">
 
-            <div className="flex flex-col items-center">
-              <span className="text-4xl sm:text-5xl font-bold text-[#0A1F44]">
-                05
-              </span>
-
-              <div className="flex gap-1 my-1">
-                {renderStars(5)}
+              <div className="flex items-center gap-1">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <Star
+                    key={index}
+                    size={18}
+                    fill="currentColor"
+                    className="text-[#F4B400]"
+                  />
+                ))}
               </div>
 
-              <span className="text-xs sm:text-sm text-gray-500">
-                Average Rating
-              </span>
+              {businessRating > 0 && (
+                <span className="font-bold text-[#0A1F44]">
+                  {businessRating.toFixed(1)}
+                </span>
+              )}
+
+              {reviewCount > 0 && (
+                <span className="text-sm text-gray-500">
+                  Based on {reviewCount} Google reviews
+                </span>
+              )}
+
             </div>
-
-            <div className="w-px h-12 sm:h-16 bg-gray-200 hidden sm:block" />
-
-            <div className="flex flex-col items-center text-center">
-              <span className="text-xl sm:text-2xl font-bold text-[#0A1F44]">
-                1,000+
-              </span>
-              <span className="text-xs sm:text-sm text-gray-500">
-                Verified UK Reviews
-              </span>
-              <span className="text-xs text-[#CF142B] mt-1 font-medium">
-                Google & Direct Customers
-              </span>
-            </div>
-          </div>
-        </header>
-
-        {/* REVIEWS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
-
-          {testimonials.map((t) => (
-            <article
-              key={t.name}
-              className="bg-gray-50 rounded-2xl p-5 sm:p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative"
-              itemScope
-              itemType="https://schema.org/Review"
-            >
-              <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-[#0A1F44]/20 absolute top-4 sm:top-6 right-4 sm:right-6" />
-
-              {/* user */}
-              <div className="flex items-center gap-3 mb-4 sm:mb-5">
-
-                <div
-                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${t.color} flex items-center justify-center font-bold text-xs sm:text-sm`}
-                >
-                  {t.avatar}
-                </div>
-
-                <div>
-                  <p className="font-semibold text-[#0A1F44] text-sm sm:text-base">
-                    {t.name}
-                  </p>
-                  <p className="text-xs sm:text-sm text-gray-400">
-                    {t.role} — {t.location}
-                  </p>
-                </div>
-              </div>
-
-              {/* stars */}
-              <div className="flex gap-1 mb-3 sm:mb-4" aria-label={`${t.rating} star review`}>
-                {renderStars(t.rating)}
-              </div>
-
-              {/* review */}
-              <p className="text-gray-600 text-sm leading-relaxed" itemProp="reviewBody">
-                "{t.text}"
-              </p>
-            </article>
-          ))}
+          )}
         </div>
+
+        {/* REVIEWS */}
+        <div className="mt-10 flex flex-wrap justify-center gap-6 sm:mt-12">
+
+          {loading ? (
+            <div className="w-full py-10 text-center text-gray-500">
+              Loading Google reviews...
+            </div>
+          ) : reviews.length === 0 ? (
+            <div className="w-full py-10 text-center text-gray-500">
+              Google reviews are currently unavailable.
+            </div>
+          ) : (
+            reviews.map((review, index) => (
+              <a
+                key={`${review.authorName}-${index}`}
+                href={reviewPageUrl || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex w-full flex-col rounded-2xl border border-[#0A1F44] bg-[#0A1F44] p-6 text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:p-7 md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+              >
+
+                {/* Quote Icon */}
+                <div className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full bg-white/10">
+                  <Quote className="h-4 w-4 text-white/70" />
+                </div>
+
+                {/* Stars */}
+                <div className="mb-5 flex items-center gap-1">
+                  {Array.from({
+                    length: Math.min(review.rating || 5, 5),
+                  }).map((_, starIndex) => (
+                    <Star
+                      key={starIndex}
+                      size={16}
+                      fill="currentColor"
+                      className="text-[#F4B400]"
+                    />
+                  ))}
+                </div>
+
+                {/* Review Text */}
+                <p className="flex-grow text-sm leading-7 text-white/90 sm:text-base">
+                  "{review.text}"
+                </p>
+
+                {/* Reviewer */}
+                <div className="mt-6 flex items-center gap-3 border-t border-white/15 pt-5">
+
+                  {review.authorPhoto ? (
+                    <img
+                      src={review.authorPhoto}
+                      alt={`${review.authorName} Google reviewer`}
+                      className="h-11 w-11 flex-shrink-0 rounded-full object-cover"
+                      referrerPolicy="no-referrer"
+                      onError={(event) => {
+                        event.currentTarget.style.display = "none";
+                        event.currentTarget.nextElementSibling?.classList.remove(
+                          "hidden"
+                        );
+                      }}
+                    />
+                  ) : null}
+
+                  {/* Fallback Avatar */}
+                  <div
+                    className={`${
+                      review.authorPhoto ? "hidden" : ""
+                    } flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-white/15 text-sm font-bold text-white`}
+                  >
+                    {review.authorName?.charAt(0)?.toUpperCase() || "G"}
+                  </div>
+
+                  <div className="min-w-0 flex-grow">
+                    <p className="truncate text-sm font-bold text-white">
+                      {review.authorName}
+                    </p>
+
+                    <div className="mt-0.5 flex items-center gap-1.5">
+                      <span className="text-xs text-white/60">
+                        Google Review
+                      </span>
+
+                      <span className="h-1 w-1 rounded-full bg-white/30" />
+
+                      <span className="text-xs text-white/50">
+                        Customer
+                      </span>
+                    </div>
+                  </div>
+
+                  <ExternalLink
+                    size={15}
+                    className="flex-shrink-0 text-white/50 transition-colors group-hover:text-white"
+                  />
+
+                </div>
+              </a>
+            ))
+          )}
+
+        </div>
+
+        {/* VIEW ALL */}
+        {!loading && reviews.length > 0 && reviewPageUrl && (
+          <div className="mt-10 text-center sm:mt-12">
+
+            <a
+              href={reviewPageUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#CF142B] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:bg-[#b81025] hover:shadow-lg"
+            >
+              View All Reviews on Google
+              <ExternalLink size={16} />
+            </a>
+
+          </div>
+        )}
+
       </div>
     </section>
   );

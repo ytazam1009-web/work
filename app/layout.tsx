@@ -1,73 +1,70 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Analytics } from "@vercel/analytics/next"
+import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
+
 const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
- metadataBase: new URL('https://work-azure-two.vercel.app'),
+  metadataBase: new URL('https://www.gbwasteremovals.co.uk'),
 
   title:
-    'GB Waste Removal UK | Same Day Waste Collection & House Clearance',
+    'GB Waste Removals | Waste Removal & Rubbish Collection UK',
 
   description:
-    'Fast and affordable waste removal services across Birmingham, Coventry & Leicester. Same-day waste collection, house clearance, office clearance, garden waste removal, junk removal, furniture disposal & moving services. Licensed UK waste carriers with eco-friendly recycling.',
+    'Professional waste removal and rubbish collection services across Birmingham, Coventry, Leicester, Walsall and Wolverhampton. House clearance, garden waste, commercial waste, furniture removal and builders waste collection from a licensed UK waste carrier.',
 
   keywords: [
     'waste removal UK',
     'waste removal Birmingham',
     'waste removal Coventry',
     'waste removal Leicester',
-    'same day waste collection',
-    'house clearance UK',
-    'house clearance birmingham',
-    'house clearance coventry',
-    'house clearance leicester',
-    'office clearance UK',
-    'office clearance birmingham',
-    'office clearance coventry',
-    'office clearance leicester',    
-    'junk removal UK',
-    'junk removal Birmingham',
-    'junk removal Coventry',
-    'junk removal Leicester',
+    'waste removal Walsall',
+    'waste removal Wolverhampton',
     'rubbish removal UK',
-    'rubbish removal birmingham',
-    'rubbish removal coventry',
-    'rubbish removal leicester',
+    'rubbish removal Birmingham',
+    'rubbish removal Coventry',
+    'rubbish removal Leicester',
+    'rubbish removal Walsall',
+    'rubbish removal Wolverhampton',
+    'same day waste collection',
+    'same day rubbish removal',
+    'house clearance UK',
+    'house clearance Birmingham',
+    'house clearance Coventry',
+    'house clearance Leicester',
+    'house clearance Walsall',
+    'house clearance Wolverhampton',
     'garden waste removal',
-    'commercial waste disposal',
-    'office clearance birmingham',
-    'office clearance coventry',
-    'office clearance leicester',
+    'garden waste collection',
+    'commercial waste removal',
+    'commercial waste collection',
+    'office clearance',
     'furniture removal',
-    'waste collection Birmingham',
-    'waste collection Coventry',
-    'waste collection Leicester',
-    'cheap waste removal',
+    'bulky waste removal',
+    'builders waste removal',
+    'construction waste removal',
+    'junk removal',
+    'waste collection',
     'licensed waste carrier',
     'eco friendly waste disposal',
-    'builder waste removal',
-    'moving services UK',
-    'house moving',
-    'office moving',
-    'same day rubbish removal',
-    'DBS-checked staff',
+    'waste disposal',
     'Man and Van Clearance',
   ],
 
   authors: [
     {
-      name: 'GB Waste Removal UK',
+      name: 'GB Waste Removals',
     },
   ],
 
-  creator: 'GB Waste Removal UK',
+  creator: 'GB Waste Removals',
 
-  publisher: 'GB Waste Removal UK',
+  publisher: 'GB Waste Removals',
 
   robots: {
     index: true,
@@ -86,37 +83,37 @@ export const metadata: Metadata = {
 
     locale: 'en_GB',
 
-    url: 'https://work-azure-two.vercel.app',
+    url: 'https://www.gbwasteremovals.co.uk',
 
     title:
-      'GB Waste Removal UK | Fast Same-Day Waste Collection',
+      'GB Waste Removals | Waste Removal & Rubbish Collection UK',
 
     description:
-      'Trusted UK waste removal company offering same-day collections, house clearances, office moving, junk removal & eco-friendly waste disposal.',
+      'Professional waste removal, rubbish collection, house clearance, garden waste, commercial waste, furniture removal and builders waste services across Birmingham, Coventry, Leicester, Walsall and Wolverhampton.',
 
-    siteName: 'GB Waste Removal UK',
+    siteName: 'GB Waste Removals',
 
     images: [
-  {
-    url: 'https://work-azure-two.vercel.app/og-image.jpg',
-    width: 1200,
-    height: 630,
-    alt: 'GB Waste Removal UK',
-  },
-],
+      {
+        url: 'https://www.gbwasteremovals.co.uk/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'GB Waste Removals - Waste Removal and Rubbish Collection',
+      },
+    ],
   },
 
   twitter: {
     card: 'summary_large_image',
 
     title:
-      'GB Waste Removal UK | Fast Same-Day Waste Collection',
+      'GB Waste Removals | Waste Removal & Rubbish Collection UK',
 
     description:
-      'Affordable same-day waste removal, house clearance & junk collection services across the UK.',
+      'Professional waste removal and rubbish collection across Birmingham, Coventry, Leicester, Walsall and Wolverhampton.',
 
     images: [
-    'https://work-azure-two.vercel.app/og-image.jpg',
+      'https://www.gbwasteremovals.co.uk/og-image.jpg',
     ],
   },
 
@@ -129,15 +126,32 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  
 }: {
   children: React.ReactNode;
-  
 }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} antialiased`}>
         {children}
+
+        {/* Google Ads Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18497420498"
+          strategy="afterInteractive"
+        />
+
+        <Script
+          id="google-ads-tag"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18497420498');
+          `}
+        </Script>
+
         <Analytics />
       </body>
     </html>
