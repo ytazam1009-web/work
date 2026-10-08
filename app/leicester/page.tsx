@@ -304,7 +304,7 @@ export default function LeicesterPage() {
         {/* Leicester Hero Image */}
         <div className="absolute inset-y-0 right-0 z-0 hidden w-[53%] sm:block">
           <img
-            src="/logos/gbwasteleicester.webp"
+            src="/logos/LeicesterWasteRemoval.webp"
             alt="GB Waste Removals Leicester waste collection service"
             className="h-full w-full object-cover"
           />
@@ -315,7 +315,7 @@ export default function LeicesterPage() {
         {/* Mobile Hero Image */}
         <div className="absolute inset-0 z-0 sm:hidden">
           <img
-            src="/logos/gbwasteleicester.webp"
+            src="/logos/LeicesterWasteRemoval.webp"
             alt="Leicester waste removal and rubbish collection"
             className="h-full w-full object-cover opacity-25"
           />

@@ -223,75 +223,103 @@ export default function WolverhamptonPage() {
       <Header showBackButton />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0A1F44] px-6 py-20 text-white sm:py-24">
-        <div className="mx-auto max-w-6xl text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#CF142B]">
-            Wolverhampton Waste Removal
-          </p>
+      <section className="relative overflow-hidden bg-[#0A1F44] px-4 py-20 text-white sm:px-6 sm:py-24 lg:px-8">
+        {/* Wolverhampton Hero Image */}
+        <div className="absolute inset-y-0 right-0 z-0 hidden w-[53%] sm:block">
+          <img
+            src="/logos/WolverhamptonWasteRemoval.webp"
+            alt="GB Waste Removals Wolverhampton waste collection service"
+            className="h-full w-full object-cover"
+          />
 
-          <h1 className="text-4xl font-bold leading-tight md:text-6xl">
-            Waste Removal Wolverhampton
-          </h1>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F44] via-[#0A1F44]/60 to-transparent" />
+        </div>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/90">
-            Reliable waste removal and rubbish collection across Wolverhampton
-            for homes, gardens, businesses, property clearances, furniture,
-            bulky waste and building projects.
-          </p>
+        {/* Mobile Hero Image */}
+        <div className="absolute inset-0 z-0 sm:hidden">
+          <img
+            src="/logos/WolverhamptonWasteRemoval.webp"
+            alt="Wolverhampton waste removal and rubbish collection"
+            className="h-full w-full object-cover opacity-25"
+          />
 
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a
-              href="/#contact"
-              className="rounded-xl bg-[#CF142B] px-8 py-4 font-bold text-white transition hover:bg-[#b91025]"
-            >
-              Get a Free Quote
-            </a>
+          <div className="absolute inset-0 bg-[#0A1F44]/80" />
+        </div>
 
-            <a
-              href="#services"
-              className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-bold text-white transition hover:bg-white/20"
-            >
-              View Our Services
-            </a>
+        {/* Hero Content */}
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
+              Wolverhampton Waste Removal & Rubbish Collection
+            </p>
+
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+              Waste Removal Wolverhampton
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
+              Reliable waste removal and rubbish collection across
+              Wolverhampton for homes, gardens, businesses, property
+              clearances, furniture, bulky waste and building projects.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+              <a
+                href="/#contact"
+                className="inline-flex items-center justify-center rounded-lg bg-[#CF142B] px-7 py-3.5 text-center font-semibold text-white transition hover:bg-red-700"
+              >
+                Get a Free Waste Removal Quote
+              </a>
+
+              <a
+                href="#services"
+                className="inline-flex items-center justify-center rounded-lg border border-white px-7 py-3.5 text-center font-semibold text-white transition hover:bg-white hover:text-[#0A1F44]"
+              >
+                View Wolverhampton Services
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Trust Bar */}
-      <section className="border-b border-gray-200 bg-white px-6 py-8">
-        <div className="mx-auto grid max-w-6xl gap-6 text-center sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <h3 className="font-bold text-[#0A1F44]">
+      <section
+        aria-label="GB Waste Removals Wolverhampton service benefits"
+        className="border-b border-slate-200 bg-white"
+      >
+        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 md:grid-cols-4">
+          <div className="border-b border-slate-200 px-4 py-5 text-center sm:px-6 sm:py-6 md:border-b-0">
+            <p className="font-bold text-[#0A1F44]">
               Local Wolverhampton Service
-            </h3>
-            <p className="mt-1 text-sm text-gray-600">
+            </p>
+            <p className="mt-1 text-sm text-slate-500">
               Serving Wolverhampton and surrounding areas
             </p>
           </div>
 
-          <div>
-            <h3 className="font-bold text-[#0A1F44]">
+          <div className="border-b border-slate-200 px-4 py-5 text-center sm:px-6 sm:py-6 md:border-b-0">
+            <p className="font-bold text-[#0A1F44]">
               Household & Commercial
-            </h3>
-            <p className="mt-1 text-sm text-gray-600">
+            </p>
+            <p className="mt-1 text-sm text-slate-500">
               Waste removal for homes and businesses
             </p>
           </div>
 
-          <div>
-            <h3 className="font-bold text-[#0A1F44]">
+          <div className="px-4 py-5 text-center sm:px-6 sm:py-6">
+            <p className="font-bold text-[#0A1F44]">
               Clear & Simple Quotes
-            </h3>
-            <p className="mt-1 text-sm text-gray-600">
+            </p>
+            <p className="mt-1 text-sm text-slate-500">
               Discuss your waste removal requirements
             </p>
           </div>
 
-          <div>
-            <h3 className="font-bold text-[#0A1F44]">
+          <div className="px-4 py-5 text-center sm:px-6 sm:py-6">
+            <p className="font-bold text-[#0A1F44]">
               Responsible Disposal
-            </h3>
-            <p className="mt-1 text-sm text-gray-600">
+            </p>
+            <p className="mt-1 text-sm text-slate-500">
               Waste handled responsibly after collection
             </p>
           </div>
@@ -299,29 +327,29 @@ export default function WolverhamptonPage() {
       </section>
 
       {/* Introduction */}
-      <section className="px-6 py-20">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#CF142B]">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
             Waste Removal in Wolverhampton
           </p>
 
-          <h2 className="mt-3 text-3xl font-bold text-[#0A1F44] md:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl">
             Professional Waste Removal Services in Wolverhampton
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
             GB Waste Removals provides reliable waste collection and rubbish
             removal services throughout Wolverhampton. Whether you need
             household rubbish cleared, garden waste collected, furniture
-            removed or waste from a renovation or building project taken away,
-            our team can help.
+            removed or waste from a renovation or building project taken
+            away, our team can help.
           </p>
 
-          <p className="mt-5 text-lg leading-8 text-gray-600">
+          <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
             We work with homeowners, landlords, businesses, tradespeople and
-            property managers across Wolverhampton and nearby areas, providing
-            a straightforward way to arrange waste collection and property
-            clearances.
+            property managers across Wolverhampton and nearby areas,
+            providing a straightforward way to arrange waste collection and
+            property clearances.
           </p>
         </div>
       </section>
@@ -330,83 +358,121 @@ export default function WolverhamptonPage() {
       <Services />
 
       {/* How It Works */}
-      <section id="how-it-works" className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#CF142B]">
-              How It Works
+      <section
+        id="how-it-works"
+        aria-labelledby="how-it-works-heading"
+        className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
+              Wolverhampton Waste Collection Process
             </p>
 
-            <h2 className="mt-3 text-3xl font-bold text-[#0A1F44] md:text-4xl">
-              Simple Waste Removal in Wolverhampton
+            <h2
+              id="how-it-works-heading"
+              className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl"
+            >
+              How Our Wolverhampton Waste Removal Service Works
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-gray-600">
-              Arrange your Wolverhampton waste collection in four simple steps,
-              from requesting a quote through to responsible removal.
+            <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
+              Arrange your Wolverhampton waste collection in four simple
+              steps, from requesting a quote through to responsible removal.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-4">
-            {[
-              {
-                number: '01',
-                title: 'Book',
-                text: 'Contact our team with details of the waste you need removed. Our quotation team will discuss the job, provide a quote and arrange your collection.',
-              },
-              {
-                number: '02',
-                title: 'We Arrive',
-                text: 'Our team arrives at the agreed time and collection location in Wolverhampton, ready to deal with the agreed waste.',
-              },
-              {
-                number: '03',
-                title: 'We Clear',
-                text: 'We collect and remove the agreed household, garden, furniture, commercial or project waste from your property.',
-              },
-              {
-                number: '04',
-                title: 'Responsible Disposal',
-                text: 'Your collected waste is taken away and handled responsibly after removal, according to the type of waste.',
-              },
-            ].map((step) => (
-              <div key={step.number} className="text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#CF142B] text-xl font-bold text-white">
-                  {step.number}
-                </div>
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <p className="text-4xl font-bold text-[#CF142B]">
+                01
+              </p>
 
-                <h3 className="mt-5 text-xl font-bold text-[#0A1F44]">
-                  {step.title}
-                </h3>
+              <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
+                Book
+              </h3>
 
-                <p className="mt-3 leading-7 text-gray-600">
-                  {step.text}
-                </p>
-              </div>
-            ))}
+              <p className="mt-3 leading-7 text-slate-600">
+                Contact our team with details of the waste you need removed.
+                Our quotation team will discuss the job, provide a quote and
+                arrange your collection.
+              </p>
+            </div>
+
+            <div>
+              <p className="text-4xl font-bold text-[#CF142B]">
+                02
+              </p>
+
+              <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
+                We Arrive
+              </h3>
+
+              <p className="mt-3 leading-7 text-slate-600">
+                Our team arrives at the agreed time and collection location
+                in Wolverhampton, ready to deal with the agreed waste.
+              </p>
+            </div>
+
+            <div>
+              <p className="text-4xl font-bold text-[#CF142B]">
+                03
+              </p>
+
+              <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
+                We Clear
+              </h3>
+
+              <p className="mt-3 leading-7 text-slate-600">
+                We collect and remove the agreed household, garden,
+                furniture, commercial or project waste from your property.
+              </p>
+            </div>
+
+            <div>
+              <p className="text-4xl font-bold text-[#CF142B]">
+                04
+              </p>
+
+              <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
+                Responsible Disposal
+              </h3>
+
+              <p className="mt-3 leading-7 text-slate-600">
+                Your collected waste is taken away and handled responsibly
+                after removal, according to the type of waste.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Areas */}
-      <section id="areas" className="bg-[#0A1F44] px-6 py-20 text-white">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#CF142B]">
-              Areas We Cover
+      <section
+        id="areas"
+        aria-labelledby="areas-heading"
+        className="bg-[#0A1F44] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
+              Wolverhampton Areas We Cover
             </p>
 
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+            <h2
+              id="areas-heading"
+              className="mt-3 text-3xl font-bold leading-tight sm:text-4xl"
+            >
               Waste Removal Across Wolverhampton
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl leading-8 text-white/80">
+            <p className="mt-4 text-base leading-7 text-white/80 sm:text-lg">
               GB Waste Removals provides waste collection and rubbish removal
               across Wolverhampton and surrounding local areas.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {[
               'Wolverhampton City Centre',
               'Tettenhall',
@@ -423,7 +489,7 @@ export default function WolverhamptonPage() {
             ].map((area) => (
               <div
                 key={area}
-                className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-center"
+                className="rounded-lg border border-white/20 bg-white/10 px-5 py-4 font-medium transition hover:bg-white/15"
               >
                 {area}
               </div>
@@ -433,81 +499,116 @@ export default function WolverhamptonPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#CF142B]">
-              Why Choose Us
-            </p>
+      <section
+        aria-labelledby="why-heading"
+        className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 md:grid-cols-2 md:items-start">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
+                Why Choose Us
+              </p>
 
-            <h2 className="mt-3 text-3xl font-bold text-[#0A1F44] md:text-4xl">
-              Waste Removal You Can Rely On in Wolverhampton
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-gray-600">
-              A straightforward waste collection service for residential,
-              commercial and property clearance requirements across
-              Wolverhampton.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: 'Local Wolverhampton Service',
-                text: 'We provide waste removal and rubbish collection for customers across Wolverhampton and surrounding local areas.',
-              },
-              {
-                title: 'Wide Range of Waste',
-                text: 'From household rubbish and garden waste to furniture, bulky items, commercial waste and suitable builders waste.',
-              },
-              {
-                title: 'Clear Quotes',
-                text: 'Our quotation team can discuss your requirements and provide a quote based on the waste and collection involved.',
-              },
-              {
-                title: 'Professional Collection',
-                text: 'We aim to keep the waste removal process straightforward from your initial enquiry through to collection.',
-              },
-              {
-                title: 'Property Clearances',
-                text: 'We can help remove unwanted waste and items from homes, gardens, garages and other accessible areas.',
-              },
-              {
-                title: 'Responsible Disposal',
-                text: 'Collected waste is taken away and handled responsibly after it has been removed from your property.',
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-gray-200 p-7"
+              <h2
+                id="why-heading"
+                className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl"
               >
-                <h3 className="text-xl font-bold text-[#0A1F44]">
-                  {item.title}
-                </h3>
+                Waste Removal You Can Rely On in Wolverhampton
+              </h2>
 
-                <p className="mt-4 leading-7 text-gray-600">
-                  {item.text}
+              <p className="mt-5 text-base leading-8 text-slate-600 sm:text-lg">
+                A straightforward waste collection service for residential,
+                commercial and property clearance requirements across
+                Wolverhampton.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-bold text-[#0A1F44]">
+                  Local Wolverhampton Service
+                </h3>
+                <p className="mt-2 leading-7 text-slate-600">
+                  We provide waste removal and rubbish collection for
+                  customers across Wolverhampton and surrounding local areas.
                 </p>
               </div>
-            ))}
+
+              <div>
+                <h3 className="font-bold text-[#0A1F44]">
+                  Wide Range of Waste
+                </h3>
+                <p className="mt-2 leading-7 text-slate-600">
+                  From household rubbish and garden waste to furniture, bulky
+                  items, commercial waste and suitable builders waste.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-[#0A1F44]">
+                  Clear Quotes
+                </h3>
+                <p className="mt-2 leading-7 text-slate-600">
+                  Our quotation team can discuss your requirements and provide
+                  a quote based on the waste and collection involved.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-[#0A1F44]">
+                  Professional Collection
+                </h3>
+                <p className="mt-2 leading-7 text-slate-600">
+                  We aim to keep the waste removal process straightforward
+                  from your initial enquiry through to collection.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-[#0A1F44]">
+                  Property Clearances
+                </h3>
+                <p className="mt-2 leading-7 text-slate-600">
+                  We can help remove unwanted waste and items from homes,
+                  gardens, garages and other accessible areas.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-[#0A1F44]">
+                  Responsible Disposal
+                </h3>
+                <p className="mt-2 leading-7 text-slate-600">
+                  Collected waste is taken away and handled responsibly after
+                  it has been removed from your property.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* FAQs */}
-      <section className="bg-gray-50 px-6 py-20">
+      <section
+        id="faqs"
+        aria-labelledby="faq-heading"
+        className="bg-slate-50 px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+      >
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#CF142B]">
-              FAQs
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
+              Wolverhampton Waste Removal FAQs
             </p>
 
-            <h2 className="mt-3 text-3xl font-bold text-[#0A1F44] md:text-4xl">
+            <h2
+              id="faq-heading"
+              className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl"
+            >
               Wolverhampton Waste Removal FAQs
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-gray-600">
+            <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">
               Answers to common questions about waste collection, rubbish
               removal, property clearances and local waste services in
               Wolverhampton.
@@ -516,35 +617,41 @@ export default function WolverhamptonPage() {
 
           <div className="mt-10 space-y-5">
             {faqs.map((faq) => (
-              <div
+              <article
                 key={faq.question}
-                className="rounded-2xl border border-gray-200 bg-white p-6"
+                className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
               >
-                <h3 className="text-lg font-bold text-[#0A1F44]">
+                <h3 className="text-base font-bold leading-6 text-[#0A1F44] sm:text-lg">
                   {faq.question}
                 </h3>
 
-                <p className="mt-3 leading-7 text-gray-600">
+                <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
                   {faq.answer}
                 </p>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-[#CF142B] px-6 py-20 text-white">
+      <section
+        aria-labelledby="cta-heading"
+        className="bg-[#CF142B] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8"
+      >
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-white/80">
+          <p className="text-sm font-semibold uppercase tracking-wider text-white/80 sm:text-base">
             Wolverhampton Waste Removal
           </p>
 
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+          <h2
+            id="cta-heading"
+            className="mt-3 text-3xl font-bold leading-tight sm:text-4xl"
+          >
             Need Waste Removed in Wolverhampton?
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/90">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
             Contact GB Waste Removals today to discuss your household,
             commercial, garden, furniture or building waste removal
             requirements and request a quote.
@@ -552,9 +659,9 @@ export default function WolverhamptonPage() {
 
           <a
             href="/#contact"
-            className="mt-8 inline-block rounded-xl bg-white px-8 py-4 font-bold text-[#0A1F44] transition hover:bg-gray-100"
+            className="mt-8 inline-flex w-full items-center justify-center rounded-lg bg-white px-8 py-4 font-bold text-[#0A1F44] transition hover:bg-slate-100 sm:w-auto"
           >
-            Get a Free Quote
+            Get a Free Wolverhampton Waste Removal Quote
           </a>
         </div>
       </section>
