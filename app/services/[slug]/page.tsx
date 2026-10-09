@@ -583,7 +583,7 @@ export default async function ServicePage({
 
             <div className="flex flex-col sm:flex-row gap-3 mt-8">
               <a
-                href="tel:00447348481091"
+                href="tel:00447337976694"
                 className="inline-flex items-center justify-center gap-2 bg-[#CF142B] hover:bg-[#b81025] text-white font-semibold px-6 py-3.5 rounded-xl transition-all"
               >
                 <Phone className="w-5 h-5" />
@@ -591,7 +591,7 @@ export default async function ServicePage({
               </a>
 
               <a
-                href="https://wa.me/447348481091"
+                href="https://wa.me/447849233886"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#0A1F44] hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-xl transition-all"
@@ -725,15 +725,15 @@ export default async function ServicePage({
 
                 <div className="space-y-3">
                   <a
-                    href="tel:00447348481091"
+                    href="tel:00447337976694"
                     className="flex items-center justify-center gap-2 w-full bg-[#CF142B] hover:bg-[#b81025] text-white font-semibold px-5 py-3 rounded-xl transition"
                   >
                     <Phone className="w-4 h-4" />
-                    Call 0044 7348 481091
+                    Call 0044 7337 976694
                   </a>
 
                   <a
-                    href="https://wa.me/447348481091"
+                    href="https://wa.me/447348481092"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full bg-[#0A1F44] hover:bg-[#071735] text-white font-semibold px-5 py-3 rounded-xl transition"
@@ -781,7 +781,7 @@ export default async function ServicePage({
           </p>
 
           <a
-            href="tel:00447348481091"
+            href="tel:00447337976694"
             className="inline-flex items-center gap-2 mt-7 bg-[#CF142B] hover:bg-[#b81025] text-white font-semibold px-7 py-3.5 rounded-xl transition"
           >
             Get Your Free Quote
