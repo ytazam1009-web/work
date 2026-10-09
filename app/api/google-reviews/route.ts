@@ -1,5 +1,5 @@
 export async function GET() {
-  const API_KEY = process.env.GOOGLE_API_KEY;
+  const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 
   // Put your current GB Waste Removals Google Place ID here
   const PLACE_ID = "ChIJd2YeYpkFu28R7HE75r_ja-s";
