@@ -12,7 +12,7 @@ import {
 
 const footerLinks = {
   Services: [
-    'Household waste Removal',
+    'Household Waste Removal',
     'Garden Waste Removal',
     'Commercial Waste',
     'Construction Waste',

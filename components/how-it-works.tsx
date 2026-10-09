@@ -148,10 +148,10 @@ export default function HowItWorks() {
               </a>
 
               <a
-                href="tel:00447337976694"
+                href="tel:+447337976694"
                 className="bg-white text-[#0A1F44] hover:bg-[#CF142B] hover:text-white border border-white font-bold px-8 py-4 rounded-xl transition-all text-sm sm:text-base"
               >
-                Call 0044 7337 976694
+                Call +44 7337 976694
               </a>
 
             </div>
