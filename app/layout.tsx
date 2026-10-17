@@ -1,3 +1,4 @@
+
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -56,14 +57,8 @@ export const metadata: Metadata = {
     'Man and Van Clearance',
   ],
 
-  authors: [
-    {
-      name: 'GB Waste Removals',
-    },
-  ],
-
+  authors: [{ name: 'GB Waste Removals' }],
   creator: 'GB Waste Removals',
-
   publisher: 'GB Waste Removals',
 
   robots: {
@@ -80,19 +75,13 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: 'website',
-
     locale: 'en_GB',
-
     url: 'https://www.gbwasteremovals.co.uk',
-
     title:
       'GB Waste Removals | Waste Removal & Rubbish Collection UK',
-
     description:
       'Professional waste removal, rubbish collection, house clearance, garden waste, commercial waste, furniture removal and builders waste services across Birmingham, Coventry, Leicester, Walsall and Wolverhampton.',
-
     siteName: 'GB Waste Removals',
-
     images: [
       {
         url: 'https://www.gbwasteremovals.co.uk/og-image.jpg',
@@ -105,13 +94,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-
     title:
       'GB Waste Removals | Waste Removal & Rubbish Collection UK',
-
     description:
       'Professional waste removal and rubbish collection across Birmingham, Coventry, Leicester, Walsall and Wolverhampton.',
-
     images: [
       'https://www.gbwasteremovals.co.uk/og-image.jpg',
     ],
@@ -140,15 +126,18 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
+        {/* Google Ads and Google Analytics Configuration */}
         <Script
-          id="google-ads-tag"
+          id="google-tracking-tags"
           strategy="afterInteractive"
         >
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
+
             gtag('config', 'AW-18497420498');
+            gtag('config', 'G-RZGD5PGXQC');
           `}
         </Script>
 
