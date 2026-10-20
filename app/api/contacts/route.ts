@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     const service = body?.service || "";
     const message = body?.message || "";
 
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "GB Waste Removals <info@gbwasteremovals.co.uk>",
       to: "info@gbwasteremovals.co.uk",
       replyTo: email,
@@ -86,6 +86,15 @@ export async function POST(req: Request) {
         </div>
       `,
     });
+
+    if (error || !data) {
+      console.error("Resend Error:", error);
+
+      return Response.json(
+        { success: false, error: "Failed to send email" },
+        { status: 500 }
+      );
+    }
 
     return Response.json({ success: true });
   } catch (error) {
