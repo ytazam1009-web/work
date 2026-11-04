@@ -1,8 +1,8 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
 import { Star, ExternalLink, Quote, CheckCircle2 } from "lucide-react";
-import Script from "next/script";
 
 type Review = {
   authorName: string;
@@ -44,45 +44,12 @@ export default function Testimonials() {
     fetchReviews();
   }, []);
 
-  const reviewSchema =
-    reviews.length > 0
-      ? {
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          name: "GB Waste Removals Google Reviews",
-          itemListElement: reviews.slice(0, 5).map((review, index) => ({
-            "@type": "Review",
-            position: index + 1,
-            author: {
-              "@type": "Person",
-              name: review.authorName,
-            },
-            reviewBody: review.text,
-            reviewRating: {
-              "@type": "Rating",
-              ratingValue: review.rating || 5,
-              bestRating: 5,
-            },
-          })),
-        }
-      : null;
-
   return (
     <section
       id="reviews"
       aria-labelledby="reviews-heading"
       className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
-      {reviewSchema && (
-        <Script
-          id="google-review-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(reviewSchema),
-          }}
-        />
-      )}
-
       <div className="mx-auto max-w-7xl">
 
         {/* HEADER */}
