@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -44,7 +45,6 @@ export default function Header({ showBackButton = false }: HeaderProps) {
     { label: 'Blog', href: '/blog' },
     { label: 'How It Works', href: '#how-it-works' },
     { label: 'Areas', href: '#areas' },
-    //{ label: 'Reviews', href: '#reviews' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -63,28 +63,26 @@ export default function Header({ showBackButton = false }: HeaderProps) {
             ? 'bg-white shadow-lg py-2 border-b border-blue-100'
             : 'bg-white py-3'
         } ${
-          headerHovered
-            ? 'opacity-100'
-            : 'opacity-25'
+          headerHovered ? 'opacity-100' : 'opacity-25'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 xl:px-8 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 xl:px-8">
 
           {/* Desktop Layout */}
-          <div className="hidden xl:flex items-center justify-between">
+          <div className="hidden xl:flex items-center justify-between gap-4">
 
             {/* Logo */}
-            <a href="/" className="flex items-center gap-3 group">
+            <a href="/" className="flex items-center gap-2 shrink-0">
 
               <Image
                 src="/uk-bg.webp"
                 alt="Waste removal truck for house clearance services"
-                width={150}
-                height={150}
-                className="w-full h-auto"
+                width={64}
+                height={64}
+                className="w-16 h-16 object-contain shrink-0"
               />
 
-              <div>
+              <div className="shrink-0">
                 <span className="text-2xl font-extrabold block text-[#0A1F44] leading-none tracking-tight">
                   GB WASTE
                 </span>
@@ -94,18 +92,17 @@ export default function Header({ showBackButton = false }: HeaderProps) {
                 </span>
 
                 <span className="text-base font-black text-[#2563EB] tracking-widest uppercase mt-1 block [text-shadow:_0_0_12px_white,_0_0_18px_white,_0_0_22px_white]">
-                  
                 </span>
               </div>
             </a>
 
             {/* Navigation */}
-            <nav className="flex items-center gap-7">
+            <nav className="flex items-center gap-4 shrink-0">
 
               {showBackButton && (
                 <a
                   href="/"
-                  className="flex items-center gap-1 bg-[#0A1F44] hover:bg-[#CF142B] text-white text-sm font-semibold px-3 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+                  className="flex items-center gap-1 bg-[#0A1F44] hover:bg-[#CF142B] text-white text-sm font-semibold px-3 py-2 rounded-xl transition-all shadow-md hover:shadow-lg whitespace-nowrap"
                 >
                   ← Back
                 </a>
@@ -124,13 +121,13 @@ export default function Header({ showBackButton = false }: HeaderProps) {
             </nav>
 
             {/* Desktop Buttons */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 shrink-0">
 
               <a
                 href={`tel:${cityPhoneLink}`}
-                className="flex items-center gap-2 bg-[#0A1F44] hover:bg-[#CF142B] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+                className="flex items-center gap-2 bg-[#0A1F44] hover:bg-[#CF142B] text-white text-sm font-semibold px-3 py-2 rounded-xl transition-all shadow-md hover:shadow-lg whitespace-nowrap"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 shrink-0" />
                 {cityPhone}
               </a>
 
@@ -138,15 +135,15 @@ export default function Header({ showBackButton = false }: HeaderProps) {
                 href="https://wa.me/447348481092"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+                className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-sm font-semibold px-3 py-2 rounded-xl transition-all shadow-md hover:shadow-lg whitespace-nowrap"
               >
-                <FaWhatsapp className="w-4 h-4" />
+                <FaWhatsapp className="w-4 h-4 shrink-0" />
                 WhatsApp
               </a>
 
               <a
                 href={showBackButton ? '/#quote-form' : '#quote-form'}
-                className="bg-[#CF142B] hover:bg-red-700 text-white text-sm font-semibold px-5 py-2 rounded-xl transition-all shadow-md hover:shadow-lg"
+                className="bg-[#CF142B] hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg whitespace-nowrap"
               >
                 Free Quote
               </a>
@@ -168,7 +165,7 @@ export default function Header({ showBackButton = false }: HeaderProps) {
                   alt="Professional waste removal services"
                   width={50}
                   height={50}
-                  className="w-10 h-10 object-cover rounded-lg"
+                  className="w-10 h-10 object-cover rounded-lg shrink-0"
                 />
 
                 <div className="leading-none min-w-0">
@@ -182,7 +179,6 @@ export default function Header({ showBackButton = false }: HeaderProps) {
                   </span>
 
                   <span className="text-[12px] font-black text-[#2563EB] uppercase tracking-widest block mt-1 [text-shadow:_0_0_10px_white,_0_0_16px_white,_0_0_20px_white]">
-                    
                   </span>
 
                 </div>
