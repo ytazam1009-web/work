@@ -76,10 +76,9 @@ svg {
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 0 0% 63.9%;
     --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 63.9%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 14.9%;
@@ -98,22 +97,5 @@ svg {
 
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-/* GB Waste Removals Custom Wheelie Bin Cursor */
-@media (min-width: 768px) {
-  html,
-  body {
-    cursor: url('/logos/wheelie-bin.png') 16 16, auto;
-  }
-
-  a,
-  button,
-  input,
-  textarea,
-  select,
-  [role="button"] {
-    cursor: url('/logos/wheelie-bin.png') 16 16, pointer;
   }
 }
