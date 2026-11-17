@@ -12,16 +12,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-
-  async redirects() {
-    return [
-      {
-        source: '/Coventry',
-        destination: '/coventry',
-        permanent: true,
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;
