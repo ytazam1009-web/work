@@ -60,20 +60,22 @@ export default function Testimonials() {
               <CheckCircle2 className="h-3.5 w-3.5 text-white" />
             </span>
 
-            Google Reviews
+            Customer Reviews
           </div>
 
           <h2
             id="reviews-heading"
             className="text-3xl font-extrabold leading-tight text-[#0A1F44] sm:text-4xl lg:text-5xl"
           >
-            What Our Customers Say
+            Customer Reviews of GB Waste Removals
           </h2>
 
           <p className="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
-            Real customer feedback about our waste removal, rubbish collection,
-            house clearance, garden waste removal, furniture clearance and
-            commercial waste services.
+            See what customers say about our waste removal and rubbish
+            collection services. We help households, landlords and businesses
+            with house clearance, garden waste collection, furniture removal
+            and commercial waste clearance across Birmingham, Coventry,
+            Leicester, Walsall, Wolverhampton and surrounding Midlands areas.
           </p>
 
           {/* GOOGLE RATING */}

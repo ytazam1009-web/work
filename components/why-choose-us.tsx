@@ -1,3 +1,4 @@
+
 import { Clock, Shield, Leaf, Banknote, Award, HeartHandshake } from 'lucide-react';
 
 const features = [
@@ -5,7 +6,7 @@ const features = [
     icon: Clock,
     title: 'Flexible Waste Collection',
     description:
-      'We offer convenient waste collection appointments for households and businesses, with availability for urgent and time-sensitive clearances.',
+      'We arrange convenient waste collection appointments for households, landlords and businesses, with availability for urgent and time-sensitive property clearances. Contact our team to discuss your collection requirements.',
     stat: '24hr',
     statLabel: 'Collection availability',
   },
@@ -13,7 +14,7 @@ const features = [
     icon: Banknote,
     title: 'Clear, Upfront Quotes',
     description:
-      'We aim to keep pricing straightforward, with a clear quote based on the type and amount of waste being collected.',
+      'Receive a quote based on the type, volume and location of your waste. We aim to keep waste removal pricing straightforward, so you understand the cost before arranging your collection.',
     stat: '£0',
     statLabel: 'Hidden fees',
   },
@@ -21,7 +22,7 @@ const features = [
     icon: Shield,
     title: 'Registered Waste Carrier',
     description:
-      'Our waste collection service is focused on responsible handling, transportation and disposal of collected waste in line with applicable UK requirements.',
+      'Choose a registered waste carrier for your rubbish collection. We focus on responsible waste handling, transportation and disposal in accordance with applicable UK waste regulations.',
     stat: 'UK',
     statLabel: 'Waste collection',
   },
@@ -29,7 +30,7 @@ const features = [
     icon: Leaf,
     title: 'Responsible Waste Disposal',
     description:
-      'Collected waste is handled responsibly, with suitable materials directed towards reuse or recycling where appropriate.',
+      'We aim to reduce unnecessary waste going to landfill by directing suitable collected materials towards reuse and recycling wherever appropriate and available.',
     stat: 'Eco',
     statLabel: 'Focused disposal',
   },
@@ -37,7 +38,7 @@ const features = [
     icon: Award,
     title: 'Experienced Waste Removal Team',
     description:
-      'Our team helps with household clearances, bulky waste, garden waste, commercial rubbish and other non-hazardous waste removal requirements.',
+      'Our team assists with household clearances, furniture collection, garden rubbish, commercial waste and suitable non-hazardous builders waste removal for homes and businesses.',
     stat: 'Pro',
     statLabel: 'Removal service',
   },
@@ -45,8 +46,8 @@ const features = [
     icon: HeartHandshake,
     title: 'Local Midlands Service',
     description:
-      'We provide waste removal for homeowners, landlords, tenants and businesses across Birmingham, Coventry, Leicester and surrounding areas.',
-    stat: '3+',
+      'We provide waste removal and rubbish collection for homeowners, landlords, tenants and businesses across Birmingham, Coventry, Leicester, Walsall and Wolverhampton.',
+    stat: '5',
     statLabel: 'Main cities covered',
   },
 ];
@@ -71,10 +72,12 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="text-base sm:text-xl text-gray-500 max-w-3xl mx-auto px-2">
-            A professional waste removal service helping homes, landlords and
-            businesses with rubbish collection, house clearance, garden waste,
-            bulky items and commercial waste across Birmingham, Coventry,
-            Leicester and surrounding areas.
+            Looking for a reliable rubbish removal company? GB Waste Removals
+            helps homeowners, landlords, tenants and businesses arrange
+            household waste collection, house clearance, garden waste removal,
+            furniture disposal and commercial rubbish collection across
+            Birmingham, Coventry, Leicester, Walsall, Wolverhampton and
+            surrounding Midlands areas.
           </p>
         </header>
 
@@ -84,8 +87,6 @@ export default function WhyChooseUs() {
             <article
               key={feature.title}
               className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-gray-100"
-              itemScope
-              itemType="https://schema.org/Service"
             >
               <div className="flex items-start justify-between mb-4 sm:mb-6">
 

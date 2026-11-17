@@ -1,3 +1,4 @@
+
 import {
   Phone,
   CalendarCheck,
@@ -10,30 +11,30 @@ const steps = [
   {
     number: '01',
     icon: Phone,
-    title: 'Request Your Free Waste Quote',
+    title: 'Request Your Free Waste Removal Quote',
     description:
-      'Contact our team by phone or through the online form. Tell us what needs removing, where you are located and the approximate amount of waste. Our quotation team will provide a clear quote for your collection.',
+      'Call our team or complete the online quote form. Tell us what needs collecting, your location and the approximate amount and type of waste. We will review your requirements and provide a quote for the collection.',
   },
   {
     number: '02',
     icon: CalendarCheck,
-    title: 'Choose Your Collection Time',
+    title: 'Arrange a Convenient Collection',
     description:
-      'Once you are happy with the quote, arrange a convenient collection time. We provide waste collection appointments across Birmingham, Coventry, Leicester and surrounding Midlands areas.',
+      'Once you are happy with your quote, agree a suitable collection appointment with our team. We arrange waste collection for homes and businesses across Birmingham, Coventry, Leicester, Walsall, Wolverhampton and surrounding Midlands areas.',
   },
   {
     number: '03',
     icon: Truck,
-    title: 'We Collect Your Waste',
+    title: 'Our Team Collects Your Waste',
     description:
-      'Our team arrives at the agreed location, loads the waste and clears the items from your property. We handle household rubbish, garden waste, furniture, commercial waste and other suitable non-hazardous waste.',
+      'Our team arrives at the agreed location and collects the items included in your quote. We handle suitable household rubbish, garden waste, unwanted furniture, commercial waste and non-hazardous builders waste.',
   },
   {
     number: '04',
     icon: Recycle,
-    title: 'Responsible Waste Disposal',
+    title: 'Responsible Waste Handling',
     description:
-      'Your collected waste is taken for appropriate handling and disposal, with recyclable and reusable materials separated where suitable.',
+      'After collection, your waste is taken for appropriate handling and disposal. Suitable materials are separated for reuse or recycling where facilities and material conditions allow.',
   },
 ];
 
@@ -57,9 +58,11 @@ export default function HowItWorks() {
           </h2>
 
           <p className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto px-2 leading-relaxed">
-            From requesting a quote to collection and responsible disposal,
-            we make rubbish removal straightforward for homes and businesses
-            across Birmingham, Coventry, Leicester and the surrounding Midlands.
+            Arranging rubbish removal should be straightforward. From your
+            initial quote and collection appointment to responsible waste
+            handling, our process helps homes and businesses organise waste
+            collection across Birmingham, Coventry, Leicester, Walsall,
+            Wolverhampton and surrounding Midlands areas.
           </p>
         </div>
 
@@ -131,10 +134,10 @@ export default function HowItWorks() {
             </h3>
 
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-sm sm:text-lg leading-relaxed px-2">
-              Request a free quote for household waste removal, garden
-              clearance, furniture collection, office clearance, commercial
-              rubbish removal or builders waste collection across Birmingham,
-              Coventry, Leicester and nearby areas.
+              Request a quote for household rubbish removal, garden clearance,
+              furniture collection, office clearance, commercial waste removal
+              or suitable builders waste collection across Birmingham,
+              Coventry, Leicester, Walsall, Wolverhampton and nearby areas.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">

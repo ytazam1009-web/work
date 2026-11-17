@@ -1,3 +1,4 @@
+
 import {
   Home,
   Building2,
@@ -14,7 +15,7 @@ const services = [
     title: 'Household Waste Removal',
     href: '/services/household-waste-removal',
     description:
-      'Reliable household waste removal and rubbish collection for unwanted items, general household waste and property clearances across Birmingham, Coventry, Leicester and surrounding Midlands areas.',
+      'Household rubbish removal and house clearance for unwanted furniture, appliances, general household rubbish and items left after moving or clearing a property. Available across Birmingham, Coventry, Leicester, Walsall, Wolverhampton and surrounding Midlands areas.',
     items: [
       'General household rubbish',
       'Old appliances & white goods',
@@ -27,7 +28,7 @@ const services = [
     title: 'Garden Waste Removal',
     href: '/services/garden-waste-removal',
     description:
-      'Professional garden waste removal and garden clearance for grass cuttings, branches, soil, rubble and unwanted outdoor items from homes across Birmingham, Coventry, Leicester and the Midlands.',
+      'Garden waste collection and outdoor clearance for grass cuttings, hedge trimmings, branches, soil, rubble and unwanted garden items. Arrange garden rubbish removal for homes across Birmingham, Coventry, Leicester, Walsall, Wolverhampton and the wider Midlands.',
     items: [
       'Grass & hedge cuttings',
       'Tree branches & stumps',
@@ -40,7 +41,7 @@ const services = [
     title: 'Commercial Waste Removal',
     href: '/services/commercial-waste-removal',
     description:
-      'Commercial waste removal and business rubbish collection for offices, shops, warehouses and other business premises across Birmingham, Coventry, Leicester and nearby Midlands areas.',
+      'Business waste removal and commercial clearance for offices, shops, restaurants, warehouses and other business premises. We collect unwanted business furniture, equipment and suitable commercial rubbish across Birmingham, Coventry, Leicester, Walsall and Wolverhampton.',
     items: [
       'Office furniture & equipment',
       'Retail & restaurant waste',
@@ -53,7 +54,7 @@ const services = [
     title: 'Builders & Construction Waste',
     href: '/services/builders-construction-waste',
     description:
-      'Non-hazardous builders waste removal and construction waste collection for building work, renovations, refurbishments and DIY projects across Birmingham and the wider Midlands.',
+      'Builders waste collection for non-hazardous construction and renovation materials from building work, refurbishments and DIY projects. Arrange removal of suitable building waste across Birmingham, Coventry, Leicester, Walsall, Wolverhampton and surrounding Midlands areas.',
     items: [
       'Bricks & concrete',
       'Plasterboard & timber',
@@ -66,7 +67,7 @@ const services = [
     title: 'Furniture & Bulky Waste',
     href: '/services/furniture-bulky-waste',
     description:
-      'Convenient furniture removal and bulky waste collection for unwanted sofas, wardrobes, beds, mattresses, large appliances and other bulky household items across the Midlands.',
+      'Furniture disposal and bulky waste collection for unwanted sofas, wardrobes, beds, mattresses, large appliances and other oversized household items. Available for homes and suitable business premises throughout Birmingham, Coventry, Leicester, Walsall and Wolverhampton.',
     items: [
       'Sofas & armchairs',
       'Wardrobes & beds',
@@ -79,7 +80,7 @@ const services = [
     title: 'WEEE & Electrical Waste',
     href: '/services/weee-electrical-waste',
     description:
-      'Responsible WEEE and electrical waste collection for unwanted electrical and electronic equipment from homes, offices and commercial premises across Birmingham, Coventry, Leicester and surrounding areas.',
+      'Electrical waste collection for suitable unwanted electrical and electronic equipment from homes, offices and commercial premises. Ask about responsible WEEE collection across Birmingham, Coventry, Leicester, Walsall, Wolverhampton and nearby Midlands areas.',
     items: [
       'TVs & monitors',
       'Computers & laptops',
@@ -105,11 +106,12 @@ export default function Services() {
           </h2>
 
           <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto mt-4">
-            From household rubbish and garden waste to furniture, commercial
-            clearances, builders waste and electrical items, GB Waste Removals
-            provides reliable waste collection and responsible waste removal
-            services across Birmingham, Coventry, Leicester and surrounding
-            Midlands areas.
+            Need household rubbish collection, garden clearance, commercial
+            waste removal or builders waste collection? GB Waste Removals
+            provides a range of waste collection services for homes and
+            businesses across Birmingham, Coventry, Leicester, Walsall,
+            Wolverhampton and surrounding Midlands areas. Contact our team
+            to discuss your waste and request a quote.
           </p>
         </div>
 
@@ -162,4 +164,3 @@ export default function Services() {
     </section>
   );
 }
-

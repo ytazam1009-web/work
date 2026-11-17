@@ -1,3 +1,4 @@
+
 import { MapPin, ArrowRight } from 'lucide-react';
 
 const areas = [
@@ -6,9 +7,9 @@ const areas = [
     areas: [
       'City Centre',
       'Solihull',
-      'Wolverhampton',
-      'Coventry',
       'Dudley',
+      'Sutton Coldfield',
+      'Edgbaston',
     ],
   },
   {
@@ -73,17 +74,17 @@ export default function Areas() {
             id="areas-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2 mb-3 sm:mb-4 leading-tight"
           >
-            Waste Removal Services Across Birmingham, Coventry, Leicester,
-            Walsall & Wolverhampton
+            Local Waste Removal Across Birmingham and the Midlands
           </h2>
 
           <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto px-2 leading-relaxed">
-            GB Waste Removals provides professional waste removal and rubbish
-            collection across Birmingham, Coventry, Leicester, Walsall and
-            Wolverhampton. Our services include house clearance, garden waste
-            removal, furniture removal, bulky waste collection, commercial
-            waste and general rubbish removal for homes and businesses across
-            the West Midlands and surrounding areas.
+            Looking for reliable waste removal or rubbish collection?
+            GB Waste Removals serves homes, landlords and businesses across
+            Birmingham, Coventry, Leicester, Walsall and Wolverhampton.
+            We provide household rubbish clearance, house clearance,
+            garden waste collection, furniture and bulky item removal,
+            commercial waste clearance and suitable builders waste
+            collection throughout our service areas.
           </p>
 
         </div>
@@ -106,9 +107,7 @@ export default function Areas() {
                       : '/wolverhampton';
 
             const serviceLabel =
-              area.city === 'Birmingham'
-                ? 'View Birmingham Waste Removal Service'
-                : `View ${area.city} Waste Removal Service`;
+              `View ${area.city} Waste Removal Service`;
 
             return (
               <a
@@ -175,9 +174,9 @@ export default function Areas() {
         <div className="mt-14 text-center">
 
           <p className="text-gray-600 mb-5 text-sm sm:text-base">
-            Looking for waste removal outside the areas listed above? Contact
-            GB Waste Removals with your postcode and we can check whether
-            waste collection is available in your area.
+            Need waste removal outside the locations listed above?
+            Send us your postcode and details of the waste. Our team
+            can check availability and discuss a suitable collection.
           </p>
 
           <a

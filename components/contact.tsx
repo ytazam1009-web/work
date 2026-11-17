@@ -32,7 +32,7 @@ const contactInfo = [
     title: 'Call Us',
     detail: '07337 976 694',
     sub: 'Mon–Sun, 7am–10pm',
-    href: 'tel:07337976694',
+    href: 'tel:+447337976694',
   },
   {
     icon: Mail,
@@ -52,7 +52,7 @@ const contactInfo = [
     icon: MapPin,
     title: 'Head Office',
     detail:
-      'Office 1, Izabella House 24-26 Regent Place City Centre Birmingham',
+      'Office 1, Izabella House, 24-26 Regent Place, City Centre, Birmingham',
     sub: 'B1 3NJ',
     href: null,
   },
@@ -124,22 +124,29 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      aria-labelledby="contact-heading"
       className="py-16 sm:py-24 bg-gradient-to-b from-blue-50 to-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-10 sm:mb-16">
           <span className="text-[#CF142B] font-bold text-xs sm:text-sm uppercase tracking-[0.2em]">
-            Get In Touch
+            Waste Removal Quotes & Enquiries
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2 mb-3 sm:mb-4">
-            Get Your Free Quote Today
+          <h2
+            id="contact-heading"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1F44] mt-2 mb-3 sm:mb-4"
+          >
+            Get a Free Waste Removal Quote
           </h2>
 
-          <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto px-2">
-            Fill in the form below and we'll get back to you within 60 minutes
-            with a free no-obligation quote.
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto px-2">
+            Need rubbish removal, house clearance, garden waste collection,
+            furniture removal or commercial waste clearance? Contact GB Waste
+            Removals for a free, no-obligation quote. We serve Birmingham,
+            Coventry, Leicester, Walsall, Wolverhampton and surrounding
+            Midlands areas.
           </p>
         </div>
 
@@ -225,12 +232,24 @@ export default function Contact() {
                 </p>
 
                 <p className="text-sm text-gray-500 mt-5">
-                  In a hurry? Call us on{' '}
+                  Prefer WhatsApp? Message us on{' '}
                   <a
-                    href="tel:+447348481092"
+                    href="https://wa.me/447348481092"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#CF142B] font-semibold"
                   >
                     +44 7348 481092
+                  </a>
+                </p>
+
+                <p className="text-sm text-gray-500 mt-3">
+                  To call us, use{' '}
+                  <a
+                    href="tel:+447337976694"
+                    className="text-[#CF142B] font-semibold"
+                  >
+                    07337 976 694
                   </a>
                 </p>
               </div>

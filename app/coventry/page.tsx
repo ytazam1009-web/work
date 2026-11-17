@@ -1,152 +1,149 @@
+
 import type { Metadata } from 'next';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Services from '@/components/services';
 
+const siteUrl = 'https://www.gbwasteremovals.co.uk';
+const pageUrl = `${siteUrl}/coventry`;
+
+const areas = [
+  'Coventry City Centre',
+  'Earlsdon',
+  'Foleshill',
+  'Binley',
+  'Tile Hill',
+  'Cheylesmore',
+  'Canley',
+  'Coundon',
+  'Stoke',
+  'Wyken',
+  'Walsgrave',
+  'Allesley',
+];
+
 export const metadata: Metadata = {
-  title:
-    'Waste Removal Coventry | Rubbish Removal & House Clearance | GB Waste Removals',
+  title: 'Waste Removal Coventry | Rubbish Collection & House Clearance',
   description:
-    'Professional waste removal in Coventry for homes, landlords, businesses and property clearances. House clearance, garden waste, furniture, bulky rubbish, commercial and builders waste collection.',
+    'Need waste removal in Coventry? Get help with household rubbish, house clearance, garden waste, furniture, commercial and builders waste collection.',
   keywords: [
     'waste removal Coventry',
     'rubbish removal Coventry',
     'waste collection Coventry',
     'house clearance Coventry',
+    'household waste removal Coventry',
     'garden waste removal Coventry',
     'furniture removal Coventry',
-    'bulky waste removal Coventry',
+    'bulky waste collection Coventry',
     'commercial waste removal Coventry',
-    'builders waste removal Coventry',
-    'construction waste removal Coventry',
-    'junk removal Coventry',
-    'same day waste removal Coventry',
-    'same day rubbish removal Coventry',
     'office clearance Coventry',
+    'builders waste removal Coventry',
+    'construction waste collection Coventry',
     'property clearance Coventry',
     'landlord waste removal Coventry',
+    'same day rubbish removal Coventry',
     'licensed waste carrier Coventry',
   ],
-
   alternates: {
-    canonical: 'https://www.gbwasteremovals.co.uk/coventry',
+    canonical: pageUrl,
   },
-
   openGraph: {
-    title:
-      'Waste Removal Coventry | Rubbish Removal & House Clearance | GB Waste Removals',
+    title: 'Waste Removal Coventry | Rubbish Collection & House Clearance',
     description:
-      'Professional waste removal and rubbish collection in Coventry for homes, businesses, landlords, gardens, property clearances and suitable building projects.',
-    url: 'https://www.gbwasteremovals.co.uk/coventry',
+      'Local waste removal and rubbish collection in Coventry for households, landlords and businesses. Enquire about furniture, garden, commercial and property clearance.',
+    url: pageUrl,
     type: 'website',
     locale: 'en_GB',
     siteName: 'GB Waste Removals',
     images: [
       {
-        url: 'https://www.gbwasteremovals.co.uk/logos/gbwastecoventry.webp',
+        url: `${siteUrl}/logos/gbwastecoventry.webp`,
         width: 1200,
         height: 800,
-        alt: 'GB Waste Removals Coventry waste collection service',
+        alt: 'GB Waste Removals waste collection service in Coventry',
       },
     ],
   },
-
   twitter: {
     card: 'summary_large_image',
     title: 'Waste Removal Coventry | GB Waste Removals',
     description:
-      'Professional waste removal, rubbish collection, house clearance, garden waste and furniture removal across Coventry.',
-    images: [
-      'https://www.gbwasteremovals.co.uk/logos/gbwastecoventry.webp',
-    ],
+      'Waste collection in Coventry for household rubbish, furniture, garden waste, commercial clearances and suitable building waste.',
+    images: [`${siteUrl}/logos/gbwastecoventry.webp`],
   },
 };
 
 export default function CoventryPage() {
   const faqItems = [
     {
-      question:
-        'What waste removal services do you provide in Coventry?',
+      question: 'What waste removal services do you provide in Coventry?',
       answer:
-        'GB Waste Removals provides waste collection and clearance services across Coventry for homes, businesses, gardens, landlords, properties and suitable building projects. Services can include household rubbish removal, furniture collection, garden waste removal, property clearance and suitable construction-related waste collection, depending on the requirements of the job.',
+        'GB Waste Removals provides collection and clearance services in Coventry for households, landlords and businesses. Depending on the job, this can include household rubbish, unwanted furniture, garden waste, bulky items, commercial clearances, property clearances and suitable builders or renovation waste.',
     },
     {
-      question:
-        'Can you clear an entire house in Coventry?',
+      question: 'Can you clear a whole house in Coventry?',
       answer:
-        'Yes. Our Coventry house clearance service can help remove unwanted furniture, household items, accumulated rubbish and other removable contents from a property. Whether you need to clear one room, a larger property or an entire house, we can assess the volume and type of waste and arrange the collection accordingly.',
+        'Yes. We can help with different sizes of house clearance, from individual rooms to larger property clearances. Tell us which rooms or areas need clearing and what types of items are involved so we can assess the collection requirements.',
     },
     {
-      question:
-        'Do you provide rubbish removal for landlords and property managers in Coventry?',
+      question: 'Do you provide waste removal for Coventry landlords and letting agents?',
       answer:
-        'Yes. GB Waste Removals can assist landlords, letting agents and property managers with waste clearance between tenancies, after property work or when unwanted items have been left behind. Collection requirements depend on the type and quantity of waste involved.',
+        'We can assist landlords, letting agents and property managers with suitable clearance work, including unwanted furniture and rubbish left at a property between tenancies. Share the property postcode, the items involved and any access details when requesting a quote.',
     },
     {
-      question:
-        'Can you collect garden waste in Coventry?',
+      question: 'Can you collect garden waste in Coventry?',
       answer:
-        'Yes. We provide garden waste removal in Coventry for suitable garden clearances, including unwanted branches, cuttings, leaves, old garden items and other removable garden waste. If the garden clearance includes household or bulky items, include those details when requesting your quotation.',
+        'We provide garden waste removal for suitable clearances in Coventry. This may include branches, leaves, cuttings and unwanted garden items. If your garden project also involves sheds, furniture or general household rubbish, include those items in your enquiry.',
     },
     {
-      question:
-        'Do you remove old furniture and bulky household items in Coventry?',
+      question: 'Do you remove sofas, wardrobes and other bulky furniture?',
       answer:
-        'Yes. We can collect many types of unwanted furniture and bulky household items in Coventry, including sofas, wardrobes, tables, beds and other removable items. If you have a particular item you are unsure about, include it when contacting our team so we can confirm whether it can be collected.',
+        'Yes. We can collect many types of unwanted furniture and bulky household items, including sofas, wardrobes, beds, tables and similar items. Let us know what needs removing and whether there are stairs, restricted access or other collection considerations.',
     },
     {
-      question:
-        'Do you offer commercial waste removal in Coventry?',
+      question: 'Can you arrange commercial waste removal in Coventry?',
       answer:
-        'Yes. GB Waste Removals can help Coventry businesses with suitable commercial waste clearances, unwanted furniture, general rubbish and other removable materials. This can include office clearances, shop clear-outs, business relocations, refurbishments and clearance work at commercial premises.',
+        'GB Waste Removals can help businesses with suitable waste and clearance requirements. This can include unwanted office furniture, general commercial rubbish, shop clear-outs, business relocations and waste from premises refurbishments. The materials and quantity need to be confirmed before collection.',
     },
     {
-      question:
-        'Can you remove waste from building or renovation work in Coventry?',
+      question: 'Do you collect builders and renovation waste in Coventry?',
       answer:
-        'We can assist with suitable waste generated by renovation, refurbishment and construction-related projects in Coventry. The type and quantity of material can affect the collection, so provide details of the waste when requesting a quote and our team can confirm the appropriate service.',
+        'We can assist with suitable waste from building, renovation and refurbishment projects. Different materials may have different handling requirements, so provide a description or photographs of the waste when you request a quote. Our team can then confirm whether the collection can be arranged.',
     },
     {
-      question:
-        'Do you offer same-day waste removal in Coventry?',
+      question: 'Is same-day rubbish removal available in Coventry?',
       answer:
-        'Same-day waste collection in Coventry may be available depending on the date, location, vehicle availability and size of the job. If you need waste removed urgently, contact us with your Coventry postcode and details of what needs collecting so we can check availability.',
+        'Same-day collection may be possible depending on your postcode, the type and quantity of waste, and our vehicle and team availability. If your collection is urgent, contact us with the details so we can check the available options.',
     },
     {
-      question:
-        'How much does waste removal cost in Coventry?',
+      question: 'How much does waste removal cost in Coventry?',
       answer:
-        'The cost of waste removal in Coventry depends on factors such as the amount and type of waste, access to the property, loading requirements and collection location. Our quotation team can review the details of your clearance and provide a quote based on the individual job rather than applying one price to every collection.',
+        'The cost depends on the type and amount of waste, where it is located, access to the property and the work involved in loading and removing it. Contact us with your postcode and details of the items so we can provide a quotation based on your specific job.',
     },
     {
-      question:
-        'What areas of Coventry do you cover?',
+      question: 'Which areas of Coventry do you cover?',
       answer:
-        'We provide waste removal services across Coventry and can cover a wide range of local areas and surrounding districts. Areas can include Coventry City Centre, Earlsdon, Foleshill, Binley, Tile Hill, Cheylesmore, Canley, Coundon, Stoke, Wyken, Walsgrave and surrounding areas. If you are unsure whether your postcode is within our service area, contact us with your postcode.',
+        'Our Coventry service area includes Coventry City Centre, Earlsdon, Foleshill, Binley, Tile Hill, Cheylesmore, Canley, Coundon, Stoke, Wyken, Walsgrave, Allesley and surrounding areas. If you cannot see your area listed, send us your postcode and we can check whether collection is available.',
     },
     {
-      question:
-        'How do I get a quote for waste removal in Coventry?',
+      question: 'How can I get a waste removal quote in Coventry?',
       answer:
-        'Get in touch with your Coventry postcode and details of what needs to be removed. You can also provide photographs where useful. Our quotation team will review the information and provide a quote based on the waste, access and collection requirements before the booking is arranged.',
+        'Send us your Coventry postcode and explain what needs to be collected. A list of items or a few photographs can help us understand the size of the job. Include any useful information about access, such as stairs, parking or the distance from the collection point to the vehicle.',
     },
     {
-      question:
-        'Do I need to sort the waste before collection?',
+      question: 'Do I need to separate different types of rubbish?',
       answer:
-        'Not necessarily. Tell us what needs to be removed when requesting your quotation and we can advise you about the collection. Sorting different materials beforehand may be useful where practical, but requirements depend on the type of waste involved.',
+        'You do not necessarily need to sort everything before making an enquiry. Tell us what materials are included so we can advise you about the collection. Some types of waste may need to be handled separately depending on their nature and applicable requirements.',
     },
     {
-      question:
-        'Can you remove waste from gardens, garages, lofts and other areas in Coventry?',
+      question: 'Can you clear garages, lofts and outdoor spaces?',
       answer:
-        'We can handle many types of property clearance involving removable waste from gardens, garages, lofts and other areas where unwanted items have accumulated. Access conditions can affect the collection, so providing accurate information when requesting a quote helps us plan the job properly.',
+        'We can help with suitable clearances involving garages, lofts, gardens and other areas where unwanted items have built up. When requesting a quote, explain where the items are located and mention any access restrictions so the job can be assessed accurately.',
     },
     {
-      question:
-        'What happens to the waste after it is collected?',
+      question: 'What happens to rubbish after it has been collected?',
       answer:
-        'Collected waste is handled according to the type of material and applicable disposal requirements. Where appropriate, suitable materials may be directed through recovery, recycling or disposal routes. We aim to manage each clearance responsibly rather than treating every type of material in exactly the same way.',
+        'Collected waste is handled according to the type of material and applicable waste management requirements. Where suitable, materials may be directed for recovery or recycling. The appropriate route depends on the waste collected.',
     },
   ];
 
@@ -154,64 +151,69 @@ export default function CoventryPage() {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'LocalBusiness',
-        '@id': 'https://www.gbwasteremovals.co.uk/#business',
-        name: 'GB Waste Removals',
-        url: 'https://www.gbwasteremovals.co.uk/',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress:
-            'Office 1, Izabella House, 24-26 Regent Place',
-          addressLocality: 'Birmingham',
-          postalCode: 'B1 3NJ',
-          addressCountry: 'GB',
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: 'Waste Removal Coventry | GB Waste Removals',
+        description:
+          'Waste removal and rubbish collection in Coventry for household, garden, furniture, commercial, property clearance and suitable building waste.',
+        isPartOf: {
+          '@id': `${siteUrl}/#website`,
         },
-        areaServed: {
-          '@type': 'City',
-          name: 'Coventry',
+        about: {
+          '@id': `${pageUrl}#service`,
+        },
+        breadcrumb: {
+          '@id': `${pageUrl}#breadcrumb`,
+        },
+        mainEntity: {
+          '@id': `${pageUrl}#service`,
         },
       },
       {
         '@type': 'Service',
-        '@id':
-          'https://www.gbwasteremovals.co.uk/coventry#service',
+        '@id': `${pageUrl}#service`,
         name: 'Waste Removal Coventry',
-        serviceType:
-          'Waste Removal and Rubbish Collection',
+        serviceType: [
+          'Waste removal',
+          'Rubbish collection',
+          'House clearance',
+          'Garden waste removal',
+          'Furniture and bulky waste collection',
+          'Commercial waste clearance',
+        ],
         provider: {
-          '@id': 'https://www.gbwasteremovals.co.uk/#business',
+          '@id': `${siteUrl}/#business`,
         },
         areaServed: {
           '@type': 'City',
           name: 'Coventry',
         },
-        url: 'https://www.gbwasteremovals.co.uk/coventry',
+        url: pageUrl,
         description:
-          'Professional waste removal and rubbish collection across Coventry for households, landlords, businesses, gardens, property clearances and suitable building projects.',
+          'Waste removal and rubbish collection across Coventry for households, landlords and businesses, including suitable household, garden, furniture, commercial and building-related waste.',
       },
       {
         '@type': 'BreadcrumbList',
-        '@id':
-          'https://www.gbwasteremovals.co.uk/coventry#breadcrumb',
+        '@id': `${pageUrl}#breadcrumb`,
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://www.gbwasteremovals.co.uk/',
+            item: `${siteUrl}/`,
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Waste Removal Coventry',
-            item: 'https://www.gbwasteremovals.co.uk/coventry',
+            item: pageUrl,
           },
         ],
       },
       {
         '@type': 'FAQPage',
-        '@id':
-          'https://www.gbwasteremovals.co.uk/coventry#faqs',
+        '@id': `${pageUrl}#faqs`,
         mainEntity: faqItems.map((faq) => ({
           '@type': 'Question',
           name: faq.question,
@@ -271,12 +273,12 @@ export default function CoventryPage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
-              Professional waste removal and rubbish collection across
-              Coventry for homes, landlords, businesses, gardens,
-              property clearances, renovations and suitable construction
-              projects. We collect unwanted furniture, bulky household
-              items, garden waste, commercial rubbish and other suitable
-              waste according to the requirements of each job.
+              Need unwanted rubbish cleared from your Coventry property?
+              GB Waste Removals helps households, landlords and businesses
+              arrange waste collection for a range of jobs. From old
+              furniture and household clutter to garden clearances,
+              commercial rubbish and suitable renovation waste, tell us
+              what needs removing and we can assess the collection.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -305,43 +307,23 @@ export default function CoventryPage() {
       >
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 md:grid-cols-4">
           <div className="border-b border-slate-200 px-4 py-5 text-center sm:px-6 sm:py-6 md:border-b-0">
-            <p className="font-bold text-[#0A1F44]">
-              Registered
-            </p>
-
-            <p className="mt-1 text-sm text-slate-500">
-              Waste Carrier
-            </p>
+            <p className="font-bold text-[#0A1F44]">Registered</p>
+            <p className="mt-1 text-sm text-slate-500">Waste Carrier</p>
           </div>
 
           <div className="border-b border-slate-200 px-4 py-5 text-center sm:px-6 sm:py-6 md:border-b-0">
-            <p className="font-bold text-[#0A1F44]">
-              Reliable
-            </p>
-
-            <p className="mt-1 text-sm text-slate-500">
-              Waste Collection
-            </p>
+            <p className="font-bold text-[#0A1F44]">Reliable</p>
+            <p className="mt-1 text-sm text-slate-500">Waste Collection</p>
           </div>
 
           <div className="px-4 py-5 text-center sm:px-6 sm:py-6">
-            <p className="font-bold text-[#0A1F44]">
-              Clear Pricing
-            </p>
-
-            <p className="mt-1 text-sm text-slate-500">
-              Job-Based Quotes
-            </p>
+            <p className="font-bold text-[#0A1F44]">Clear Pricing</p>
+            <p className="mt-1 text-sm text-slate-500">Job-Based Quotes</p>
           </div>
 
           <div className="px-4 py-5 text-center sm:px-6 sm:py-6">
-            <p className="font-bold text-[#0A1F44]">
-              Responsible
-            </p>
-
-            <p className="mt-1 text-sm text-slate-500">
-              Waste Handling
-            </p>
+            <p className="font-bold text-[#0A1F44]">Responsible</p>
+            <p className="mt-1 text-sm text-slate-500">Waste Handling</p>
           </div>
         </div>
       </section>
@@ -350,34 +332,36 @@ export default function CoventryPage() {
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
-            Waste Removal Coventry
+            Local Waste Collection
           </p>
 
           <h2 className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl">
-            Professional Waste Removal Across Coventry
+            Rubbish Removal for Coventry Homes, Landlords & Businesses
           </h2>
 
           <p className="mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-            If you need rubbish removed from a home, garden, business or
-            property in Coventry, GB Waste Removals provides a
-            straightforward collection service. We can help with household
-            waste, furniture, garden clearances, commercial rubbish,
-            property clearances and suitable renovation or building waste.
-            Tell us what needs collecting, provide your postcode and we can
-            assess the requirements of your job.
+            Clearing unwanted items can involve more than putting a few
+            bags outside. You may be preparing a property for new
+            occupants, making space in a garage, dealing with old
+            furniture or clearing waste after renovation work. GB Waste
+            Removals can assess the type and amount of waste involved and
+            help arrange a suitable collection in Coventry.
           </p>
 
           <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-            Our Coventry waste removal service covers a wide range of
-            local areas, including Coventry City Centre, Earlsdon,
-            Foleshill, Binley, Tile Hill, Cheylesmore, Canley, Coundon,
-            Stoke, Wyken, Walsgrave and surrounding areas.
+            We cover Coventry City Centre, Earlsdon, Foleshill, Binley,
+            Tile Hill, Cheylesmore, Canley, Coundon, Stoke, Wyken,
+            Walsgrave, Allesley and surrounding areas. Send us your
+            postcode and details of the job to check collection
+            availability.
           </p>
         </div>
       </section>
 
       {/* Shared Services */}
-      <Services />
+      <div id="services">
+        <Services />
+      </div>
 
       {/* How It Works */}
       <section
@@ -395,75 +379,70 @@ export default function CoventryPage() {
               id="how-it-works-heading"
               className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl"
             >
-              How Our Coventry Waste Removal Service Works
+              How to Arrange Your Coventry Rubbish Collection
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
-              We keep the waste collection process simple, from your first
-              enquiry through to removal and responsible handling.
+              From describing the items to arranging a collection, we
+              keep the process clear so you know what information is
+              needed before the job goes ahead.
             </p>
           </div>
 
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                01
-              </p>
+              <p className="text-4xl font-bold text-[#CF142B]">01</p>
 
               <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
-                Request a Quote
+                Tell Us What Needs Removing
               </h3>
 
               <p className="mt-3 leading-7 text-slate-600">
-                Tell us your Coventry postcode, what needs to be removed
-                and any useful access or property information. Photographs
-                can also help when assessing the job.
+                Share your Coventry postcode and describe the rubbish,
+                furniture or other items you want collected. Photographs
+                can help explain the size of the job.
               </p>
             </div>
 
             <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                02
-              </p>
+              <p className="text-4xl font-bold text-[#CF142B]">02</p>
 
               <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
-                Arrange Collection
+                Receive Your Quote
               </h3>
 
               <p className="mt-3 leading-7 text-slate-600">
-                Once the requirements and quotation are agreed, we arrange
-                a suitable collection time for the job.
+                We review the waste type, quantity and access
+                information to assess the collection and provide a
+                job-based quotation.
               </p>
             </div>
 
             <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                03
-              </p>
+              <p className="text-4xl font-bold text-[#CF142B]">03</p>
 
               <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
-                We Collect
+                Arrange a Collection
               </h3>
 
               <p className="mt-3 leading-7 text-slate-600">
-                Our team collects the agreed waste and unwanted items from
-                the property according to the collection requirements.
+                Once the quotation and requirements are agreed, we
+                arrange a suitable collection time, subject to
+                availability.
               </p>
             </div>
 
             <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                04
-              </p>
+              <p className="text-4xl font-bold text-[#CF142B]">04</p>
 
               <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
-                Waste Handling
+                Waste Is Collected
               </h3>
 
               <p className="mt-3 leading-7 text-slate-600">
-                Collected materials are handled according to their type and
-                applicable disposal requirements, with recovery or recycling
-                where appropriate.
+                We collect the agreed items and handle the materials
+                according to their type and applicable waste management
+                requirements.
               </p>
             </div>
           </div>
@@ -486,32 +465,20 @@ export default function CoventryPage() {
               id="areas-heading"
               className="mt-3 text-3xl font-bold leading-tight sm:text-4xl"
             >
-              Waste Removal Across Coventry & Surrounding Areas
+              Local Rubbish Collection Across Coventry
             </h2>
 
             <p className="mt-4 text-base leading-7 text-white/80 sm:text-lg">
-              GB Waste Removals provides waste collection and rubbish
-              removal across Coventry and surrounding local areas. If your
-              postcode is not listed, contact us and we can check whether
-              collection is available for your location.
+              Whether you need household rubbish collected, furniture
+              removed or a property cleared, contact us with your
+              location and collection details. We cover a range of
+              Coventry neighbourhoods and can check surrounding
+              postcodes on request.
             </p>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {[
-              'Coventry City Centre',
-              'Earlsdon',
-              'Foleshill',
-              'Binley',
-              'Tile Hill',
-              'Cheylesmore',
-              'Canley',
-              'Coundon',
-              'Stoke',
-              'Wyken',
-              'Walsgrave',
-              'Allesley',
-            ].map((area) => (
+            {areas.map((area) => (
               <div
                 key={area}
                 className="rounded-lg border border-white/20 bg-white/10 px-5 py-4 font-medium transition hover:bg-white/15"
@@ -539,15 +506,15 @@ export default function CoventryPage() {
                 id="why-heading"
                 className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl"
               >
-                A Straightforward Waste Removal Service in Coventry
+                Waste Collection Planned Around Your Job
               </h2>
 
               <p className="mt-5 text-base leading-8 text-slate-600 sm:text-lg">
-                We focus on making waste collection simple and convenient.
-                Whether you are clearing a home, removing unwanted
-                furniture, tidying a garden or arranging a commercial
-                clearance, we assess the requirements of the individual job
-                before collection.
+                Every clearance is different. A household furniture
+                collection has different requirements from a garden
+                clear-out, a landlord clearance or waste from a
+                refurbishment. We ask about the items, quantity and
+                access before confirming the collection arrangements.
               </p>
             </div>
 
@@ -558,19 +525,21 @@ export default function CoventryPage() {
                 </h3>
 
                 <p className="mt-2 leading-7 text-slate-600">
-                  We keep the collection process straightforward from your
-                  initial enquiry through to the agreed waste collection.
+                  Explain what needs collecting and where it is located.
+                  We use those details to assess your enquiry and discuss
+                  the collection requirements.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-[#0A1F44]">
-                  Reliable Collection
+                  Quotes Based on the Job
                 </h3>
 
                 <p className="mt-2 leading-7 text-slate-600">
-                  We arrange a suitable collection time based on the
-                  requirements and availability for your job.
+                  The quotation takes account of the waste involved and
+                  the work required, rather than assuming every
+                  collection is the same.
                 </p>
               </div>
 
@@ -580,19 +549,19 @@ export default function CoventryPage() {
                 </h3>
 
                 <p className="mt-2 leading-7 text-slate-600">
-                  Waste is handled according to its type and applicable
-                  disposal requirements, with recycling or recovery where
-                  appropriate.
+                  Collected waste is handled according to its type and
+                  applicable disposal requirements, with recovery or
+                  recycling where appropriate.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-[#0A1F44]">
-                  Residential & Commercial
+                  Residential & Commercial Clearances
                 </h3>
 
                 <p className="mt-2 leading-7 text-slate-600">
-                  We can assist with suitable waste removal requirements for
+                  We can assess suitable collection requirements for
                   homes, landlords, businesses, gardens and property
                   clearances across Coventry.
                 </p>
@@ -618,13 +587,13 @@ export default function CoventryPage() {
               id="faq-heading"
               className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl"
             >
-              Frequently Asked Questions About Waste Removal in Coventry
+              Questions About Rubbish Removal in Coventry
             </h2>
 
             <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">
-              Answers to common questions about Coventry rubbish
-              collection, house clearance, garden waste, furniture removal,
-              commercial waste and property clearance.
+              Find out more about our waste collection, house clearance,
+              garden waste, furniture removal and commercial clearance
+              services in Coventry.
             </p>
           </div>
 
@@ -657,19 +626,20 @@ export default function CoventryPage() {
             id="cta-heading"
             className="text-3xl font-bold leading-tight sm:text-4xl"
           >
-            Need Waste Removed in Coventry?
+            Arrange Waste Removal in Coventry
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
-            Request a waste removal quote with your Coventry postcode and
-            details of the items or waste you need collected.
+            Tell us your Coventry postcode and what you need collected.
+            Contact GB Waste Removals to request a quotation for your
+            household, garden, furniture or commercial waste clearance.
           </p>
 
           <a
             href="/#contact"
             className="mt-8 inline-flex w-full items-center justify-center rounded-lg bg-white px-8 py-4 font-bold text-[#0A1F44] transition hover:bg-slate-100 sm:w-auto"
           >
-            Get a Free Coventry Waste Removal Quote
+            Get a Coventry Waste Removal Quote
           </a>
         </div>
       </section>

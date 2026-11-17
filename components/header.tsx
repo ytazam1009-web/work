@@ -41,6 +41,7 @@ export default function Header({ showBackButton = false }: HeaderProps) {
 
   const navLinks = [
     { label: 'Services', href: '#services' },
+    { label: 'Blog', href: '/blog' },
     { label: 'How It Works', href: '#how-it-works' },
     { label: 'Areas', href: '#areas' },
     //{ label: 'Reviews', href: '#reviews' },
@@ -48,6 +49,7 @@ export default function Header({ showBackButton = false }: HeaderProps) {
   ];
 
   const getNavHref = (href: string) => {
+    if (href.startsWith('/')) return href;
     return showBackButton ? `/${href}` : href;
   };
 

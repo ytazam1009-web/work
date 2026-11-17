@@ -1,9 +1,9 @@
+
 'use client';
 
 import { Star, Phone, ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function Hero() {
-
   const trustBadges = [
     { text: 'Same Day Waste Removal (Collection within 24 Hours)' },
     { text: 'Licensed Waste Carrier Approved in the UK' },
@@ -24,18 +24,20 @@ export default function Hero() {
 
         {/* HEADING */}
         <h1 className="text-4xl sm:text-6xl font-extrabold text-white mb-6">
-          Fast & Affordable{' '}
+          Waste Removal in{' '}
           <span className="text-[#CF142B]">
-            Waste Removal
+            Birmingham
           </span>{' '}
-          Services in Birmingham & the Midlands
+          & Across the Midlands
         </h1>
 
         {/* DESCRIPTION */}
         <p className="text-base sm:text-xl text-white/90 mb-10 max-w-3xl mx-auto">
-          Reliable waste removal, house clearance, garden waste collection and
-          commercial waste services across Birmingham, Coventry, Leicester and
-          surrounding areas.
+          Looking for reliable waste removal or rubbish collection? GB Waste
+          Removals provides household waste clearance, garden waste collection,
+          commercial rubbish removal, builders waste and bulky item collection
+          across Birmingham, Coventry, Leicester, Walsall, Wolverhampton and
+          surrounding Midlands areas.
         </p>
 
         {/* CTA BUTTON */}
@@ -66,7 +68,7 @@ export default function Hero() {
         {/* CALL */}
         <div className="mt-10">
           <a
-            href="tel:07418628511"
+            href="tel:+447337976694"
             className="inline-flex items-center gap-2 bg-white text-[#0A1F44] border-2 border-white px-6 py-3 rounded-full font-bold hover:bg-[#CF142B] hover:text-white hover:border-[#CF142B] transition-all"
           >
             <Phone className="w-4 h-4" />

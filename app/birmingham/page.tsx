@@ -1,13 +1,17 @@
+
 import type { Metadata } from 'next';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Services from '@/components/services';
 
+const siteUrl = 'https://www.gbwasteremovals.co.uk';
+const pageUrl = `${siteUrl}/birmingham`;
+
 export const metadata: Metadata = {
   title:
-    'Waste Removal Birmingham | Rubbish Removal & House Clearance | GB Waste Removals',
+    'Waste Removal Birmingham | Local Rubbish Collection & Clearance',
   description:
-    'Professional waste removal in Birmingham for homes, landlords, businesses and property clearances. House clearance, garden waste, furniture, bulky rubbish, commercial and builders waste collection.',
+    'Need waste removal in Birmingham? GB Waste Removals collects household rubbish, garden waste, furniture, commercial waste and builders waste. Request a quote.',
   keywords: [
     'waste removal Birmingham',
     'rubbish removal Birmingham',
@@ -15,33 +19,30 @@ export const metadata: Metadata = {
     'house clearance Birmingham',
     'garden waste removal Birmingham',
     'furniture removal Birmingham',
-    'bulky waste removal Birmingham',
+    'bulky waste collection Birmingham',
     'commercial waste removal Birmingham',
     'builders waste removal Birmingham',
-    'construction waste removal Birmingham',
-    'junk removal Birmingham',
-    'same day waste removal Birmingham',
-    'same day rubbish removal Birmingham',
+    'construction waste collection Birmingham',
     'office clearance Birmingham',
     'property clearance Birmingham',
-    'landlord waste removal Birmingham',
+    'landlord waste clearance Birmingham',
     'licensed waste carrier Birmingham',
   ],
   alternates: {
-    canonical: 'https://www.gbwasteremovals.co.uk/birmingham',
+    canonical: pageUrl,
   },
   openGraph: {
     title:
-      'Waste Removal Birmingham | Rubbish Removal & House Clearance | GB Waste Removals',
+      'Waste Removal Birmingham | Local Rubbish Collection & Clearance',
     description:
-      'Professional waste removal and rubbish collection in Birmingham for homes, businesses, landlords, gardens, property clearances and suitable building projects.',
-    url: 'https://www.gbwasteremovals.co.uk/birmingham',
+      'Household rubbish, garden waste, furniture, commercial waste and property clearance in Birmingham. Contact GB Waste Removals for a collection quote.',
+    url: pageUrl,
     type: 'website',
     locale: 'en_GB',
     siteName: 'GB Waste Removals',
     images: [
       {
-        url: 'https://www.gbwasteremovals.co.uk/logos/gbwastebirmingham.webp',
+        url: `${siteUrl}/logos/gbwastebirmingham.webp`,
         width: 1200,
         height: 800,
         alt: 'GB Waste Removals Birmingham waste collection service',
@@ -50,166 +51,176 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title:
-      'Waste Removal Birmingham | GB Waste Removals',
+    title: 'Waste Removal Birmingham | GB Waste Removals',
     description:
-      'Professional waste removal, rubbish collection, house clearance, garden waste and furniture removal across Birmingham.',
-    images: [
-      'https://www.gbwasteremovals.co.uk/logos/gbwastebirmingham.webp',
-    ],
+      'Birmingham rubbish removal, house clearance, garden waste, furniture collection and commercial waste removal.',
+    images: [`${siteUrl}/logos/gbwastebirmingham.webp`],
   },
 };
 
 export default function BirminghamPage() {
   const faqItems = [
     {
-      question:
-        'What waste removal services do you provide in Birmingham?',
+      question: 'What waste removal services do you provide in Birmingham?',
       answer:
-        'GB Waste Removals provides waste collection and clearance services across Birmingham for homes, businesses, gardens, landlords, properties and suitable building projects. Services can include household rubbish removal, furniture collection, garden waste removal, property clearance and suitable construction-related waste collection, depending on the requirements of the job.',
+        'GB Waste Removals provides waste collection and clearance services across Birmingham for households, landlords, businesses and property owners. Depending on the job, we can collect household rubbish, unwanted furniture, bulky items, garden waste, commercial rubbish and suitable builders or renovation waste.',
+    },
+    {
+      question: 'Can you clear an entire house in Birmingham?',
+      answer:
+        'Yes. Our Birmingham house clearance service can help remove unwanted furniture, household belongings and accumulated rubbish from individual rooms or larger properties. Tell us whether you need a partial or full house clearance and provide details of the items involved so we can assess the job.',
     },
     {
       question:
-        'Can you clear an entire house in Birmingham?',
+        'Do you provide rubbish removal for landlords and letting agents in Birmingham?',
       answer:
-        'Yes. Our Birmingham house clearance service can help remove unwanted furniture, household items, accumulated rubbish and other removable contents from a property. Whether you need to clear one room, a larger property or an entire house, we can assess the volume and type of waste and arrange the collection accordingly.',
+        'We can assist landlords, letting agents and property managers with suitable waste clearances between tenancies, after property work or when unwanted items have been left behind. Let us know the property location, the type of items and the approximate quantity when requesting a quote.',
     },
     {
-      question:
-        'Do you provide rubbish removal for landlords and property managers in Birmingham?',
+      question: 'Can you collect garden waste in Birmingham?',
       answer:
-        'Yes. GB Waste Removals can assist landlords, letting agents and property managers with waste clearance between tenancies, after property work or when unwanted items have been left behind. Collection requirements depend on the type and quantity of waste involved.',
+        'Yes. We provide garden waste removal for suitable garden clearances in Birmingham. This can include branches, leaves, cuttings, unwanted garden items and other removable garden waste. If the job also includes furniture or household rubbish, mention those items when requesting your quotation.',
     },
     {
-      question:
-        'Can you collect garden waste in Birmingham?',
+      question: 'Do you remove old furniture and bulky household items?',
       answer:
-        'Yes. We provide garden waste removal in Birmingham for suitable garden clearances, including unwanted branches, cuttings, leaves, old garden items and other removable garden waste. If the garden clearance includes household or bulky items, include those details when requesting your quotation.',
+        'We can collect many types of unwanted furniture and bulky household items in Birmingham, including sofas, wardrobes, tables, beds and other removable items. Tell us what needs collecting and, where possible, provide photographs so we can confirm whether the items can be included in the collection.',
     },
     {
-      question:
-        'Do you remove old furniture and bulky household items?',
+      question: 'Do you offer commercial waste removal in Birmingham?',
       answer:
-        'Yes. We can collect many types of unwanted furniture and bulky household items in Birmingham, including sofas, wardrobes, tables, beds and other removable items. If you have a particular item you are unsure about, include it when contacting our team so we can confirm whether it can be collected.',
+        'GB Waste Removals can help Birmingham businesses with suitable commercial waste clearances, unwanted furniture, general rubbish and removable materials. This may include office clearances, shop clear-outs, business relocations, refurbishments and clearance work at commercial premises.',
     },
     {
-      question:
-        'Do you offer commercial waste removal in Birmingham?',
+      question: 'Can you remove waste from building or renovation work?',
       answer:
-        'Yes. GB Waste Removals can help Birmingham businesses with suitable commercial waste clearances, unwanted furniture, general rubbish and other removable materials. This can include office clearances, shop clear-outs, business relocations, refurbishments and clearance work at commercial premises.',
+        'We can assist with suitable waste generated by renovation, refurbishment and construction-related projects. The type and quantity of material affect how a collection is arranged. Please describe the materials involved when requesting a quote so our team can confirm whether they can be collected.',
     },
     {
-      question:
-        'Can you remove waste from building or renovation work?',
+      question: 'Do you offer same-day waste removal in Birmingham?',
       answer:
-        'We can assist with suitable waste generated by renovation, refurbishment and construction-related projects. The type and quantity of material can affect the collection, so provide details of the waste when requesting a quote and our team can confirm the appropriate service.',
+        'Same-day waste collection may be available in Birmingham depending on the date, location, vehicle availability and size of the job. If you need an urgent collection, contact us with your postcode and details of the waste so we can check availability.',
     },
     {
-      question:
-        'Do you offer same-day waste removal in Birmingham?',
+      question: 'How much does waste removal cost in Birmingham?',
       answer:
-        'Same-day waste collection in Birmingham may be available depending on the date, location, vehicle availability and size of the job. If you need waste removed urgently, contact us with your Birmingham postcode and details of what needs collecting so we can check availability.',
+        'The cost of waste removal in Birmingham depends on the type and amount of waste, access to the property, loading requirements and collection location. Providing an item list or photographs can help us assess the job and prepare a quotation based on your specific requirements.',
     },
     {
-      question:
-        'How much does waste removal cost in Birmingham?',
+      question: 'What areas of Birmingham do you cover?',
       answer:
-        'The cost of waste removal in Birmingham depends on factors such as the amount and type of waste, access to the property, loading requirements and collection location. Our quotation team can review the details of your clearance and provide a quote based on the individual job rather than applying one price to every collection.',
+        'Our Birmingham service covers a range of local areas, including Birmingham City Centre, Edgbaston, Harborne, Selly Oak, Erdington, Sutton Coldfield, Kings Heath, Yardley, Jewellery Quarter, Moseley and Acocks Green. Contact us with your postcode if you are unsure whether your location can be covered.',
     },
     {
-      question:
-        'What areas of Birmingham do you cover?',
+      question: 'How do I get a quote for waste removal in Birmingham?',
       answer:
-        'We provide waste removal services across Birmingham and can cover a wide range of local areas and surrounding districts. Areas can include Birmingham City Centre, Edgbaston, Harborne, Selly Oak, Erdington, Sutton Coldfield, Kings Heath, Yardley, Jewellery Quarter, Moseley, Acocks Green and Solihull. If you are unsure whether your postcode is within our service area, contact us with your postcode.',
+        'Contact GB Waste Removals with your Birmingham postcode and a description of what needs to be collected. You can also send photographs, an approximate quantity and details about access to the waste. We will review the information and provide a quotation based on the collection requirements.',
     },
     {
-      question:
-        'How do I get a quote for waste removal in Birmingham?',
+      question: 'Do I need to sort the waste before collection?',
       answer:
-        'Get in touch with your Birmingham postcode and details of what needs to be removed. You can also provide photographs where useful. Our quotation team will review the information and provide a quote based on the waste, access and collection requirements before the booking is arranged.',
-    },
-    {
-      question:
-        'Do I need to sort the waste before collection?',
-      answer:
-        'Not necessarily. Tell us what needs to be removed when requesting your quotation and we can advise you about the collection. Sorting different materials beforehand may be useful where practical, but requirements depend on the type of waste involved.',
+        'Not necessarily. Tell us what needs to be removed when requesting your quotation and we can advise you about the collection. Separating different materials beforehand may be useful where practical, but this depends on the type of waste and the requirements of the job.',
     },
     {
       question:
         'Can you remove waste from gardens, garages, lofts and other areas?',
       answer:
-        'We can handle many types of property clearance involving removable waste from gardens, garages, lofts and other areas where unwanted items have accumulated. Access conditions can affect the collection, so providing accurate information when requesting a quote helps us plan the job properly.',
+        'We can handle many types of property clearance involving removable waste from gardens, garages, lofts and other areas where unwanted items have accumulated. Please explain where the waste is located and mention any access restrictions so the collection can be assessed properly.',
     },
     {
-      question:
-        'What happens to the waste after it is collected?',
+      question: 'What happens to the waste after it is collected?',
       answer:
-        'Collected waste is handled according to the type of material and applicable disposal requirements. Where appropriate, suitable materials may be directed through recovery, recycling or disposal routes. We aim to manage each clearance responsibly rather than treating every type of material in exactly the same way.',
+        'Collected waste is handled according to the type of material and applicable disposal requirements. Where appropriate, suitable materials may be directed through recovery or recycling routes. Different materials can require different handling and disposal arrangements.',
     },
+  ];
+
+  const areas = [
+    'Birmingham City Centre',
+    'Edgbaston',
+    'Harborne',
+    'Selly Oak',
+    'Erdington',
+    'Sutton Coldfield',
+    'Kings Heath',
+    'Yardley',
+    'Jewellery Quarter',
+    'Moseley',
+    'Acocks Green',
+    'Solihull',
   ];
 
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'LocalBusiness',
-        '@id': 'https://www.gbwasteremovals.co.uk/#business',
-        name: 'GB Waste Removals',
-        url: 'https://www.gbwasteremovals.co.uk/',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress:
-            'Office 1, Izabella House, 24-26 Regent Place',
-          addressLocality: 'Birmingham',
-          postalCode: 'B1 3NJ',
-          addressCountry: 'GB',
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: 'Waste Removal Birmingham | GB Waste Removals',
+        description:
+          'Waste removal and rubbish collection in Birmingham for households, landlords, businesses and property clearances.',
+        isPartOf: {
+          '@id': `${siteUrl}/#website`,
         },
-        areaServed: {
-          '@type': 'City',
-          name: 'Birmingham',
+        about: {
+          '@id': `${pageUrl}#service`,
         },
+        breadcrumb: {
+          '@id': `${pageUrl}#breadcrumb`,
+        },
+        inLanguage: 'en-GB',
       },
       {
         '@type': 'Service',
-        '@id':
-          'https://www.gbwasteremovals.co.uk/birmingham#service',
+        '@id': `${pageUrl}#service`,
         name: 'Waste Removal Birmingham',
-        serviceType:
-          'Waste Removal and Rubbish Collection',
+        serviceType: [
+          'Waste removal',
+          'Rubbish collection',
+          'House clearance',
+          'Garden waste removal',
+          'Furniture and bulky waste collection',
+          'Commercial waste removal',
+          'Builders waste collection',
+        ],
         provider: {
-          '@id': 'https://www.gbwasteremovals.co.uk/#business',
+          '@id': `${siteUrl}/#business`,
         },
-        areaServed: {
-          '@type': 'City',
-          name: 'Birmingham',
-        },
-        url: 'https://www.gbwasteremovals.co.uk/birmingham',
+        areaServed: [
+          {
+            '@type': 'City',
+            name: 'Birmingham',
+          },
+          ...areas.map((area) => ({
+            '@type': 'Place',
+            name: area,
+          })),
+        ],
+        url: pageUrl,
         description:
-          'Professional waste removal and rubbish collection across Birmingham for households, landlords, businesses, gardens, property clearances and suitable building projects.',
+          'Waste removal and rubbish collection in Birmingham for household, garden, furniture, commercial, property clearance and suitable building waste requirements.',
       },
       {
         '@type': 'BreadcrumbList',
-        '@id':
-          'https://www.gbwasteremovals.co.uk/birmingham#breadcrumb',
+        '@id': `${pageUrl}#breadcrumb`,
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://www.gbwasteremovals.co.uk/',
+            item: `${siteUrl}/`,
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Waste Removal Birmingham',
-            item: 'https://www.gbwasteremovals.co.uk/birmingham',
+            item: pageUrl,
           },
         ],
       },
       {
         '@type': 'FAQPage',
-        '@id':
-          'https://www.gbwasteremovals.co.uk/birmingham#faqs',
+        '@id': `${pageUrl}#faqs`,
         mainEntity: faqItems.map((faq) => ({
           '@type': 'Question',
           name: faq.question,
@@ -235,18 +246,16 @@ export default function BirminghamPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#0A1F44] px-4 py-20 text-white sm:px-6 sm:py-24 lg:px-8">
-        {/* Birmingham Hero Image */}
         <div className="absolute inset-y-0 right-0 z-0 hidden w-[53%] sm:block">
           <img
             src="/logos/gbwastebirmingham.webp"
-            alt="GB Waste Removals Birmingham waste collection service"
+            alt="GB Waste Removals rubbish collection service in Birmingham"
             className="h-full w-full object-cover"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F44] via-[#0A1F44]/60 to-transparent" />
         </div>
 
-        {/* Mobile Hero Image */}
         <div className="absolute inset-0 z-0 sm:hidden">
           <img
             src="/logos/gbwastebirmingham.webp"
@@ -256,7 +265,6 @@ export default function BirminghamPage() {
           <div className="absolute inset-0 bg-[#0A1F44]/80" />
         </div>
 
-        {/* Hero Content */}
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
@@ -268,12 +276,13 @@ export default function BirminghamPage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
-              Professional waste removal and rubbish collection across
-              Birmingham for homes, landlords, businesses, gardens,
-              property clearances, renovations and suitable construction
-              projects. We collect unwanted furniture, bulky household
-              items, garden waste, commercial rubbish and other suitable
-              waste according to the requirements of each job.
+              Need unwanted rubbish, furniture or other waste cleared in
+              Birmingham? GB Waste Removals provides collection services for
+              homes, landlords, businesses and property clearances. We can
+              help with household rubbish, garden waste, bulky items,
+              commercial clearances and suitable builders waste. Tell us
+              what needs removing and where it is located so we can assess
+              your collection requirements.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -302,39 +311,23 @@ export default function BirminghamPage() {
       >
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 md:grid-cols-4">
           <div className="border-b border-slate-200 px-4 py-5 text-center sm:px-6 sm:py-6 md:border-b-0">
-            <p className="font-bold text-[#0A1F44]">
-              Registered
-            </p>
-            <p className="mt-1 text-sm text-slate-500">
-              Waste Carrier
-            </p>
+            <p className="font-bold text-[#0A1F44]">Registered</p>
+            <p className="mt-1 text-sm text-slate-500">Waste Carrier</p>
           </div>
 
           <div className="border-b border-slate-200 px-4 py-5 text-center sm:px-6 sm:py-6 md:border-b-0">
-            <p className="font-bold text-[#0A1F44]">
-              Reliable
-            </p>
-            <p className="mt-1 text-sm text-slate-500">
-              Waste Collection
-            </p>
+            <p className="font-bold text-[#0A1F44]">Reliable</p>
+            <p className="mt-1 text-sm text-slate-500">Waste Collection</p>
           </div>
 
           <div className="px-4 py-5 text-center sm:px-6 sm:py-6">
-            <p className="font-bold text-[#0A1F44]">
-              Clear Pricing
-            </p>
-            <p className="mt-1 text-sm text-slate-500">
-              Job-Based Quotes
-            </p>
+            <p className="font-bold text-[#0A1F44]">Clear Pricing</p>
+            <p className="mt-1 text-sm text-slate-500">Job-Based Quotes</p>
           </div>
 
           <div className="px-4 py-5 text-center sm:px-6 sm:py-6">
-            <p className="font-bold text-[#0A1F44]">
-              Responsible
-            </p>
-            <p className="mt-1 text-sm text-slate-500">
-              Waste Handling
-            </p>
+            <p className="font-bold text-[#0A1F44]">Responsible</p>
+            <p className="mt-1 text-sm text-slate-500">Waste Handling</p>
           </div>
         </div>
       </section>
@@ -343,34 +336,114 @@ export default function BirminghamPage() {
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
-            Waste Removal Birmingham
+            Local Rubbish Collection
           </p>
 
           <h2 className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl">
-            Professional Waste Removal Across Birmingham
+            Waste Collection for Birmingham Homes, Businesses and Properties
           </h2>
 
           <p className="mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-            If you need rubbish removed from a home, garden, business or
-            property in Birmingham, GB Waste Removals provides a
-            straightforward collection service. We can help with household
-            waste, furniture, garden clearances, commercial rubbish,
-            property clearances and suitable renovation or building waste.
-            Tell us what needs collecting, provide your postcode and we can
-            assess the requirements of your job.
+            Finding a suitable way to clear unwanted waste can be difficult
+            when you have bulky furniture, household rubbish, garden
+            cuttings or materials left after property work. GB Waste
+            Removals helps customers arrange waste collection in Birmingham
+            based on the type of items, the quantity involved and the
+            collection location.
           </p>
 
           <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-            Our Birmingham waste removal service covers a wide range of
-            local areas, including Birmingham City Centre, Edgbaston,
-            Harborne, Selly Oak, Erdington, Sutton Coldfield, Kings Heath,
-            Yardley, Moseley, Acocks Green and surrounding areas.
+            Whether you are clearing a single room, preparing a property
+            between tenancies, removing unwanted items from a garden or
+            dealing with rubbish at business premises, tell us what needs
+            collecting. We can review the details and provide a quotation
+            for the work required.
+          </p>
+
+          <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+            Our Birmingham service covers a range of local areas, including
+            Birmingham City Centre, Edgbaston, Harborne, Selly Oak,
+            Erdington, Sutton Coldfield, Kings Heath, Yardley, Moseley,
+            Acocks Green and surrounding districts. Send us your postcode
+            if you would like us to check collection availability.
           </p>
         </div>
       </section>
 
       {/* Shared Services */}
-      <Services />
+      <div id="services">
+        <Services />
+      </div>
+
+      {/* Preparing a Quote */}
+      <section
+        aria-labelledby="quote-information-heading"
+        className="bg-slate-50 px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
+              Requesting a Birmingham Collection
+            </p>
+
+            <h2
+              id="quote-information-heading"
+              className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl"
+            >
+              What Information Helps Us Quote for Waste Removal?
+            </h2>
+
+            <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">
+              A few details about your waste can help us understand the
+              collection and assess the work before providing a quotation.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <article className="rounded-xl border border-slate-200 bg-white p-6">
+              <h3 className="text-xl font-bold text-[#0A1F44]">
+                Your Birmingham Postcode
+              </h3>
+              <p className="mt-3 leading-7 text-slate-600">
+                Let us know where the waste is located. Your postcode helps
+                us check the collection location and consider the
+                requirements of the job.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6">
+              <h3 className="text-xl font-bold text-[#0A1F44]">
+                Type and Amount of Waste
+              </h3>
+              <p className="mt-3 leading-7 text-slate-600">
+                Describe the items you need removed, such as furniture,
+                household rubbish, garden waste or suitable building
+                materials. An approximate quantity is helpful.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6">
+              <h3 className="text-xl font-bold text-[#0A1F44]">
+                Photographs and Access
+              </h3>
+              <p className="mt-3 leading-7 text-slate-600">
+                Photographs can help show the amount and type of waste.
+                Also mention stairs, restricted access or where the items
+                are situated on the property.
+              </p>
+            </article>
+          </div>
+
+          <div className="mt-10 text-center">
+            <a
+              href="/#contact"
+              className="inline-flex items-center justify-center rounded-lg bg-[#CF142B] px-7 py-3.5 font-semibold text-white transition hover:bg-red-700"
+            >
+              Request a Birmingham Waste Removal Quote
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* How It Works */}
       <section
@@ -392,16 +465,15 @@ export default function BirminghamPage() {
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
-              We keep the waste collection process simple, from your first
-              enquiry through to removal and responsible handling.
+              From your first enquiry to the collection itself, we keep the
+              process straightforward and based on the requirements of
+              your job.
             </p>
           </div>
 
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                01
-              </p>
+              <p className="text-4xl font-bold text-[#CF142B]">01</p>
               <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
                 Request a Quote
               </h3>
@@ -413,9 +485,7 @@ export default function BirminghamPage() {
             </div>
 
             <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                02
-              </p>
+              <p className="text-4xl font-bold text-[#CF142B]">02</p>
               <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
                 Arrange Collection
               </h3>
@@ -426,9 +496,7 @@ export default function BirminghamPage() {
             </div>
 
             <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                03
-              </p>
+              <p className="text-4xl font-bold text-[#CF142B]">03</p>
               <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
                 We Collect
               </h3>
@@ -439,16 +507,14 @@ export default function BirminghamPage() {
             </div>
 
             <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                04
-              </p>
+              <p className="text-4xl font-bold text-[#CF142B]">04</p>
               <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
                 Waste Handling
               </h3>
               <p className="mt-3 leading-7 text-slate-600">
                 Collected materials are handled according to their type and
-                applicable disposal requirements, with recovery or recycling
-                where appropriate.
+                applicable disposal requirements, with recovery or
+                recycling where appropriate.
               </p>
             </div>
           </div>
@@ -471,32 +537,19 @@ export default function BirminghamPage() {
               id="areas-heading"
               className="mt-3 text-3xl font-bold leading-tight sm:text-4xl"
             >
-              Waste Removal Across Birmingham & Surrounding Areas
+              Waste Removal Across Birmingham and Nearby Areas
             </h2>
 
             <p className="mt-4 text-base leading-7 text-white/80 sm:text-lg">
-              GB Waste Removals provides waste collection and rubbish
-              removal across Birmingham and surrounding local areas. If your
-              postcode is not listed, contact us and we can check whether
-              collection is available for your location.
+              We provide waste collection and rubbish removal across a
+              range of Birmingham districts. If your postcode is not listed
+              below, contact us and we can check whether collection is
+              available for your location.
             </p>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {[
-              'Birmingham City Centre',
-              'Edgbaston',
-              'Harborne',
-              'Selly Oak',
-              'Erdington',
-              'Sutton Coldfield',
-              'Kings Heath',
-              'Yardley',
-              'Jewellery Quarter',
-              'Moseley',
-              'Acocks Green',
-              'Solihull',
-            ].map((area) => (
+            {areas.map((area) => (
               <div
                 key={area}
                 className="rounded-lg border border-white/20 bg-white/10 px-5 py-4 font-medium transition hover:bg-white/15"
@@ -528,11 +581,12 @@ export default function BirminghamPage() {
               </h2>
 
               <p className="mt-5 text-base leading-8 text-slate-600 sm:text-lg">
-                We focus on making waste collection simple and convenient.
-                Whether you are clearing a home, removing unwanted
-                furniture, tidying a garden or arranging a commercial
-                clearance, we assess the requirements of the individual job
-                before collection.
+                Every clearance has different requirements. A household
+                furniture collection, a garden clearance and a commercial
+                waste removal job may involve different materials,
+                quantities and access arrangements. We assess the details
+                of your enquiry so the quotation and collection can be
+                arranged around the work involved.
               </p>
             </div>
 
@@ -549,11 +603,11 @@ export default function BirminghamPage() {
 
               <div>
                 <h3 className="font-bold text-[#0A1F44]">
-                  Reliable Collection
+                  Job-Based Quotations
                 </h3>
                 <p className="mt-2 leading-7 text-slate-600">
-                  We arrange a suitable collection time based on the
-                  requirements and availability for your job.
+                  We consider the type and quantity of waste, access and
+                  collection requirements when preparing a quotation.
                 </p>
               </div>
 
@@ -570,11 +624,11 @@ export default function BirminghamPage() {
 
               <div>
                 <h3 className="font-bold text-[#0A1F44]">
-                  Residential & Commercial
+                  Residential and Commercial Collections
                 </h3>
                 <p className="mt-2 leading-7 text-slate-600">
-                  We can assist with suitable waste removal requirements for
-                  homes, landlords, businesses, gardens and property
+                  We can assist with suitable waste removal requirements
+                  for homes, landlords, businesses, gardens and property
                   clearances across Birmingham.
                 </p>
               </div>
@@ -603,9 +657,9 @@ export default function BirminghamPage() {
             </h2>
 
             <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">
-              Answers to common questions about Birmingham rubbish
-              collection, house clearance, garden waste, furniture removal,
-              commercial waste and property clearance.
+              Find answers about Birmingham rubbish collection, house
+              clearance, garden waste, furniture removal, commercial waste
+              and arranging a collection.
             </p>
           </div>
 
@@ -642,8 +696,9 @@ export default function BirminghamPage() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
-            Request a waste removal quote with your Birmingham postcode and
-            details of the items or waste you need collected.
+            Tell us your Birmingham postcode and what you need collected.
+            Provide a description or photographs of the waste and request
+            a quotation for your collection.
           </p>
 
           <a
@@ -659,4 +714,3 @@ export default function BirminghamPage() {
     </div>
   );
 }
-

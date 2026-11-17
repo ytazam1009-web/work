@@ -1,12 +1,16 @@
+
 import type { Metadata } from 'next';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Services from '@/components/services';
 
+const siteUrl = 'https://www.gbwasteremovals.co.uk';
+const pageUrl = `${siteUrl}/wolverhampton`;
+
 export const metadata: Metadata = {
-  title: 'Waste Removal Wolverhampton | Rubbish Clearance & Collection',
+  title: 'Waste Removal Wolverhampton | Rubbish Collection & Clearance',
   description:
-    'Professional waste removal in Wolverhampton for homes, gardens, businesses, furniture, bulky items, property clearances and building projects. Get a free quote from GB Waste Removals.',
+    'Looking for waste removal in Wolverhampton? GB Waste Removals collects household rubbish, garden waste, furniture, commercial waste and suitable builders waste. Request a quote.',
   keywords: [
     'waste removal Wolverhampton',
     'rubbish removal Wolverhampton',
@@ -17,33 +21,54 @@ export const metadata: Metadata = {
     'furniture removal Wolverhampton',
     'commercial waste removal Wolverhampton',
     'builders waste removal Wolverhampton',
-    'bulky waste removal Wolverhampton',
-    'Wolverhampton waste clearance',
-    'waste removal near me Wolverhampton',
+    'bulky waste collection Wolverhampton',
+    'Wolverhampton rubbish clearance',
+    'waste removal near me',
   ],
   alternates: {
-    canonical: 'https://www.gbwasteremovals.co.uk/Wolverhampton',
+    canonical: pageUrl,
   },
   openGraph: {
     title: 'Waste Removal Wolverhampton | GB Waste Removals',
     description:
-      'Reliable waste removal and rubbish collection across Wolverhampton for homes, gardens, businesses, property clearances and building projects.',
-    url: 'https://www.gbwasteremovals.co.uk/Wolverhampton',
+      'Arrange household, garden, furniture, commercial and builders waste collection in Wolverhampton. Contact GB Waste Removals for a quotation.',
+    url: pageUrl,
     siteName: 'GB Waste Removals',
     type: 'website',
+    images: [
+      {
+        url: '/logos/WolverhamptonWasteRemoval.webp',
+        alt: 'GB Waste Removals in Wolverhampton',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Waste Removal Wolverhampton | GB Waste Removals',
     description:
-      'Reliable waste removal and rubbish collection services across Wolverhampton and surrounding areas.',
+      'Household, garden, furniture and commercial waste removal across Wolverhampton. Request a collection quote.',
+    images: ['/logos/WolverhamptonWasteRemoval.webp'],
   },
 };
 
+const areas = [
+  'Wolverhampton City Centre',
+  'Tettenhall',
+  'Compton',
+  'Penn',
+  'Wednesfield',
+  'Bilston',
+  'Bushbury',
+  'Whitmore Reans',
+  'Merry Hill',
+  'Oxley',
+  'Finchfield',
+  'Warstones',
+];
+
 const faqs = [
   {
-    question:
-      'What waste removal services do you provide in Wolverhampton?',
+    question: 'What waste removal services do you provide in Wolverhampton?',
     answer:
       'GB Waste Removals provides household rubbish removal, garden waste collection, furniture and bulky waste removal, commercial waste collection, builders waste removal and general rubbish clearance across Wolverhampton and surrounding areas.',
   },
@@ -61,7 +86,7 @@ const faqs = [
   {
     question: 'Can you remove garden waste in Wolverhampton?',
     answer:
-      'Yes. We can collect garden waste including branches, hedge cuttings, green waste, soil and unwanted garden items. Tell us what needs removing when requesting your quote.',
+      'Yes. We can collect suitable garden waste including branches, hedge cuttings, green waste, soil and unwanted garden items. Tell us what needs removing when requesting your quote.',
   },
   {
     question:
@@ -76,8 +101,7 @@ const faqs = [
       'Yes. We provide waste collection and clearance services for offices, shops, businesses, landlords and other commercial properties across Wolverhampton.',
   },
   {
-    question:
-      'Can you remove builders waste in Wolverhampton?',
+    question: 'Can you remove builders waste in Wolverhampton?',
     answer:
       'Yes. We can collect suitable non-hazardous waste from renovation, refurbishment, building and DIY projects, including materials such as timber, bricks, tiles and other construction waste.',
   },
@@ -88,15 +112,14 @@ const faqs = [
       'Same-day collection may be available depending on your location, waste type, access and our schedule. Contact GB Waste Removals to discuss your requirements and current availability.',
   },
   {
-    question:
-      'How much does waste removal cost in Wolverhampton?',
+    question: 'How much does waste removal cost in Wolverhampton?',
     answer:
       'Waste removal prices depend on the type and volume of waste, access and collection requirements. Contact our team with details of your waste to request a quotation.',
   },
   {
     question: 'What areas of Wolverhampton do you cover?',
     answer:
-      'We cover Wolverhampton City Centre and surrounding areas including Tettenhall, Compton, Penn, Wednesfield, Bilston, Bushbury, Whitmore Reans, Merry Hill, Oxley, Finchfield, Warstones and nearby locations.',
+      `We cover Wolverhampton City Centre and surrounding areas including ${areas.slice(1).join(', ')} and nearby locations. Contact us to check availability for your postcode.`,
   },
   {
     question:
@@ -116,8 +139,7 @@ const faqs = [
       'Yes, depending on the type of waste, access and collection requirements. Contact our team with details of the area and items that need removing.',
   },
   {
-    question:
-      'What happens to my waste after collection?',
+    question: 'What happens to my waste after collection?',
     answer:
       'Collected waste is taken away and handled responsibly after removal, with the disposal process depending on the type of waste collected.',
   },
@@ -127,32 +149,29 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'LocalBusiness',
-      '@id': 'https://www.gbwasteremovals.co.uk/#business',
-      name: 'GB Waste Removals',
-      url: 'https://www.gbwasteremovals.co.uk/',
-      areaServed: [
-        {
-          '@type': 'City',
-          name: 'Wolverhampton',
-        },
-        {
-          '@type': 'Place',
-          name: 'Tettenhall',
-        },
-        {
-          '@type': 'Place',
-          name: 'Wednesfield',
-        },
-        {
-          '@type': 'Place',
-          name: 'Bilston',
-        },
-        {
-          '@type': 'Place',
-          name: 'Bushbury',
-        },
-      ],
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: 'Waste Removal Wolverhampton | GB Waste Removals',
+      description:
+        'Waste removal and rubbish collection for homes, gardens, businesses, property clearances, furniture and suitable building projects across Wolverhampton.',
+      isPartOf: {
+        '@id': `${siteUrl}/#website`,
+      },
+      about: {
+        '@id': `${siteUrl}/#business`,
+      },
+      breadcrumb: {
+        '@id': `${pageUrl}#breadcrumb`,
+      },
+      mainEntity: {
+        '@id': `${pageUrl}#service`,
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${pageUrl}#service`,
+      name: 'Waste Removal Wolverhampton',
       serviceType: [
         'Waste Removal',
         'Rubbish Removal',
@@ -163,41 +182,38 @@ const structuredData = {
         'Commercial Waste Removal',
         'Builders Waste Removal',
       ],
-    },
-    {
-      '@type': 'Service',
-      name: 'Waste Removal Wolverhampton',
-      serviceType: 'Waste Removal',
       provider: {
-        '@type': 'LocalBusiness',
-        name: 'GB Waste Removals',
+        '@id': `${siteUrl}/#business`,
       },
       areaServed: {
         '@type': 'City',
         name: 'Wolverhampton',
       },
       description:
-        'Waste removal and rubbish collection services for homes, gardens, businesses, property clearances, furniture and building projects across Wolverhampton.',
+        'Waste removal and rubbish collection for homes, gardens, businesses, property clearances, furniture and suitable building projects across Wolverhampton.',
+      url: pageUrl,
     },
     {
       '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://www.gbwasteremovals.co.uk/',
+          item: `${siteUrl}/`,
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Waste Removal Wolverhampton',
-          item: 'https://www.gbwasteremovals.co.uk/Wolverhampton',
+          item: pageUrl,
         },
       ],
     },
     {
       '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
       mainEntity: faqs.map((faq) => ({
         '@type': 'Question',
         name: faq.question,
@@ -258,9 +274,13 @@ export default function WolverhamptonPage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
-              Reliable waste removal and rubbish collection across
-              Wolverhampton for homes, gardens, businesses, property
-              clearances, furniture, bulky waste and building projects.
+              Need unwanted waste cleared from your Wolverhampton property?
+              GB Waste Removals provides collection for household rubbish,
+              garden waste, unwanted furniture, bulky items, commercial
+              premises and suitable building projects. Whether you are
+              clearing a room, preparing a property for its next occupants
+              or dealing with waste from renovation work, we can discuss
+              the collection requirements and provide a quotation.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -334,28 +354,30 @@ export default function WolverhamptonPage() {
           </p>
 
           <h2 className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl">
-            Professional Waste Removal Services in Wolverhampton
+            Local Rubbish Collection for Homes and Businesses
           </h2>
 
           <p className="mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-            GB Waste Removals provides reliable waste collection and rubbish
-            removal services throughout Wolverhampton. Whether you need
-            household rubbish cleared, garden waste collected, furniture
-            removed or waste from a renovation or building project taken
-            away, our team can help.
+            From unwanted household items to waste left after a garden
+            project, renovation or property clearance, arranging the right
+            collection can make the job easier. GB Waste Removals helps
+            customers across Wolverhampton arrange the removal of different
+            types of suitable waste.
           </p>
 
           <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-            We work with homeowners, landlords, businesses, tradespeople and
-            property managers across Wolverhampton and nearby areas,
-            providing a straightforward way to arrange waste collection and
-            property clearances.
+            We work with homeowners, landlords, letting agents, businesses
+            and tradespeople. Let us know what needs collecting, where the
+            waste is located and any access considerations so we can
+            understand the job and provide a suitable quotation.
           </p>
         </div>
       </section>
 
       {/* Shared Services */}
-      <Services />
+      <div id="services">
+        <Services />
+      </div>
 
       {/* How It Works */}
       <section
@@ -373,76 +395,52 @@ export default function WolverhamptonPage() {
               id="how-it-works-heading"
               className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl"
             >
-              How Our Wolverhampton Waste Removal Service Works
+              How to Arrange Waste Collection in Wolverhampton
             </h2>
 
             <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
-              Arrange your Wolverhampton waste collection in four simple
-              steps, from requesting a quote through to responsible removal.
+              From your first enquiry to the collection itself, arranging
+              waste removal involves four straightforward steps.
             </p>
           </div>
 
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                01
-              </p>
+            {[
+              {
+                number: '01',
+                title: 'Tell Us What Needs Removing',
+                text: 'Contact our team with your Wolverhampton postcode and details of the waste. Photographs can help us understand the quantity and type of items involved.',
+              },
+              {
+                number: '02',
+                title: 'Receive a Quotation',
+                text: 'We discuss the waste, access and collection requirements so that a suitable quotation can be provided for the job.',
+              },
+              {
+                number: '03',
+                title: 'Arrange Your Collection',
+                text: 'Once the requirements and quotation are agreed, we arrange a suitable collection time based on availability and the needs of the job.',
+              },
+              {
+                number: '04',
+                title: 'Waste Is Collected',
+                text: 'Our team collects the agreed waste and takes it away for responsible handling in accordance with the type of material.',
+              },
+            ].map((step) => (
+              <div key={step.number}>
+                <p className="text-4xl font-bold text-[#CF142B]">
+                  {step.number}
+                </p>
 
-              <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
-                Book
-              </h3>
+                <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
+                  {step.title}
+                </h3>
 
-              <p className="mt-3 leading-7 text-slate-600">
-                Contact our team with details of the waste you need removed.
-                Our quotation team will discuss the job, provide a quote and
-                arrange your collection.
-              </p>
-            </div>
-
-            <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                02
-              </p>
-
-              <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
-                We Arrive
-              </h3>
-
-              <p className="mt-3 leading-7 text-slate-600">
-                Our team arrives at the agreed time and collection location
-                in Wolverhampton, ready to deal with the agreed waste.
-              </p>
-            </div>
-
-            <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                03
-              </p>
-
-              <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
-                We Clear
-              </h3>
-
-              <p className="mt-3 leading-7 text-slate-600">
-                We collect and remove the agreed household, garden,
-                furniture, commercial or project waste from your property.
-              </p>
-            </div>
-
-            <div>
-              <p className="text-4xl font-bold text-[#CF142B]">
-                04
-              </p>
-
-              <h3 className="mt-4 text-xl font-bold text-[#0A1F44]">
-                Responsible Disposal
-              </h3>
-
-              <p className="mt-3 leading-7 text-slate-600">
-                Your collected waste is taken away and handled responsibly
-                after removal, according to the type of waste.
-              </p>
-            </div>
+                <p className="mt-3 leading-7 text-slate-600">
+                  {step.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -463,30 +461,20 @@ export default function WolverhamptonPage() {
               id="areas-heading"
               className="mt-3 text-3xl font-bold leading-tight sm:text-4xl"
             >
-              Waste Removal Across Wolverhampton
+              Waste Collection Across Wolverhampton and Nearby Areas
             </h2>
 
             <p className="mt-4 text-base leading-7 text-white/80 sm:text-lg">
-              GB Waste Removals provides waste collection and rubbish removal
-              across Wolverhampton and surrounding local areas.
+              We provide waste removal and rubbish collection across
+              Wolverhampton and nearby neighbourhoods. Our listed areas
+              include residential locations, the city centre and surrounding
+              communities. If your postcode is not listed, contact us to
+              check whether collection is available.
             </p>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {[
-              'Wolverhampton City Centre',
-              'Tettenhall',
-              'Compton',
-              'Penn',
-              'Wednesfield',
-              'Bilston',
-              'Bushbury',
-              'Whitmore Reans',
-              'Merry Hill',
-              'Oxley',
-              'Finchfield',
-              'Warstones',
-            ].map((area) => (
+            {areas.map((area) => (
               <div
                 key={area}
                 className="rounded-lg border border-white/20 bg-white/10 px-5 py-4 font-medium transition hover:bg-white/15"
@@ -507,81 +495,75 @@ export default function WolverhamptonPage() {
           <div className="grid gap-12 md:grid-cols-2 md:items-start">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-[#CF142B] sm:text-base">
-                Why Choose Us
+                Why Choose GB Waste Removals
               </p>
 
               <h2
                 id="why-heading"
                 className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl"
               >
-                Waste Removal You Can Rely On in Wolverhampton
+                Waste Removal for Different Property and Project Needs
               </h2>
 
               <p className="mt-5 text-base leading-8 text-slate-600 sm:text-lg">
-                A straightforward waste collection service for residential,
-                commercial and property clearance requirements across
-                Wolverhampton.
+                Different properties and projects create different types
+                of waste. A household clear-out may involve furniture and
+                general rubbish, while a garden project or refurbishment
+                can produce very different materials. We discuss the
+                details of each Wolverhampton collection before arranging
+                the work.
               </p>
             </div>
 
             <div className="space-y-6">
               <div>
                 <h3 className="font-bold text-[#0A1F44]">
-                  Local Wolverhampton Service
+                  Residential Waste Collection
                 </h3>
                 <p className="mt-2 leading-7 text-slate-600">
-                  We provide waste removal and rubbish collection for
-                  customers across Wolverhampton and surrounding local areas.
+                  Help with unwanted household rubbish, furniture, bulky
+                  items and waste from accessible areas of your property.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-[#0A1F44]">
-                  Wide Range of Waste
+                  Garden and Outdoor Waste
                 </h3>
                 <p className="mt-2 leading-7 text-slate-600">
-                  From household rubbish and garden waste to furniture, bulky
-                  items, commercial waste and suitable builders waste.
+                  Collection of suitable garden waste, including branches,
+                  hedge cuttings, green waste and other unwanted outdoor
+                  materials.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-[#0A1F44]">
-                  Clear Quotes
+                  Commercial and Property Clearances
                 </h3>
                 <p className="mt-2 leading-7 text-slate-600">
-                  Our quotation team can discuss your requirements and provide
-                  a quote based on the waste and collection involved.
+                  Waste removal support for offices, shops, landlords,
+                  letting agents and property managers.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-[#0A1F44]">
-                  Professional Collection
+                  Clear Job-Based Quotations
                 </h3>
                 <p className="mt-2 leading-7 text-slate-600">
-                  We aim to keep the waste removal process straightforward
-                  from your initial enquiry through to collection.
+                  We consider the type and amount of waste, access and
+                  collection requirements when discussing your quotation.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-[#0A1F44]">
-                  Property Clearances
+                  Responsible Waste Handling
                 </h3>
                 <p className="mt-2 leading-7 text-slate-600">
-                  We can help remove unwanted waste and items from homes,
-                  gardens, garages and other accessible areas.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-[#0A1F44]">
-                  Responsible Disposal
-                </h3>
-                <p className="mt-2 leading-7 text-slate-600">
-                  Collected waste is taken away and handled responsibly after
-                  it has been removed from your property.
+                  Collected waste is taken away and handled responsibly
+                  after removal, according to the type of material.
                 </p>
               </div>
             </div>
@@ -605,13 +587,13 @@ export default function WolverhamptonPage() {
               id="faq-heading"
               className="mt-3 text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl"
             >
-              Wolverhampton Waste Removal FAQs
+              Frequently Asked Questions About Waste Removal in Wolverhampton
             </h2>
 
             <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg">
-              Answers to common questions about waste collection, rubbish
-              removal, property clearances and local waste services in
-              Wolverhampton.
+              Find answers about local rubbish collection, household
+              clearances, garden waste, furniture removal and commercial
+              waste services in Wolverhampton.
             </p>
           </div>
 
@@ -652,9 +634,10 @@ export default function WolverhamptonPage() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
-            Contact GB Waste Removals today to discuss your household,
-            commercial, garden, furniture or building waste removal
-            requirements and request a quote.
+            Contact GB Waste Removals with your Wolverhampton postcode
+            and details of the household, commercial, garden, furniture
+            or building waste you need collected. We can discuss your
+            requirements and provide a quotation.
           </p>
 
           <a
